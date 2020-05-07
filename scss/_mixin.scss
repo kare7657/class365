@@ -1,0 +1,226 @@
+@mixin web-S {
+    @media (max-width: $web-S) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width: $pad) {
+        @content;
+    }
+}
+@mixin mobile-L {
+    @media (max-width: $mobile-L) {
+        @content;
+    }
+}
+@mixin mobile-XS {
+    @media (max-width: $mobile-XS) {
+        @content;
+    }
+}
+
+@mixin btn() {
+    padding: 0 $padding-XS;
+    background-color: $dark-blue;
+    border-radius: 10px;
+    border: none;
+    h4 {
+        font-size: $font-size-h4;
+        color: $font-color-title-L;
+        font-family: "微軟正黑體";
+        font-weight: bold;
+    }
+    &:hover {
+        background-color: $hover;
+        transition-duration: 0.5s;
+    }    
+}
+
+@mixin navbar() {
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: center;
+    @include pad() {
+        display: unset;
+        justify-content: unset;
+    }
+    .pc {
+        width: 1140px;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        @include pad() {
+            display: none;
+        }
+        .navbar-L {
+            width: 25%;
+            height: 100%;
+            h4 {
+                font-size: $font-size-h4;
+                color: $font-color-title-L;
+                margin: 0;
+                padding: 0;
+                line-height: 80px;
+            }
+        }
+        .navbar-R {
+            width: 75%;
+            height: 100%;
+            color: $font-color-title-L;
+            display: flex;
+            justify-content: flex-end;
+            h4 {
+                font-size: $font-size-h4;
+                color: $font-color-title-L;
+                margin: 0;
+                padding: 0;
+                margin-right: 20px;
+                line-height: 80px;
+                display: inline;
+            }
+        }
+    }
+    .mobile {
+        display: none;
+        height: 60px;
+        @include pad() {
+            display: block;
+            position: relative;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            display: flex;
+            .fas.fa-bars {
+                font-size: 30px;
+                line-height: 60px;
+                padding: 0 30px;
+                color: $font-color-title-L;
+            }
+            ul {
+                display: block;
+                width: 100vw;
+                background-color: rgba(0, 0, 0, 0.7);
+                font-size: $font-size-h4;
+                line-height: 60px;
+                position: absolute;
+                top: 60px;
+                left: -100vw;
+                margin: 0;
+                padding: 40px 0;
+                text-align: center;
+            }
+            a {
+                color: #fff;
+            }
+            &:hover {
+                ul {
+                    display: inline-block;
+                    color: $basic-blue;
+                    transition-duration: 0.7s;
+                    top: 60px;
+                    left: 0;
+                }
+                li {
+                    &:hover {
+                        color: $basic-blue;
+                    }
+                }
+            }
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            h4 {
+                font-size: $font-size-h4;
+                color: $font-color-title-L;
+                line-height: 60px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@mixin notice() {
+    width: 100%;
+    padding: $padding-M;
+    background-color: $light-gray;
+    border-radius: 20px;
+    text-align: center;
+
+    @include pad() {
+        padding: $padding-S;
+        h3 {
+            font-size: $font-size-h4;
+        }
+    }
+    @include mobile-XS() {
+        padding: $padding-S $padding-XS;
+    }
+    .btn {
+        @include btn();
+    }
+}
+
+@mixin footer() {
+    h4,
+    p {
+        color: $font-color-title-L;
+    }
+    .ft-top {
+        width: 100%;
+        background-color: $dark-blue;
+        display: flex;
+        justify-content: center;
+        padding: $padding-S 40px;
+        .text-gp {
+            width: 100%;
+            max-width: 1140px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            @include mobile-L() {
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-align: center;
+                width: 100%;
+                margin-bottom: $margin-S;
+            }
+
+            .text-box {
+                display: inline-block;
+                text-align-last: left;
+                margin: 0 $margin-XS;
+                @include pad() {
+                    margin: 0;
+                    margin-bottom: $margin-XS;
+                }
+                @include mobile-L() {
+                    text-align-last: center;
+                }
+            }
+        }
+    }
+    .ft-bot {
+        background-color: $light-sky;
+        display: flex;
+        justify-content: center;
+        padding: $padding-XXS 0;
+        .copyright {
+            width: 100%;
+            max-width: 1140px;
+            p {
+                color: $dark-blue;
+                font-weight: bold;
+                @include mobile-L() {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

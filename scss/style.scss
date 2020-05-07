@@ -1,0 +1,232 @@
+@import "./guideline";
+@import "./mixin";
+
+* {
+    font-family: "微軟正黑體";
+    box-sizing: border-box !important;
+    .container {
+        width: 1140px;
+        margin: auto;
+        padding: $padding-L 0;
+        @include pad() {
+            width: 80%;
+            padding: $padding-M 0;
+        }
+        @include mobile-L() {
+            padding: $padding-S 0;
+        }
+    }
+    h3 {
+        font-size: $font-size-h3;
+        color: $font-color-title-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-bottom: $margin-S;
+        line-height: 45px;
+    }
+    h4 {
+        font-size: $font-size-h4;
+        color: $font-color-title-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-top: $margin-XS;
+        margin-bottom: $margin-XS;
+    }
+    p {
+        font-size: $font-size-p;
+        color: $font-color-text;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    a {
+        text-decoration: none !important;
+        list-style: none;
+    }
+    .clearfix {
+        clear: both;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+}
+
+//web
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .navbar {
+        @include navbar();
+    }
+    // .banner {
+    //     width: 100%;
+    //     height: 100vh;
+    //     background-image: url(../img/index-banner1.jpg);
+    //     background-size: cover;
+    //     background-position: center bottom;
+    // }
+    .swiper-container {
+        width: 100%;
+        height: 100vh;
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .content1 {
+        .icon-gp {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .icon {
+                width: 33.3%;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                margin-bottom: $margin-M;
+                @include pad() {
+                    width: 50%;
+                    padding: 0 $padding-XXS;
+                }
+                @include mobile-L() {
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: $margin-M;
+                }
+                img {
+                    margin: $margin-XS 0;
+                }
+            }
+        }
+    }
+    .content2 {
+        background-color: $light-gray;
+        background-image: url(../img/cloud.png);
+        background-position: left 100%;
+        background-repeat: no-repeat;
+    }
+    .content3 {
+        .explain-L {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            @include pad() {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+        }
+        .explain-R {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            @include pad() {
+                flex-direction: column;
+            }
+        }
+        .explain-img {
+            width: 45%;
+            @include pad() {
+                width: 80%;
+                margin: auto;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .text-box {
+            width: 40%;
+            text-align: center;
+            margin-bottom: $margin-XL;
+            @include pad() {
+                width: 80%;
+                margin: auto;
+                margin-top: $margin-M;
+                margin-bottom: $margin-L;
+            }
+            @include mobile-L() {
+                margin-top: $margin-S;
+                margin-bottom: $margin-L;
+            }
+            .text-gp {
+                text-align-last: left;
+                margin-bottom: $margin-S;
+            }
+            .btn {
+                @include btn();
+            }
+        }
+    }
+    .content4 {
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            padding-bottom: $padding-M;
+        }
+    }
+    .content5 {
+        background-color: $basic-blue;
+        h3 {
+            color: $font-color-title-L;
+        }
+        .img-gp {
+            .talk-L {
+                float: left;
+            }
+            .talk-R {
+                float: right;
+            }
+            img {
+                object-fit: cover;
+                object-position: center;
+                margin: $margin-S 0;
+                @include pad() {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .content6 {
+        .notice {
+            @include notice();
+        }
+    }
+
+    .footer {
+        @include footer();
+    }
+}
