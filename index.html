@@ -7,7 +7,7 @@
     <title>Class 365</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../scss/style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <div class="pc">
             <div class="navbar-L">
                 <a href="#top">
@@ -62,14 +62,31 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div class="banner"></div>
+    </nav>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../img/index-banner1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../img/index-banner2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../img/index-banner3.jpg" alt=""></div>
+            <div class="swiper-slide">
+                <div class="BN-text-gp" id="BN-title1">
+                    <h2>Class 365</h2>
+                    <h4>雲端差勤你的每一天</h4>
+                </div>
+                <img class="BN1" src="../img/index-banner1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <div class="BN-text-gp" id="BN-title2">
+                    <h2>豐富的差勤報表</h2>
+                    <h4>輕鬆查詢差勤報表，一鍵匯出檔案</h4>
+                </div>
+                <img class="BN2" src="../img/index-banner2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <div class="BN-text-gp" id="BN-title3">
+                    <h2>線上申請表單</h2>
+                    <h4>流程透明化，一次掌握審核進度</h4>
+                </div>
+                <img class="BN3" src="../img/index-banner3.jpg" alt="">
+            </div>
         </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
@@ -77,7 +94,7 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
-    <div class="content1">
+    <section class="content-torment">
         <div class="container">
             <h3>你有以下困擾嗎？</h3>
             <div class="icon-gp">
@@ -108,16 +125,15 @@
                 </div>
             </div>
         </div>
-
-    </div>
-    <div class="content2">
+    </section>
+    <section class="content-whats365">
         <div class="container">
             <h4>什麼是Class 365? </h4>
             <p>Class365為力天資訊開發的雲端差勤系統，提供人事管理、差勤管理、薪資管理等模組，具有組織管理、線上表單、報表資料...等功能，協助企業端管理組織結構、優化流程效率，另外亦有提供客製化設定，符合不同產業的需求
             </p>
         </div>
-    </div>
-    <div class="content3">
+    </section>
+    <section class="content-function">
         <div class="container">
             <div class="explain-L">
                 <div class="explain-img">
@@ -201,12 +217,12 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="content4">
+    </section>
+    <section class="content-client">
         <h3>我們的客戶</h3>
         <img src="/img/client.png" alt="">
-    </div>
-    <div class="content5">
+    </section>
+    <section class="content-recommend">
         <div class="container">
             <h3>好評推薦</h3>
             <div class="img-gp">
@@ -217,8 +233,8 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>
-    <div class="content6">
+    </section>
+    <section class="content6">
         <div class="container">
             <div class="notice">
                 <h3>心動了嗎？立即體驗Class 365雲端差勤系統</h3>
@@ -227,8 +243,8 @@
                 </button>
             </div>
         </div>
-    </div>
-    <div class="footer">
+    </section>
+    <footer class="footer">
         <div class="ft-top">
             <div class="text-gp">
                 <div class="text-box">
@@ -255,7 +271,7 @@
             </div>
         </div>
 
-    </div>
+    </footer>
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -275,16 +291,17 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
-            cssMode: true,
+            slidesPerView: 1,
+            //   spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            pagination: {
-                el: '.swiper-pagination'
-            },
-            mousewheel: true,
-            keyboard: true,
         });
     </script>
 </body>

@@ -33,7 +33,7 @@
     &:hover {
         background-color: $hover;
         transition-duration: 0.5s;
-    }    
+    }
 }
 
 @mixin navbar() {
@@ -105,7 +105,7 @@
             ul {
                 display: block;
                 width: 100vw;
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: rgba(0, 0, 0, 0.8);
                 font-size: $font-size-h4;
                 line-height: 60px;
                 position: absolute;
