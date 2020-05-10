@@ -67,6 +67,9 @@
     h6 {
         font-weight: bold;
     }
+    .btn {
+        @include btn();
+    }
 }
 
 //web
@@ -236,9 +239,7 @@ body {
                 text-align-last: left;
                 margin-bottom: $margin-S;
             }
-            .btn {
-                @include btn();
-            }
+            
         }
     }
     .content-client {
