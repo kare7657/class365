@@ -91,13 +91,17 @@
             display: block;
             position: relative;
         }
-        
         .menu {
             position: absolute;
             top: 0;
             left: 0px;
             display: flex;
-            
+            .fas.fa-bars {
+                font-size: 30px;
+                line-height: 60px;
+                padding: 0 30px;
+                color: $font-color-title-L;
+            }
             ul {
                 display: block;
                 width: 100vw;
@@ -129,12 +133,6 @@
                 }
             }
         }
-        .fas.fa-bars {
-            font-size: 30px;
-            line-height: 60px;
-            padding: 0 30px;
-            color: $font-color-title-L;
-        }        
         .title {
             display: flex;
             justify-content: center;
