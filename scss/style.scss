@@ -1,6 +1,6 @@
 @import "./guideline";
 @import "./mixin";
-
+// 通用
 * {
     font-family: "微軟正黑體";
     box-sizing: border-box !important;
@@ -69,7 +69,6 @@
     }
 }
 
-//web
 html,
 body {
     width: 100%;
@@ -79,6 +78,7 @@ body {
     .navbar {
         @include navbar();
     }
+    // Banner
     .swiper-container {
         width: 100%;
         height: 100vh;
@@ -158,6 +158,7 @@ body {
             }
         }
     }
+    // 困擾
     .content-torment {
         .icon-gp {
             display: flex;
@@ -184,12 +185,14 @@ body {
             }
         }
     }
+    // 什麼是Class365
     .content-whats365 {
         background-color: $light-gray;
         background-image: url(../img/cloud.png);
         background-position: left 100%;
         background-repeat: no-repeat;
     }
+    // 模組介紹
     .content-function {
         .explain-L {
             width: 100%;
@@ -242,6 +245,7 @@ body {
             }
         }
     }
+    // 我們的客戶
     .content-client {
         img {
             width: 100%;
@@ -250,6 +254,7 @@ body {
             padding-bottom: $padding-M;
         }
     }
+    // 好評推薦
     .content-recommend {
         background-color: $basic-blue;
         h3 {
@@ -272,6 +277,7 @@ body {
             }
         }
     }
+    // 聯絡我們
     .content6 {
         .notice {
             @include notice();
