@@ -82,12 +82,17 @@
   font-weight: bold;
 }
 
+* section {
+  width: 100%;
+}
+
 html,
 body {
   width: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html .navbar,
@@ -774,7 +779,6 @@ body .back-top {
 
 html .top-BN,
 body .top-BN {
-  width: 100%;
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -963,5 +967,54 @@ html .content-flow img,
 body .content-flow img {
   width: 100%;
   border-radius: 30px;
+}
+
+html .content-Allicon .Allicon-gp,
+body .content-Allicon .Allicon-gp {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html .content-Allicon .Allicon-gp .Allicon,
+body .content-Allicon .Allicon-gp .Allicon {
+  width: 25%;
+  text-align: center;
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  html .content-Allicon .Allicon-gp .Allicon,
+  body .content-Allicon .Allicon-gp .Allicon {
+    width: 50%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-Allicon .Allicon-gp .Allicon,
+  body .content-Allicon .Allicon-gp .Allicon {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+html .content-Allicon .Allicon-gp .Allicon img,
+body .content-Allicon .Allicon-gp .Allicon img {
+  width: 170px;
+  height: 170px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */

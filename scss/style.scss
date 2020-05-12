@@ -7,11 +7,11 @@
 
 html,
 body {
-    // 首頁
     width: 100%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     // 導覽列
     .navbar {
         @include navbar();
@@ -306,7 +306,58 @@ body {
         }
     }
     // 流程圖
-    .content-flow{
-        @include flow($basic-blue);
+    .content-flow {
+        // @include flow($basic-blue);
+        background-color: $basic-blue;
+        img {
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    // 所有功能
+    .content-Allicon {
+        .Allicon-gp {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .Allicon {
+                width: 25%;
+                text-align: center;
+                padding: 0 $padding-XS;
+                margin-bottom: $margin-M;
+
+                @include pad() {
+                    width: 50%;
+                    padding: 0 $padding-XXS;
+                }
+                @include mobile-L() {
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: $margin-M;
+                }
+                img {
+                    width: 170px;
+                    height: 170px;
+                    // background-color: $basic-blue;
+                    object-fit: contain;
+                    object-position: center;
+                    margin: $margin-XS 0;
+                }
+                // .icon {
+                //     margin: auto;
+                //     width: 170px;
+                //     height: 170px;
+                //     border-radius: 50%;
+                //     background-color: $basic-blue;
+                //     background-image: url(../img/HR-icon1.png);
+                //     background-size: 40%;
+                //     background-position: center;
+                //     background-repeat: no-repeat;
+                //     margin-bottom: $margin-S;
+                // }
+            }
+        }
     }
 }
