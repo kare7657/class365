@@ -5,7 +5,9 @@
     @include all();
 }
 
+html,
 body {
+    // 首頁
     width: 100%;
     margin: 0;
     padding: 0;
@@ -129,7 +131,7 @@ body {
         background-repeat: no-repeat;
     }
     // 模組介紹
-    .content-function {
+    .content-module {
         .explain-L {
             width: 100%;
             display: flex;
@@ -219,10 +221,92 @@ body {
             @include notice();
         }
     }
+    // 頁尾
     footer {
         @include footer();
     }
     .back-top {
         @include back-top();
+    }
+
+    // 人事模組
+    .top-BN {
+        @include top-BN();
+    }
+    .content-function {
+        .explain-M {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: $margin-L;
+            .explain-img {
+                width: 100%;
+            }
+            .text-gp {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        .explain-L {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: $margin-L;
+            @include pad() {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+        }
+        .explain-R {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            @include pad() {
+                flex-direction: column;
+            }
+        }
+        .explain-img {
+            width: 45%;
+            @include pad() {
+                width: 80%;
+                margin: auto;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .text-box {
+            width: 40%;
+            text-align: center;
+            margin-bottom: $margin-XL;
+
+            @include pad() {
+                width: 80%;
+                margin: auto;
+                margin-top: $margin-M;
+                margin-bottom: $margin-L;
+            }
+            @include mobile-L() {
+                margin-top: $margin-S;
+                margin-bottom: $margin-L;
+            }
+            .text-gp {
+                text-align-last: left;
+                margin-bottom: $margin-S;
+            }
+            .btn {
+                @include btn();
+            }
+            h3 {
+                margin-bottom: $margin-M;
+            }
+        }
+    }
+    // 流程圖
+    .content-flow{
+        @include flow($basic-blue);
     }
 }
