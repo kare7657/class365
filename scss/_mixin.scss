@@ -1,3 +1,4 @@
+// RWD
 @mixin web-S {
     @media (max-width: $web-S) {
         @content;
@@ -16,6 +17,74 @@
 @mixin mobile-XS {
     @media (max-width: $mobile-XS) {
         @content;
+    }
+}
+// 通用
+@mixin all() {
+    font-family: "微軟正黑體";
+    box-sizing: border-box !important;
+    .container {
+        width: 1140px;
+        margin: auto;
+        padding: $padding-L 0;
+        @include pad() {
+            width: 80%;
+            padding: $padding-M 0;
+        }
+        @include mobile-L() {
+            padding: $padding-S 0;
+        }
+    }
+    h2 {
+        font-size: $font-size-h2;
+        color: $font-color-title-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-bottom: $margin-XS;
+        line-height: 48px;
+    }
+    h3 {
+        font-size: $font-size-h3;
+        color: $font-color-title-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-bottom: $margin-S;
+        line-height: 45px;
+    }
+    h4 {
+        font-size: $font-size-h4;
+        color: $font-color-title-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-top: $margin-XS;
+        margin-bottom: $margin-XS;
+    }
+    p {
+        font-size: $font-size-p;
+        color: $font-color-text;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    a {
+        text-decoration: none;
+        list-style: none;
+    }
+    .clearfix {
+        clear: both;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
     }
 }
 
