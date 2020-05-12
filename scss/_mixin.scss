@@ -225,17 +225,21 @@
     }
 }
 
-@mixin back-top() {    
+@mixin back-top() {
     width: 60px;
     height: 60px;
     z-index: 999;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
-    background-color: rgba(0, 0, 0, 0.1);   
+    right: 40px;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     font-size: $font-size-h4;
     color: $font-color-text;
     line-height: 55px;
     text-align: center;
+    @include web-S() {
+        right: 25px;
+        bottom: 25px;
+    }
 }
