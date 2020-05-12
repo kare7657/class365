@@ -75,6 +75,7 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    // 導覽列
     .navbar {
         @include navbar();
     }
@@ -278,7 +279,7 @@ body {
         }
     }
     // 聯絡我們
-    .content6 {
+    .content-contactus {
         .notice {
             @include notice();
         }

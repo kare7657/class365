@@ -595,8 +595,8 @@ body .content-recommend .img-gp img {
   }
 }
 
-html .content6 .notice,
-body .content6 .notice {
+html .content-contactus .notice,
+body .content-contactus .notice {
   width: 100%;
   padding: 100px;
   background-color: #eeefef;
@@ -605,41 +605,41 @@ body .content6 .notice {
 }
 
 @media (max-width: 768px) {
-  html .content6 .notice,
-  body .content6 .notice {
+  html .content-contactus .notice,
+  body .content-contactus .notice {
     padding: 60px;
   }
-  html .content6 .notice h3,
-  body .content6 .notice h3 {
+  html .content-contactus .notice h3,
+  body .content-contactus .notice h3 {
     font-size: 24px;
   }
 }
 
 @media (max-width: 320px) {
-  html .content6 .notice,
-  body .content6 .notice {
+  html .content-contactus .notice,
+  body .content-contactus .notice {
     padding: 60px 30px;
   }
 }
 
-html .content6 .notice .btn,
-body .content6 .notice .btn {
+html .content-contactus .notice .btn,
+body .content-contactus .notice .btn {
   padding: 0 30px;
   background-color: #2b5f75;
   border-radius: 10px;
   border: none;
 }
 
-html .content6 .notice .btn h4,
-body .content6 .notice .btn h4 {
+html .content-contactus .notice .btn h4,
+body .content-contactus .notice .btn h4 {
   font-size: 24px;
   color: white;
   font-family: "微軟正黑體";
   font-weight: bold;
 }
 
-html .content6 .notice .btn:hover,
-body .content6 .notice .btn:hover {
+html .content-contactus .notice .btn:hover,
+body .content-contactus .notice .btn:hover {
   background-color: black;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
