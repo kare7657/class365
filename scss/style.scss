@@ -360,4 +360,8 @@ body {
             }
         }
     }
+    // 其他功能
+    .content-other{
+        @include link();
+    }
 }
