@@ -1171,9 +1171,23 @@ body .content-other .link-gp .link img {
   width: 100%;
 }
 
+html .content-howmuch .bgB,
+body .content-howmuch .bgB {
+  background-color: #a5dee4;
+}
+
+html .content-howmuch .bgC,
+body .content-howmuch .bgC {
+  background-color: #7db9de;
+}
+
+html .content-howmuch .bgD,
+body .content-howmuch .bgD {
+  background-color: #33a6b8;
+}
+
 html .content-howmuch table,
 body .content-howmuch table {
-  margin: auto;
   margin-bottom: 50px;
   width: 100%;
   text-align: center;
@@ -1186,7 +1200,7 @@ body .content-howmuch table {
 
 html .content-howmuch table th,
 body .content-howmuch table th {
-  width: 40%;
+  width: 30%;
   font-size: 20px;
   color: #314965;
   background-color: #E5F1F9;
@@ -1194,10 +1208,16 @@ body .content-howmuch table th {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  html .content-howmuch table th,
+  body .content-howmuch table th {
+    width: 35%;
+  }
+}
+
 @media (max-width: 568px) {
   html .content-howmuch table th,
   body .content-howmuch table th {
-    width: 30%;
     font-size: 16px;
     padding: 5px;
   }
@@ -1205,26 +1225,47 @@ body .content-howmuch table th {
 
 html .content-howmuch table td,
 body .content-howmuch table td {
-  width: 60%;
   padding: 10px 0;
   font-size: 20px;
   color: #727171;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  html .content-howmuch table td,
+  body .content-howmuch table td {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (max-width: 568px) {
   html .content-howmuch table td,
   body .content-howmuch table td {
-    width: 70%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 16px;
   }
 }
 
 html .content-howmuch table td .text-gp,
 body .content-howmuch table td .text-gp {
-  padding: 30px 0;
+  padding: 60px 0 30px 0;
+  margin: 0 10px;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   html .content-howmuch table td .text-gp,
   body .content-howmuch table td .text-gp {
     padding: 30px 0 0 0;
@@ -1234,12 +1275,20 @@ body .content-howmuch table td .text-gp {
 html .content-howmuch table td .text-gp img,
 body .content-howmuch table td .text-gp img {
   width: 200px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  html .content-howmuch table td .text-gp img,
+  body .content-howmuch table td .text-gp img {
+    width: 50%;
+  }
 }
 
 @media (max-width: 568px) {
   html .content-howmuch table td .text-gp img,
   body .content-howmuch table td .text-gp img {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -1255,20 +1304,5 @@ body .content-howmuch table td .text-gp span {
   body .content-howmuch table td .text-gp span {
     font-size: 16px;
   }
-}
-
-html .content-howmuch .bgB,
-body .content-howmuch .bgB {
-  background-color: #a5dee4;
-}
-
-html .content-howmuch .bgC,
-body .content-howmuch .bgC {
-  background-color: #7db9de;
-}
-
-html .content-howmuch .bgD,
-body .content-howmuch .bgD {
-  background-color: #33a6b8;
 }
 /*# sourceMappingURL=style.css.map */

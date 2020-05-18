@@ -264,9 +264,6 @@ body {
     }
     //收費方式
     .content-howmuch {
-        table {
-            @include table();
-        }
         .bgB {
             background-color: $light-sky;
         }
@@ -275,6 +272,9 @@ body {
         }
         .bgD {
             background-color: $blue-green;
+        }
+        table {
+            @include table();
         }
     }
 }

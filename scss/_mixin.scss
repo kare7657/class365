@@ -521,7 +521,6 @@
 }
 
 @mixin table() {
-    margin: auto;
     margin-bottom: $margin-M;
     width: 100%;
     text-align: center;
@@ -530,39 +529,50 @@
     border-radius: 20px;
     border: solid 1px $basic-blue;
     background-color: #fff;
+
     th {
-        width: 40%;
+        width: 30%;
         font-size: $font-size-h5;
         color: $font-color-title-D;
         background-color: $table-blue;
         padding: $padding-XXS;
         font-weight: bold;
+        @include pad() {
+            width: 35%;
+        }
         @include mobile-L() {
-            width: 30%;
             font-size: $font-size-p;
             padding: 5px;
         }
     }
     td {
-        width: 60%;
         padding: $padding-XXS 0;
         font-size: $font-size-h5;
         color: $font-color-text;
+        display: flex;
+        justify-content: center;
+        @include pad() {
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
         @include mobile-L() {
-            width: 70%;
+            flex-direction: column;
             font-size: $font-size-p;
         }
         .text-gp {
-            display: flex;
-            justify-content: center;
-            padding: $padding-XS 0;
-            @include mobile-L() {
+            padding: $padding-S 0 $padding-XS 0;
+            margin: 0 $margin-XS;
+            @include pad() {
                 padding: $padding-XS 0 0 0;
             }
             img {
                 width: 200px;
+                margin-bottom: $margin-XS;
+                @include pad() {
+                    width: 50%;
+                }
                 @include mobile-L() {
-                    width: 80%;
+                    width: 70%;
                 }
             }
             span {
