@@ -552,27 +552,36 @@
         display: flex;
         justify-content: center;
         @include pad() {
-            flex-wrap: wrap;
             flex-direction: row;
         }
         @include mobile-L() {
+            flex-wrap: wrap;
             flex-direction: column;
             font-size: $font-size-p;
+            padding: $padding-XXS 0;
         }
         .text-gp {
+            width: 33.3%;
             padding: $padding-S 0 $padding-XS 0;
             margin: 0 $margin-XS;
+            @include web-S() {
+                margin: -10px;
+            }
             @include pad() {
+                margin: -5px;
+            }
+            @include mobile-L() {
                 padding: $padding-XS 0 0 0;
+                width: unset;
             }
             img {
                 width: 200px;
                 margin-bottom: $margin-XS;
-                @include pad() {
-                    width: 50%;
+                @include web-S() {
+                    width: 80%;
                 }
                 @include mobile-L() {
-                    width: 70%;
+                    width: 60%;
                 }
             }
             span {

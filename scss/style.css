@@ -1033,7 +1033,7 @@ body .content-function .text-box h3 {
 
 html .content-flow-HR,
 body .content-flow-HR {
-  background-color: #7db9de;
+  background-color: #a5dee4;
 }
 
 html .content-flow-HR img,
@@ -1239,8 +1239,6 @@ body .content-howmuch table td {
 @media (max-width: 768px) {
   html .content-howmuch table td,
   body .content-howmuch table td {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1251,24 +1249,43 @@ body .content-howmuch table td {
 @media (max-width: 568px) {
   html .content-howmuch table td,
   body .content-howmuch table td {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 16px;
+    padding: 10px 0;
   }
 }
 
 html .content-howmuch table td .text-gp,
 body .content-howmuch table td .text-gp {
+  width: 33.3%;
   padding: 60px 0 30px 0;
   margin: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  html .content-howmuch table td .text-gp,
+  body .content-howmuch table td .text-gp {
+    margin: -10px;
+  }
 }
 
 @media (max-width: 768px) {
   html .content-howmuch table td .text-gp,
   body .content-howmuch table td .text-gp {
+    margin: -5px;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table td .text-gp,
+  body .content-howmuch table td .text-gp {
     padding: 30px 0 0 0;
+    width: unset;
   }
 }
 
@@ -1278,17 +1295,17 @@ body .content-howmuch table td .text-gp img {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   html .content-howmuch table td .text-gp img,
   body .content-howmuch table td .text-gp img {
-    width: 50%;
+    width: 80%;
   }
 }
 
 @media (max-width: 568px) {
   html .content-howmuch table td .text-gp img,
   body .content-howmuch table td .text-gp img {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -1304,5 +1321,19 @@ body .content-howmuch table td .text-gp span {
   body .content-howmuch table td .text-gp span {
     font-size: 16px;
   }
+}
+
+html .content-form .form,
+body .content-form .form {
+  background-color: #E5F1F9;
+  padding: 100px 0;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+html .content-form .form form,
+body .content-form .form form {
+  width: 60%;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

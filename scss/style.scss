@@ -238,7 +238,7 @@ body {
     }
     // 流程圖
     .content-flow-HR {
-        @include flow($basic-blue);
+        @include flow($light-sky);
     }
     .content-flow-attendance {
         @include flow($light-green);
@@ -275,6 +275,19 @@ body {
         }
         table {
             @include table();
+        }
+    }
+    //聯絡我們
+    .content-form {        
+        .form {        
+            background-color: $table-blue;
+            padding: $padding-M 0;
+            margin-top: $margin-M;
+            border-radius: 20px;            
+            form{                
+                width: 60%;
+                margin: auto;
+            }
         }
     }
 }
