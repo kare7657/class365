@@ -1023,13 +1023,35 @@ body .content-function .text-box h3 {
   }
 }
 
-html .content-flow,
-body .content-flow {
+html .content-flow-HR,
+body .content-flow-HR {
   background-color: #7db9de;
 }
 
-html .content-flow img,
-body .content-flow img {
+html .content-flow-HR img,
+body .content-flow-HR img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+html .content-flow-attendance,
+body .content-flow-attendance {
+  background-color: #c5de7d;
+}
+
+html .content-flow-attendance img,
+body .content-flow-attendance img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+html .content-flow-money,
+body .content-flow-money {
+  background-color: #a5abe4;
+}
+
+html .content-flow-money img,
+body .content-flow-money img {
   width: 100%;
   border-radius: 30px;
 }

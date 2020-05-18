@@ -449,6 +449,14 @@
     }
 }
 
+@mixin flow($bg-color){
+    background-color: $bg-color;
+    img {
+        width: 100%;
+        border-radius: 30px;
+    }
+}
+
 @mixin Allicon() {
     .Allicon-gp {
         width: 100%;

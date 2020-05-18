@@ -237,12 +237,14 @@ body {
         @include function();
     }
     // 流程圖
-    .content-flow {
-        background-color: $basic-blue;
-        img {
-            width: 100%;
-            border-radius: 30px;
-        }
+    .content-flow-HR {
+        @include flow($basic-blue);
+    }
+    .content-flow-attendance {
+        @include flow($light-green);
+    }
+    .content-flow-money {
+        @include flow($light-purple);
     }
     // 所有功能
     .content-Allicon {
