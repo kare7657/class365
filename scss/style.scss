@@ -254,12 +254,27 @@ body {
     .content-other {
         h2 {
             @include pad() {
-                padding: 0 $padding-M;
+                padding: 0 $padding-S;
                 line-height: 62px;
             }
         }
         .link-gp {
             @include link-gp();
+        }
+    }
+    //收費方式
+    .content-howmuch {
+        table {
+            @include table();
+        }
+        .bgB {
+            background-color: $light-sky;
+        }
+        .bgC {
+            background-color: $basic-blue;
+        }
+        .bgD {
+            background-color: $blue-green;
         }
     }
 }

@@ -24,6 +24,13 @@
   }
 }
 
+@media (max-width: 320px) {
+  * .container {
+    padding: 30px 0;
+    width: 85%;
+  }
+}
+
 * h2 {
   font-size: 48px;
   color: #314965;
@@ -831,6 +838,7 @@ body .top-BN {
 
 html .top-BN .BN-text-gp,
 body .top-BN .BN-text-gp {
+  width: 80%;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -1108,7 +1116,7 @@ body .content-Allicon .Allicon-gp .Allicon img {
 @media (max-width: 768px) {
   html .content-other h2,
   body .content-other h2 {
-    padding: 0 100px;
+    padding: 0 60px;
     line-height: 62px;
   }
 }
@@ -1161,5 +1169,106 @@ body .content-other .link-gp .link h3 {
 html .content-other .link-gp .link img,
 body .content-other .link-gp .link img {
   width: 100%;
+}
+
+html .content-howmuch table,
+body .content-howmuch table {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px;
+  border: solid 1px #7db9de;
+  background-color: #fff;
+}
+
+html .content-howmuch table th,
+body .content-howmuch table th {
+  width: 40%;
+  font-size: 20px;
+  color: #314965;
+  background-color: #E5F1F9;
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table th,
+  body .content-howmuch table th {
+    width: 30%;
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+html .content-howmuch table td,
+body .content-howmuch table td {
+  width: 60%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #727171;
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table td,
+  body .content-howmuch table td {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+
+html .content-howmuch table td .text-gp,
+body .content-howmuch table td .text-gp {
+  padding: 30px 0;
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table td .text-gp,
+  body .content-howmuch table td .text-gp {
+    padding: 30px 0 0 0;
+  }
+}
+
+html .content-howmuch table td .text-gp img,
+body .content-howmuch table td .text-gp img {
+  width: 200px;
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table td .text-gp img,
+  body .content-howmuch table td .text-gp img {
+    width: 80%;
+  }
+}
+
+html .content-howmuch table td .text-gp span,
+body .content-howmuch table td .text-gp span {
+  font-size: 20px;
+  color: #314965;
+  font-weight: bold;
+}
+
+@media (max-width: 568px) {
+  html .content-howmuch table td .text-gp span,
+  body .content-howmuch table td .text-gp span {
+    font-size: 16px;
+  }
+}
+
+html .content-howmuch .bgB,
+body .content-howmuch .bgB {
+  background-color: #a5dee4;
+}
+
+html .content-howmuch .bgC,
+body .content-howmuch .bgC {
+  background-color: #7db9de;
+}
+
+html .content-howmuch .bgD,
+body .content-howmuch .bgD {
+  background-color: #33a6b8;
 }
 /*# sourceMappingURL=style.css.map */

@@ -34,6 +34,10 @@
         @include mobile-L() {
             padding: $padding-S 0;
         }
+        @include mobile-XS() {
+            padding: $padding-XS 0;
+            width: 85%;
+        }
     }
     h2 {
         font-size: $font-size-h2;
@@ -62,9 +66,9 @@
         margin-top: $margin-XS;
         margin-bottom: $margin-XS;
     }
-    h5{
+    h5 {
         font-size: $font-size-h5;
-        color: $font-color-title-L;        
+        color: $font-color-title-L;
     }
     p {
         font-size: $font-size-p;
@@ -217,9 +221,9 @@
                 padding: 40px 0;
                 text-align: center;
             }
-            h4{
+            h4 {
                 color: $light-sky;
-            }                       
+            }
             a {
                 color: $font-color-title-L;
             }
@@ -354,6 +358,7 @@
     object-fit: cover;
     object-position: center;
     .BN-text-gp {
+        width: 80%;
         position: absolute;
         top: 45%;
         left: 50%;
@@ -449,7 +454,7 @@
     }
 }
 
-@mixin flow($bg-color){
+@mixin flow($bg-color) {
     background-color: $bg-color;
     img {
         width: 100%;
@@ -511,6 +516,63 @@
         }
         img {
             width: 100%;
+        }
+    }
+}
+
+@mixin table() {
+    margin: auto;
+    margin-bottom: $margin-M;
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    border: solid 1px $basic-blue;
+    background-color: #fff;
+    th {
+        width: 40%;
+        font-size: $font-size-h5;
+        color: $font-color-title-D;
+        background-color: $table-blue;
+        padding: $padding-XXS;
+        font-weight: bold;
+        @include mobile-L() {
+            width: 30%;
+            font-size: $font-size-p;
+            padding: 5px;
+        }
+    }
+    td {
+        width: 60%;
+        padding: $padding-XXS 0;
+        font-size: $font-size-h5;
+        color: $font-color-text;
+        @include mobile-L() {
+            width: 70%;
+            font-size: $font-size-p;
+        }
+        .text-gp {
+            display: flex;
+            justify-content: center;
+            padding: $padding-XS 0;
+            @include mobile-L() {
+                padding: $padding-XS 0 0 0;
+            }
+            img {
+                width: 200px;
+                @include mobile-L() {
+                    width: 80%;
+                }
+            }
+            span {
+                font-size: $font-size-h5;
+                color: $font-color-title-D;
+                font-weight: bold;
+                @include mobile-L() {
+                    font-size: $font-size-p;
+                }
+            }
         }
     }
 }
