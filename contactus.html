@@ -60,7 +60,6 @@
                         <li><a href="howmuch.html">收費方式</a></li>
                         <li><a href="QA.html">常見問題</a></li>
                         <li><a href="contactus.html">聯絡我們</a></li>
-
                     </ul>
                 </div>
             </div>
@@ -86,13 +85,13 @@
             <h3>填寫表單</h3>
             <div class="form">
                 <form>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3" style="font-weight: bold;">
                         <label for="companyname" class="col-sm-3 col-form-label">公司名稱</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="companyname" placeholder="例:力天資訊有限公司">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3" style="font-weight: bold;">
                         <label for="numberofpeople" class="col-sm-3 col-form-label">公司人數</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="numberofpeople">
@@ -102,26 +101,26 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3" style="font-weight: bold;">
                         <label for="name" class="col-sm-3 col-form-label">姓名</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="name" placeholder="例:李雲端">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3" style="font-weight: bold;">
+                        <label for="phonenumber" class="col-sm-3 col-form-label">電話</label>
+                        <div class="col-sm-9">
+                            <input type="tel" class="form-control" id="phonenumber" placeholder="04-23768386">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3" style="font-weight: bold;">
                         <label for="Email" class="col-sm-3 col-form-label">信箱</label>
                         <div class="col-sm-9">
                             <input type="email" class="form-control" id="Email" placeholder="name@example.com.tw">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="phonenumber" class="col-sm-3 col-form-label">電話</label>
-                        <div class="col-sm-9">
-                            <input type="number" class="form-control" id="phonenumber" placeholder="04-23768386">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="type" class="col-sm-3 col-form-label">諮詢類型</label>
+                    <div class="form-group row mb-3" style="font-weight: bold;">
+                        <label for="type" class="col-sm-3 col-form-label">詢問類型</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="type">
                                 <option>系統諮詢</option>
@@ -130,35 +129,53 @@
                                 <option>其他</option>
                             </select>
                         </div>
-                    </div>                    
-                    <div class="form-group row">
+                    </div>
+                    <div class="form-group row mb-3" style="font-weight: bold;">
                         <label for="contents" class="col-sm-3 col-form-label">內容描述</label>
                         <div class="col-sm-9">
                             <textarea class="form-control" id="contents" rows="3"></textarea>
                         </div>
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="icon-gp">
-
-        </div>
-    </section>
-
-
-    <!-- 聯絡我們快捷 -->
-    <section class="content-contactus">
-        <div class="container">
-            <div class="notice">
-                <h3>心動了嗎？立即體驗Class 365雲端差勤系統</h3>
-                <a href="contactus.html">
-                    <div class="btn">
-                        <h4>聯絡我們</h4>
+                    <div class="form-group row mb-3" style="font-weight: bold;">
+                        <label for="code" class="col-sm-3 col-form-label">驗證碼</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
                     </div>
-                </a>
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary mt-3"
+                            style="background-color: #2b5f75;border: none;font-weight: bold;padding: 8px 50px;">
+                            送出</button>
+                    </div>
+                    <!-- <div class="col-sm-12 d-flex justify-content-center">
+                        <input type="button" class="btn-form" value="送出">
+                    </div> -->
+                </form>
+
             </div>
         </div>
     </section>
+
+    <section class="container" style="padding: 0;">
+        <div class="icon-gp">
+            <div class="icon">
+                <img src="img/contactus-icon1.png" alt="">
+                <h4>客服信箱</h4>
+                <p>service@leeten.com.tw</p>
+            </div>
+            <div class="icon">
+                <img src="img/contactus-icon2.png" alt="">
+                <h4>報價與合作</h4>
+                <p>04-23768258 #606</p>
+            </div>
+            <div class="icon">
+                <img src="img/contactus-icon3.png" alt="">
+                <h4>客服信箱</h4>
+                <p>04-23768258 #606</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="ft-top">
             <div class="text-gp">
