@@ -23,6 +23,12 @@ body {
         @include web-S() {
             height: 80vh;
         }
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include mobile-L() {
+                display: none;
+            }
+        }
         .swiper-slide {
             position: relative;
             text-align: center;
@@ -70,6 +76,17 @@ body {
             }
             .BN-text-gp {
                 position: absolute;
+                h2 {
+                    @include mobile-XS() {
+                        font-size: $font-size-h3;
+                    }
+                }
+                h4 {
+                    @include mobile-XS() {
+                        font-size: $font-size-h5;
+                        padding: 0 $padding-XS;
+                    }
+                }
             }
             #BN-title1 {
                 top: 18%;
@@ -83,6 +100,7 @@ body {
                 right: 15%;
                 @include pad() {
                     top: 45%;
+                    right: unset;
                     margin: auto;
                 }
             }
@@ -91,6 +109,7 @@ body {
                 left: 13%;
                 @include pad() {
                     top: 45%;
+                    left: unset;
                     margin: auto;
                 }
             }
@@ -165,7 +184,7 @@ body {
             text-align: center;
             margin-bottom: $margin-XL;
             @include pad() {
-                width: 80%;
+                width: 100%;
                 margin: auto;
                 margin-top: $margin-M;
                 margin-bottom: $margin-L;
@@ -175,11 +194,23 @@ body {
                 margin-bottom: $margin-L;
             }
             .text-gp {
-                text-align-last: left;
                 margin-bottom: $margin-S;
+                p,
+                h4 {
+                    text-align: left;
+                    @include mobile-L(){
+                        text-align: center;
+                    }
+                }
             }
             .btn {
                 @include btn();
+            }
+            h3 {
+                margin-bottom: $margin-M;
+                @include pad() {
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -317,6 +348,12 @@ body {
                     }
                 }
             }
+        }
+    }
+    //常見問題
+    .content-QA {
+        .collapse-gp {
+            @include collapse;
         }
     }
 }

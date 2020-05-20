@@ -96,7 +96,7 @@
     }
     section {
         width: 100%;
-    }
+    }    
 }
 
 @mixin btn() {
@@ -303,7 +303,6 @@
 
             .text-box {
                 display: inline-block;
-                text-align-last: left;
                 margin: 0 $margin-XS;
                 @include pad() {
                     margin: 0;
@@ -311,6 +310,12 @@
                 }
                 @include mobile-L() {
                     text-align-last: center;
+                }
+                p {
+                    text-align: left;
+                    @include mobile-L() {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -389,6 +394,9 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: $margin-L;
+            .mg-XS{
+                margin-bottom: $margin-XS;
+            }
         }
     }
     .explain-L {
@@ -428,7 +436,7 @@
         margin-bottom: $margin-M;
 
         @include pad() {
-            width: 80%;
+            width: 100%;
             margin: auto;
             margin-top: $margin-M;
         }
@@ -436,10 +444,13 @@
             margin-top: $margin-S;
         }
         .text-gp {
-            text-align-last: left;
             margin-bottom: $margin-S;
-            @include pad() {
-                text-align-last: center;
+            p,
+            h4 {
+                text-align: left;
+                @include pad() {
+                    text-align: center;
+                }
             }
         }
         .btn {
@@ -448,7 +459,7 @@
         h3 {
             margin-bottom: $margin-M;
             @include pad() {
-                margin-bottom: $margin-S;
+                margin-bottom: 30px;
             }
         }
     }
@@ -676,8 +687,73 @@
                 }
             }
             input:focus,
+            select:focus,
+            option:focus,
             textarea:focus {
-                border: 1px solid $basic-blue;
+                outline: 1px solid $basic-blue;
+            }
+        }
+    }
+}
+
+@mixin collapse() {
+    padding: 0 $padding-M;
+    @include pad() {
+        padding: 0;
+    }
+    .collapsible {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: $padding-XXS $padding-XS;
+        margin-bottom: $margin-XS;
+        border: none;
+        background-color: $table-blue;
+        text-align: left;
+        outline: none;
+        font-size: $font-size-h4;
+        color: $font-color-title-D;
+        font-weight: bold;
+        @include mobile-XS() {
+            font-size: $font-size-h5;
+        }
+    }
+    .collapsible:after {
+        content: "\002B";
+        color: $font-color-title-D;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2212";
+    }
+    .content {
+        padding: 0 $padding-XS;
+        margin-bottom: $margin-S;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        @include mobile-XS() {
+            margin-bottom: $margin-XS;
+        }
+        p {
+            text-align: left;
+            font-size: $font-size-h5;
+            color: $font-color-text;
+            line-height: $font-size-h5 * 2;
+            @include mobile-XS() {
+                font-size: $font-size-p;
+                line-height: $font-size-p * 2;
+            }
+        }
+        ul,
+        li {
+            list-style: none;
+            font-size: $font-size-h5;
+            color: $font-color-text;
+            @include mobile-XS() {
+                font-size: $font-size-p;
             }
         }
     }

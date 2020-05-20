@@ -326,6 +326,15 @@ body .swiper-container {
   }
 }
 
+@media (max-width: 568px) {
+  html .swiper-container .swiper-button-next,
+  html .swiper-container .swiper-button-prev,
+  body .swiper-container .swiper-button-next,
+  body .swiper-container .swiper-button-prev {
+    display: none;
+  }
+}
+
 html .swiper-container .swiper-slide,
 body .swiper-container .swiper-slide {
   position: relative;
@@ -391,6 +400,21 @@ body .swiper-container .swiper-slide .BN-text-gp {
   position: absolute;
 }
 
+@media (max-width: 320px) {
+  html .swiper-container .swiper-slide .BN-text-gp h2,
+  body .swiper-container .swiper-slide .BN-text-gp h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  html .swiper-container .swiper-slide .BN-text-gp h4,
+  body .swiper-container .swiper-slide .BN-text-gp h4 {
+    font-size: 20px;
+    padding: 0 30px;
+  }
+}
+
 html .swiper-container .swiper-slide #BN-title1,
 body .swiper-container .swiper-slide #BN-title1 {
   top: 18%;
@@ -414,6 +438,7 @@ body .swiper-container .swiper-slide #BN-title2 {
   html .swiper-container .swiper-slide #BN-title2,
   body .swiper-container .swiper-slide #BN-title2 {
     top: 45%;
+    right: unset;
     margin: auto;
   }
 }
@@ -428,6 +453,7 @@ body .swiper-container .swiper-slide #BN-title3 {
   html .swiper-container .swiper-slide #BN-title3,
   body .swiper-container .swiper-slide #BN-title3 {
     top: 45%;
+    left: unset;
     margin: auto;
   }
 }
@@ -560,7 +586,7 @@ body .content-module .text-box {
 @media (max-width: 768px) {
   html .content-module .text-box,
   body .content-module .text-box {
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 80px;
@@ -577,8 +603,23 @@ body .content-module .text-box {
 
 html .content-module .text-box .text-gp,
 body .content-module .text-box .text-gp {
-  text-align-last: left;
   margin-bottom: 25px;
+}
+
+html .content-module .text-box .text-gp p,
+html .content-module .text-box .text-gp h4,
+body .content-module .text-box .text-gp p,
+body .content-module .text-box .text-gp h4 {
+  text-align: left;
+}
+
+@media (max-width: 568px) {
+  html .content-module .text-box .text-gp p,
+  html .content-module .text-box .text-gp h4,
+  body .content-module .text-box .text-gp p,
+  body .content-module .text-box .text-gp h4 {
+    text-align: center;
+  }
 }
 
 html .content-module .text-box .btn,
@@ -602,6 +643,18 @@ body .content-module .text-box .btn:hover {
   background-color: black;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+html .content-module .text-box h3,
+body .content-module .text-box h3 {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  html .content-module .text-box h3,
+  body .content-module .text-box h3 {
+    margin-bottom: 30px;
+  }
 }
 
 html .content-client img,
@@ -753,7 +806,6 @@ body footer .ft-top .text-gp {
 html footer .ft-top .text-gp .text-box,
 body footer .ft-top .text-gp .text-box {
   display: inline-block;
-  text-align-last: left;
   margin: 0 10px;
 }
 
@@ -769,6 +821,18 @@ body footer .ft-top .text-gp .text-box {
   html footer .ft-top .text-gp .text-box,
   body footer .ft-top .text-gp .text-box {
     text-align-last: center;
+  }
+}
+
+html footer .ft-top .text-gp .text-box p,
+body footer .ft-top .text-gp .text-box p {
+  text-align: left;
+}
+
+@media (max-width: 568px) {
+  html footer .ft-top .text-gp .text-box p,
+  body footer .ft-top .text-gp .text-box p {
+    text-align: center;
   }
 }
 
@@ -893,6 +957,11 @@ body .content-function .explain-M .text-gp {
   margin-bottom: 80px;
 }
 
+html .content-function .explain-M .text-gp .mg-XS,
+body .content-function .explain-M .text-gp .mg-XS {
+  margin-bottom: 10px;
+}
+
 html .content-function .explain-L,
 body .content-function .explain-L {
   width: 100%;
@@ -970,7 +1039,7 @@ body .content-function .text-box {
 @media (max-width: 768px) {
   html .content-function .text-box,
   body .content-function .text-box {
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 50px;
   }
@@ -985,14 +1054,22 @@ body .content-function .text-box {
 
 html .content-function .text-box .text-gp,
 body .content-function .text-box .text-gp {
-  text-align-last: left;
   margin-bottom: 25px;
 }
 
+html .content-function .text-box .text-gp p,
+html .content-function .text-box .text-gp h4,
+body .content-function .text-box .text-gp p,
+body .content-function .text-box .text-gp h4 {
+  text-align: left;
+}
+
 @media (max-width: 768px) {
-  html .content-function .text-box .text-gp,
-  body .content-function .text-box .text-gp {
-    text-align-last: center;
+  html .content-function .text-box .text-gp p,
+  html .content-function .text-box .text-gp h4,
+  body .content-function .text-box .text-gp p,
+  body .content-function .text-box .text-gp h4 {
+    text-align: center;
   }
 }
 
@@ -1027,7 +1104,7 @@ body .content-function .text-box h3 {
 @media (max-width: 768px) {
   html .content-function .text-box h3,
   body .content-function .text-box h3 {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1468,10 +1545,14 @@ body .content-form .container .form form .form-gp textarea {
 }
 
 html .content-form .container .form form .form-gp input:focus,
+html .content-form .container .form form .form-gp select:focus,
+html .content-form .container .form form .form-gp option:focus,
 html .content-form .container .form form .form-gp textarea:focus,
 body .content-form .container .form form .form-gp input:focus,
+body .content-form .container .form form .form-gp select:focus,
+body .content-form .container .form form .form-gp option:focus,
 body .content-form .container .form form .form-gp textarea:focus {
-  border: 1px solid #7db9de;
+  outline: 1px solid #7db9de;
 }
 
 html .content-icon .icon-gp,
@@ -1525,6 +1606,106 @@ body .content-icon .icon-gp .icon img {
   html .content-icon .icon-gp .icon img,
   body .content-icon .icon-gp .icon img {
     height: 150px;
+  }
+}
+
+html .content-QA .collapse-gp,
+body .content-QA .collapse-gp {
+  padding: 0 100px;
+}
+
+@media (max-width: 768px) {
+  html .content-QA .collapse-gp,
+  body .content-QA .collapse-gp {
+    padding: 0;
+  }
+}
+
+html .content-QA .collapse-gp .collapsible,
+body .content-QA .collapse-gp .collapsible {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #E5F1F9;
+  text-align: left;
+  outline: none;
+  font-size: 24px;
+  color: #314965;
+  font-weight: bold;
+}
+
+@media (max-width: 320px) {
+  html .content-QA .collapse-gp .collapsible,
+  body .content-QA .collapse-gp .collapsible {
+    font-size: 20px;
+  }
+}
+
+html .content-QA .collapse-gp .collapsible:after,
+body .content-QA .collapse-gp .collapsible:after {
+  content: "\002B";
+  color: #314965;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+html .content-QA .collapse-gp .active:after,
+body .content-QA .collapse-gp .active:after {
+  content: "\2212";
+}
+
+html .content-QA .collapse-gp .content,
+body .content-QA .collapse-gp .content {
+  padding: 0 30px;
+  margin-bottom: 25px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 320px) {
+  html .content-QA .collapse-gp .content,
+  body .content-QA .collapse-gp .content {
+    margin-bottom: 10px;
+  }
+}
+
+html .content-QA .collapse-gp .content p,
+body .content-QA .collapse-gp .content p {
+  text-align: left;
+  font-size: 20px;
+  color: #727171;
+  line-height: 40px;
+}
+
+@media (max-width: 320px) {
+  html .content-QA .collapse-gp .content p,
+  body .content-QA .collapse-gp .content p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+html .content-QA .collapse-gp .content ul,
+html .content-QA .collapse-gp .content li,
+body .content-QA .collapse-gp .content ul,
+body .content-QA .collapse-gp .content li {
+  list-style: none;
+  font-size: 20px;
+  color: #727171;
+}
+
+@media (max-width: 320px) {
+  html .content-QA .collapse-gp .content ul,
+  html .content-QA .collapse-gp .content li,
+  body .content-QA .collapse-gp .content ul,
+  body .content-QA .collapse-gp .content li {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
