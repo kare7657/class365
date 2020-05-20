@@ -28,11 +28,17 @@
                     <a href="">
                         <h4>功能介紹</h4>
                     </a>
-                <div class="nav-list">
-                    <a href="HR.html"><h4>人事模組</h4></a> <br>
-                    <a href="attendance.html"><h4>差勤模組</h4></a> <br>
-                    <a href="money.html"><h4>薪資模組</h4></a>
-                </div>
+                    <div class="nav-list">
+                        <a href="HR.html">
+                            <h4>人事模組</h4>
+                        </a> <br>
+                        <a href="attendance.html">
+                            <h4>差勤模組</h4>
+                        </a> <br>
+                        <a href="money.html">
+                            <h4>薪資模組</h4>
+                        </a>
+                    </div>
                 </div>
                 <a href="howmuch.html">
                     <h4>收費方式</h4>
@@ -51,7 +57,7 @@
                     <ul>
                         <li><a href="HR.html">人事模組</a></li>
                         <li><a href="attendance.html">差勤模組</a></li>
-                        <li><a href="money.html">薪資模組</a></li>                        
+                        <li><a href="money.html">薪資模組</a></li>
                         <li><a href="howmuch.html">收費方式</a></li>
                         <li><a href="QA.html">常見問題</a></li>
                         <li><a href="contactus.html">聯絡我們</a></li>
@@ -249,7 +255,7 @@
                     <div class="btn">
                         <h4>聯絡我們</h4>
                     </div>
-                </a>                
+                </a>
             </div>
         </div>
     </section>
@@ -304,7 +310,7 @@
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             //   spaceBetween: 30,
-            loop: true,
+            // loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -312,6 +318,10 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
             },
         });
     </script>
