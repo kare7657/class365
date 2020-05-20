@@ -1353,27 +1353,129 @@ body .content-form .container .form {
   }
 }
 
-html .content-form .container .form form,
-body .content-form .container .form form {
-  width: 60%;
-  margin: auto;
+html .content-form .container .form form .form-gp,
+body .content-form .container .form form .form-gp {
+  padding: 0 120px;
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 768px) {
-  html .content-form .container .form form,
-  body .content-form .container .form form {
-    width: 80%;
+  html .content-form .container .form form .form-gp,
+  body .content-form .container .form form .form-gp {
+    padding: 0 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-html .content-form .container .form form .btn.btn-primary,
-body .content-form .container .form form .btn.btn-primary {
-  background-color: #2b5f75;
-  margin: 25px;
+html .content-form .container .form form .form-gp label,
+body .content-form .container .form form .form-gp label {
+  width: 20%;
+  text-align: right;
+  margin-right: 50px;
+  color: #2b5f75;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-html .icon-gp,
-body .icon-gp {
+@media (max-width: 768px) {
+  html .content-form .container .form form .form-gp label,
+  body .content-form .container .form form .form-gp label {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+html .content-form .container .form form .form-gp input,
+html .content-form .container .form form .form-gp select,
+body .content-form .container .form form .form-gp input,
+body .content-form .container .form form .form-gp select {
+  background-color: #fff;
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #a5dee4;
+  padding: 0 10px;
+  color: #727171;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  html .content-form .container .form form .form-gp input,
+  html .content-form .container .form form .form-gp select,
+  body .content-form .container .form form .form-gp input,
+  body .content-form .container .form form .form-gp select {
+    width: 100%;
+  }
+}
+
+html .content-form .container .form form .form-gp input[type="submit"], html .content-form .container .form form .form-gp input[type="button"], html .content-form .container .form form .form-gp input[type="reset"],
+html .content-form .container .form form .form-gp select[type="submit"],
+html .content-form .container .form form .form-gp select[type="button"],
+html .content-form .container .form form .form-gp select[type="reset"],
+body .content-form .container .form form .form-gp input[type="submit"],
+body .content-form .container .form form .form-gp input[type="button"],
+body .content-form .container .form form .form-gp input[type="reset"],
+body .content-form .container .form form .form-gp select[type="submit"],
+body .content-form .container .form form .form-gp select[type="button"],
+body .content-form .container .form form .form-gp select[type="reset"] {
+  width: unset;
+  height: 50px;
+  background-color: #2b5f75;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 30px;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+html .content-form .container .form form .form-gp textarea,
+body .content-form .container .form form .form-gp textarea {
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #a5dee4;
+  padding: 0 10px;
+  color: #727171;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  html .content-form .container .form form .form-gp textarea,
+  body .content-form .container .form form .form-gp textarea {
+    width: 100%;
+  }
+}
+
+html .content-form .container .form form .form-gp input:focus,
+html .content-form .container .form form .form-gp textarea:focus,
+body .content-form .container .form form .form-gp input:focus,
+body .content-form .container .form form .form-gp textarea:focus {
+  border: 1px solid #7db9de;
+}
+
+html .content-icon .icon-gp,
+body .content-icon .icon-gp {
   padding: 0 0 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1387,28 +1489,42 @@ body .icon-gp {
 }
 
 @media (max-width: 568px) {
-  html .icon-gp,
-  body .icon-gp {
+  html .content-icon .icon-gp,
+  body .content-icon .icon-gp {
     padding: 30px 0 30px 0;
   }
 }
 
-html .icon-gp .icon,
-body .icon-gp .icon {
+html .content-icon .icon-gp .icon,
+body .content-icon .icon-gp .icon {
   width: 33.3%;
   margin-bottom: 50px;
 }
 
 @media (max-width: 568px) {
-  html .icon-gp .icon,
-  body .icon-gp .icon {
+  html .content-icon .icon-gp .icon,
+  body .content-icon .icon-gp .icon {
     width: 100%;
   }
 }
 
-html .icon-gp .icon img,
-body .icon-gp .icon img {
+html .content-icon .icon-gp .icon img,
+body .content-icon .icon-gp .icon img {
   height: 150px;
   margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  html .content-icon .icon-gp .icon img,
+  body .content-icon .icon-gp .icon img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 568px) {
+  html .content-icon .icon-gp .icon img,
+  body .content-icon .icon-gp .icon img {
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

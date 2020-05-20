@@ -283,54 +283,39 @@ body {
             @include mobile-L() {
                 width: 100%;
                 margin: unset;
-                // padding: $padding-XS 0;
             }
             .form {
-                background-color: $table-blue;
-                padding: $padding-M 0;
-                margin-top: $margin-M;
-                border-radius: 20px;
-                @include pad() {
-                    padding: $padding-S 0;
-                }
-                @include mobile-L() {
-                    border-radius: unset;
-                }
-                form {
-                    width: 60%;
-                    margin: auto;
-                    @include pad() {
-                        width: 80%;
-                    }
-                    .btn.btn-primary {
-                        background-color: $dark-blue;
-                        margin: $margin-S;
-                    }
-                    // .btn-form{
-                    //     @include btn-form();
-                    // }
-                }
+                @include form();
             }
         }
     }
-    .icon-gp {        
-        padding: 0 0 $padding-S 0;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        flex-wrap: wrap;
-        @include mobile-L(){
-            padding: $padding-XS 0 $padding-XS 0;
-        }
-        .icon {
-            width: 33.3%;
-            margin-bottom: $margin-M;
+    //聯絡我們icon
+    .content-icon {
+        .icon-gp {
+            padding: 0 0 $padding-S 0;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            flex-wrap: wrap;
             @include mobile-L() {
-                width: 100%;
+                padding: $padding-XS 0 $padding-XS 0;
             }
-            img {
-                height: 150px;
-                margin-bottom: $margin-S;
+            .icon {
+                width: 33.3%;
+                margin-bottom: $margin-M;
+                @include mobile-L() {
+                    width: 100%;
+                }
+                img {
+                    height: 150px;
+                    margin-bottom: $margin-S;
+                    @include pad() {
+                        height: 100px;
+                    }
+                    @include mobile-L() {
+                        height: 150px;
+                    }
+                }
             }
         }
     }

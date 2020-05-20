@@ -594,13 +594,91 @@
             }
         }
     }
+}
 
-    // @mixin btn-form() {
-    //     background-color: $dark-blue;
-    //     color: $font-color-title-L;
-    //     font-size: $font-size-h4;
-    //     border: none;
-    //     padding: $padding-XXS $padding-XS;
-    //     margin: $margin-S;
-    // }
+@mixin form() {
+    background-color: $table-blue;
+    padding: $padding-M 0;
+    margin-top: $margin-M;
+    border-radius: 20px;
+    @include pad() {
+        padding: $padding-S 0;
+    }
+    @include mobile-L() {
+        border-radius: unset;
+    }
+    form {
+        .form-gp {
+            padding: 0 $padding-L;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            margin-bottom: $margin-S;
+            @include pad() {
+                padding: 0 $padding-S;
+                flex-direction: column;
+            }
+            label {
+                width: 20%;
+                text-align: right;
+                margin-right: $margin-M;
+                color: $dark-blue;
+                font-size: $font-size-h4;
+                font-weight: bold;
+                @include pad() {
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+            input,
+            select {
+                background-color: #fff;
+                width: 60%;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid $light-sky;
+                padding: 0 $padding-XXS;
+                color: $font-color-text;
+                font-size: $font-size-h5;
+                line-height: $font-size-h5;
+                @include pad() {
+                    width: 100%;
+                }
+                &[type="submit"],
+                &[type="button"],
+                &[type="reset"] {
+                    width: unset;
+                    height: 50px;
+                    background-color: $dark-blue;
+                    color: $font-color-title-L;
+                    font-size: $font-size-h5;
+                    line-height: $font-size-h5;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 0px 30px;
+                    text-decoration: none;
+                    margin-top: $margin-S;
+                }
+            }
+            textarea {
+                width: 60%;
+                border-radius: 5px;
+                border: 1px solid $light-sky;
+                padding: 0 $padding-XXS;
+                color: $font-color-text;
+                font-size: $font-size-h5;
+                line-height: $font-size-h5;
+                @include pad() {
+                    width: 100%;
+                }
+            }
+            input:focus,
+            textarea:focus {
+                border: 1px solid $basic-blue;
+            }
+        }
+    }
 }
