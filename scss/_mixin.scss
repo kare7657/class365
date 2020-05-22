@@ -36,7 +36,7 @@
         }
         @include mobile-XS() {
             padding: $padding-XS 0;
-            width: 85%;
+            // width: 85%;
         }
     }
     h2 {
@@ -308,8 +308,11 @@
                     margin: 0;
                     margin-bottom: $margin-XS;
                 }
-                @include mobile-L() {
-                    text-align-last: center;
+                h4 {
+                    text-align: left;
+                    @include mobile-L() {
+                        text-align: center;
+                    }
                 }
                 p {
                     text-align: left;
@@ -384,18 +387,32 @@
         flex-wrap: wrap;
         margin-bottom: $margin-L;
         @include pad() {
-            margin-bottom: $margin-S;
+            margin-bottom: unset;
         }
         .explain-img {
             width: 100%;
+            margin-bottom: $margin-M;
+            img {
+                border-radius: 30px;
+                @include mobile-L() {
+                    border-radius: 20px;
+                }
+            }
         }
         .text-gp {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: $margin-L;
-            .mg-XS{
+            margin-bottom: $margin-M;
+            .mg-XS {
                 margin-bottom: $margin-XS;
+            }
+        }
+        .text-box {
+            margin: 0;
+            margin-bottom: $margin-S;
+            @include mobile-L() {
+                margin-bottom: unset;
             }
         }
     }
@@ -403,11 +420,9 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        margin-bottom: $margin-L;
         @include pad() {
             flex-wrap: wrap;
             flex-direction: column-reverse;
-            margin-bottom: $margin-S;
         }
     }
     .explain-R {
@@ -421,46 +436,87 @@
         }
     }
     .explain-img {
-        width: 45%;
+        width: 50%;
+        margin: unset;
+        margin-bottom: $margin-M;
         @include pad() {
-            width: 80%;
-            margin: auto;
+            width: 100%;
         }
         img {
             width: 100%;
         }
     }
     .text-box {
+        margin-top: $margin-M;
         width: 40%;
         text-align: center;
-        margin-bottom: $margin-M;
-
         @include pad() {
             width: 100%;
             margin: auto;
             margin-top: $margin-M;
         }
         @include mobile-L() {
-            margin-top: $margin-S;
+            margin-top: unset;
         }
-        .text-gp {
-            margin-bottom: $margin-S;
-            p,
+        .header {
+            width: 100%;
+            h3,
             h4 {
-                text-align: left;
+                text-align: center;
+            }
+            h3 {
+                margin-bottom: 5px;
+                color: $dark-blue;
                 @include pad() {
-                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+            h4 {
+                margin: 0;
+                color: rgba($color: $dark-blue, $alpha: 0.6);
+                @include pad() {
+                    margin: 5px 0 0 0;
+                }
+            }
+        }
+        .body {
+            padding: $padding-XXS * 2 0;
+            p {
+                text-align: left;
+            }
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: $margin-S;
+            ul {
+                width: 50%;
+                text-align: left;
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                font-size: $font-size-p;
+                line-height: $font-size-p * 2;
+                color: $dark-blue;
+                @include mobile-XS() {
+                    font-size: 14px;
+                    line-height: 14px * 2;
+                }
+                i {
+                    padding-right: 7px;
+                    margin-bottom: $margin-XS;
+                    color: $dark-blue;
+                    font-size: 14px;
+                    @include mobile-L() {
+                        font-size: 12px;
+                        padding-right: 3px;
+                    }
                 }
             }
         }
         .btn {
             @include btn();
-        }
-        h3 {
-            margin-bottom: $margin-M;
-            @include pad() {
-                margin-bottom: 30px;
-            }
         }
     }
 }
@@ -470,6 +526,9 @@
     img {
         width: 100%;
         border-radius: 30px;
+        @include mobile-L() {
+            border-radius: 20px;
+        }
     }
 }
 
