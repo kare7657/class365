@@ -1126,7 +1126,7 @@ body .content-function .text-box .body {
 
 html .content-function .text-box .body p,
 body .content-function .text-box .body p {
-  text-align: left;
+  text-align: justify;
 }
 
 html .content-function .text-box .list,
