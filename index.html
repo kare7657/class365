@@ -5,72 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 365</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <link rel="stylesheet" href="scss/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
 </head>
 
 <body>
-    <!-- 導覽列 -->
-    <nav class="navbar">
-        <div class="pc">
-            <div class="navbar-L">
-                <a href="index.html">
-                    <h4>Class 365</h4>
-                </a>
-            </div>
-            <div class="navbar-R">
-                <div class="nav-function">
-                    <a href="">
-                        <h4>功能介紹</h4>
-                    </a>
-                    <div class="nav-list">
-                        <a href="HR.html">
-                            <h4>人事模組</h4>
-                        </a> <br>
-                        <a href="attendance.html">
-                            <h4>差勤模組</h4>
-                        </a> <br>
-                        <a href="money.html">
-                            <h4>薪資模組</h4>
-                        </a>
-                    </div>
-                </div>
-                <a href="howmuch.html">
-                    <h4>收費方式</h4>
-                </a>
-                <a href="QA.html">
-                    <h4>常見問題</h4>
-                </a>
-                <a href="contactus.html">
-                    <h4 style="margin-right: 0px;">聯絡我們</h4>
-                </a>
-            </div>
-        </div>
-        <div class="mobile">
-            <div class="menu">
-                <div class="fas fa-bars">
-                    <ul>
-                        <li><a href="HR.html">人事模組</a></li>
-                        <li><a href="attendance.html">差勤模組</a></li>
-                        <li><a href="money.html">薪資模組</a></li>
-                        <li><a href="howmuch.html">收費方式</a></li>
-                        <li><a href="QA.html">常見問題</a></li>
-                        <li><a href="contactus.html">聯絡我們</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <a class="title" href="index.html">
-                    <h4>Class 365</h4>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- header -->
+    <header id="header"></header>
     <!-- Banner-Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -105,31 +50,31 @@
     <!-- 你有以下困擾嗎 -->
     <section class="content-torment">
         <div class="container">
-            <h3>你有以下困擾嗎？</h3>
+            <h2>你有以下困擾嗎？</h2>
             <div class="icon-gp">
                 <div class="icon">
                     <img src="img/icon1.png" alt="">
-                    <h4>耗時</h4>
+                    <h3>耗時</h3>
                     <p>花太多時間歸納及處理薪資計算的前置作業</p>
                 </div>
                 <div class="icon">
                     <img src="img/icon2.png" alt="">
-                    <h4>管理不易</h4>
+                    <h3>管理不易</h3>
                     <p>組織架構大,無法即時掌握員工出缺勤狀況</p>
                 </div>
                 <div class="icon">
                     <img src="img/icon3.png" alt="">
-                    <h4>法規</h4>
+                    <h3>法規</h3>
                     <p>無法即時跟進符合勞基法的程序作業</p>
                 </div>
                 <div class="icon">
                     <img src="img/icon4.png" alt="">
-                    <h4>自定義</h4>
+                    <h3>自定義</h3>
                     <p>難以自行設定特休、薪資、加扣款方式</p>
                 </div>
                 <div class="icon">
                     <img src="img/icon5.png" alt="">
-                    <h4>多樣化</h4>
+                    <h3>多樣化</h3>
                     <p>無法提供客制化的作業及報表需求</p>
                 </div>
             </div>
@@ -138,7 +83,7 @@
     <!-- 什麼是Class365 -->
     <section class="content-whats365">
         <div class="container">
-            <h4>什麼是Class 365? </h4>
+            <h2>什麼是Class 365? </h2>
             <p>Class365為力天資訊開發的雲端差勤系統，提供人事管理、差勤管理、薪資管理等模組，具有組織管理、線上表單、報表資料...等功能，協助企業端管理組織結構、優化流程效率，另外亦有提供客製化設定，符合不同產業的需求
             </p>
         </div>
@@ -151,23 +96,23 @@
                     <img src="img/hr.png" alt="">
                 </div>
                 <div class="text-box">
-                    <h3>人事</h3>
+                    <h2>人事</h2>
                     <div class="text-gp">
-                        <h4>特休管理</h4>
+                        <h3>特休管理</h3>
                         <p>提供周年制/歷年制，特休結清遞延，支持彈性客製化需求</p>
                     </div>
                     <div class="text-gp">
-                        <h4>差假管理</h4>
+                        <h3>差假管理</h3>
                         <p>每年匯入新年度人事行政局的國定假日，自訂特休假天數，方便管理出缺勤紀錄
                         </p>
                     </div>
                     <div class="text-gp">
-                        <h4>排班</h4>
+                        <h3>排班</h3>
                         <p>提供彈性的排班方式(一日多班,一例一休)，人員分權分級設定，輕鬆掌握排班狀情況</p>
                     </div>
                     <a href="HR.html">
                         <div class="btn">
-                            <h4>了解更多</h4>
+                            <h3>了解更多</h3>
                         </div>
                     </a>
                 </div>
@@ -177,24 +122,24 @@
                     <img src="img/attendance.png" alt="">
                 </div>
                 <div class="text-box">
-                    <h3>差勤</h3>
+                    <h2>差勤</h2>
                     <div class="text-gp">
-                        <h4>請假方式</h4>
+                        <h3>請假方式</h3>
                         <p>多元線上申請表單、電子審核、線上追蹤，加速作業效率</p>
                     </div>
                     <div class="text-gp">
-                        <h4>差勤報表</h4>
+                        <h3>差勤報表</h3>
                         <p>超過 10 種差勤報表，刷卡資料查詢，即時掌握人員狀況
                         </p>
                     </div>
                     <div class="text-gp">
-                        <h4>刷卡資料</h4>
+                        <h3>刷卡資料</h3>
                         <p>刷卡機打卡、線上打卡、QR code打卡，支援出勤異常通知
                         </p>
                     </div>
                     <a href="attendance.html">
                         <div class="btn">
-                            <h4>了解更多</h4>
+                            <h3>了解更多</h3>
                         </div>
                     </a>
 
@@ -205,22 +150,22 @@
                     <img src="img/money.png" alt="">
                 </div>
                 <div class="text-box">
-                    <h3>薪資</h3>
+                    <h2>薪資</h2>
                     <div class="text-gp">
-                        <h4>薪資計算</h4>
+                        <h3>薪資計算</h3>
                         <p>批次設定員工薪資，可查詢各月份領薪人數、薪資總額資料</p>
                     </div>
                     <div class="text-gp">
-                        <h4>薪資加扣款</h4>
+                        <h3>薪資加扣款</h3>
                         <p>提供免稅所得、代扣代墊、扣款 等參數化設定</p>
                     </div>
                     <div class="text-gp">
-                        <h4>薪資報表</h4>
+                        <h3>薪資報表</h3>
                         <p>可匯出員工薪資條、伙食津貼、加班費印領清冊等報表</p>
                     </div>
                     <a href="money.html">
                         <div class="btn">
-                            <h4>了解更多</h4>
+                            <h3>了解更多</h3>
                         </div>
                     </a>
                 </div>
@@ -229,13 +174,13 @@
     </section>
     <!-- 我們的客戶 -->
     <section class="content-client">
-        <h3>我們的客戶</h3>
+        <h2>我們的客戶</h2>
         <img src="img/client.png" alt="">
     </section>
     <!-- 好評推薦 -->
     <section class="content-recommend">
         <div class="container">
-            <h3>好評推薦</h3>
+            <h2>好評推薦</h2>
             <div class="img-gp">
                 <img src="img/talk1.png" alt="" class="talk-L">
                 <img src="img/talk2.png" alt="" class="talk-R">
@@ -249,60 +194,37 @@
     <section class="content-contactus">
         <div class="container">
             <div class="notice">
-                <h3>心動了嗎？立即體驗Class 365雲端差勤系統</h3>
+                <h2>心動了嗎？立即體驗Class 365雲端差勤系統</h2>
                 <a href="contactus.html">
                     <div class="btn">
-                        <h4>聯絡我們</h4>
+                        <h3>聯絡我們</h3>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="ft-top">
-            <div class="text-gp">
-                <div class="text-box">
-                    <h4>台中</h4>
-                    <p>+886 4 2376 8258 <br>
-                        403台中市忠明南路270號8F-3</p>
-                </div>
-                <div class="text-box">
-                    <h4>台北</h4>
-                    <p>+886 2 2702 7207 <br>
-                        106 台北市大安路二段118號5F</p>
-                </div>
-                <div class="text-box" style="margin-bottom: 0;">
-                    <p>FAX | +886 4 2376 8386 <br>
-                        www.leeten.com <br>
-                        service@leeten.com.tw</p>
-                </div>
-            </div>
-        </div>
-        <div class="ft-bot">
-            <div class="copyright">
-                <p>Copyright © 2020 LEETEN All rights reserved</p>
-            </div>
-        </div>
-    </footer>
 
-    <a href="#top">
-        <div class="back-top">▲</div>
-    </a>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
 
     <!-- bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
     <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script src="../package/js/swiper.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
 
     <!-- Initialize Swiper -->
     <script>

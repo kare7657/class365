@@ -5,72 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <link rel="stylesheet" href="scss/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
 <body>
-    <!-- 導覽列 -->
-    <nav class="navbar">
-        <div class="pc">
-            <div class="navbar-L">
-                <a href="index.html">
-                    <h4>Class 365</h4>
-                </a>
-            </div>
-            <div class="navbar-R">
-                <div class="nav-function">
-                    <a href="">
-                        <h4>功能介紹</h4>
-                    </a>
-                    <div class="nav-list">
-                        <a href="HR.html">
-                            <h4>人事模組</h4>
-                        </a> <br>
-                        <a href="attendance.html">
-                            <h4>差勤模組</h4>
-                        </a> <br>
-                        <a href="money.html">
-                            <h4>薪資模組</h4>
-                        </a>
-                    </div>
-                </div>
-                <a href="howmuch.html">
-                    <h4>收費方式</h4>
-                </a>
-                <a href="QA.html">
-                    <h4>常見問題</h4>
-                </a>
-                <a href="contactus.html">
-                    <h4 style="margin-right: 0px;">聯絡我們</h4>
-                </a>
-            </div>
-        </div>
-        <div class="mobile">
-            <div class="menu">
-                <div class="fas fa-bars">
-                    <ul>
-                        <li><a href="HR.html">人事模組</a></li>
-                        <li><a href="attendance.html">差勤模組</a></li>
-                        <li><a href="money.html">薪資模組</a></li>
-                        <li><a href="howmuch.html">收費方式</a></li>
-                        <li><a href="QA.html">常見問題</a></li>
-                        <li><a href="contactus.html">聯絡我們</a></li>
-
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <a class="title" href="index.html">
-                    <h4>Class 365</h4>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- header -->
+    <header id="header"></header>
     <!-- banner -->
     <div class="top-BN">
         <div class="BN-text-gp">
@@ -257,42 +201,30 @@
                 <h3>心動了嗎？立即體驗Class 365雲端差勤系統</h3>
                 <a href="contactus.html">
                     <div class="btn">
-                        <h4>聯絡我們</h4>
+                        <h3>聯絡我們</h3>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="ft-top">
-            <div class="text-gp">
-                <div class="text-box">
-                    <h4>台中</h4>
-                    <p>+886 4 2376 8258 <br>
-                        403台中市忠明南路270號8F-3</p>
-                </div>
-                <div class="text-box">
-                    <h4>台北</h4>
-                    <p>+886 2 2702 7207 <br>
-                        106 台北市大安路二段118號5F</p>
-                </div>
-                <div class="text-box" style="margin-bottom: 0;">
-                    <p>FAX | +886 4 2376 8386 <br>
-                        www.leeten.com <br>
-                        service@leeten.com.tw</p>
-                </div>
-            </div>
-        </div>
-        <div class="ft-bot">
-            <div class="copyright">
-                <p>Copyright © 2020 LEETEN All rights reserved</p>
-            </div>
-        </div>
-    </footer>
+    <!-- footer -->
+    <footer id="footer"></footer>
 
-    <a href="#top">
-        <div class="back-top">▲</div>
-    </a>
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>
