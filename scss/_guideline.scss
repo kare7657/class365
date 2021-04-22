@@ -12,34 +12,39 @@ $light-green: #c5de7d;
 $light-purple: #a5abe4;
 $blue-green: #33a6b8;
 $dark-blue: #2b5f75;
+$gray-60: #777;
+$gray-30: #ccc;
 $light-gray: #eeefef;
 $hover: black;
-$table-blue: #E5F1F9;
+$table-blue: #e5f1f9;
 
 //font-color
-$font-color-title-D: #314965;
-$font-color-title-L: white;
-$font-color-text: #727171;
+$font-D: #314965;
+$font-W: white;
+$text: #727171;
 
 //font-size
-$font-size-h1: 40px;
-$font-size-h2: 34px;
-$font-size-h3: 24px;
-$font-size-h4: 20px;
-$font-size-h5: 18px;
-$font-size-p: 16px;
+$size-h1: 2.5rem; //40px
+$size-h2: 2rem; //32px
+$size-h3: 1.5rem; //24px
+$size-h4: 1.25rem; //20px
+$size-h5: 1.125rem; //18px
+$size-p: 1rem; //16px
 
 //padding
-$padding-XXS: 10px;
-$padding-XS: 30px;
-$padding-S: 60px;
-$padding-M: 90px;
-$padding-L: 120px;
+$p-XXS: 8px;
+$p-XS: 16px;
+$p-S: 24px;
+$p-M: 32px;
+$p-L: 40px;
+$p-XL: 56px;
+$p-2L: 64px;
 
 //margin
-$margin-XS: 10px;
-$margin-S: 25px;
-$margin-M: 50px;
-$margin-L: 80px;
-$margin-XL: 140px;
-
+$m-XXS: 4px;
+$m-XS: 12px;
+$m-S: 20px;
+$m-M: 36px;
+$m-L: 48px;
+$m-XL: 52px;
+$m-2L: 60px;

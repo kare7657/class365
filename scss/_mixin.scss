@@ -26,57 +26,66 @@
     .container {
         width: 1140px;
         margin: auto;
-        padding: $padding-S 0;
+        padding: $p-2L 0;
         @include pad() {
             width: 80%;
-            padding: $padding-S 0;
+            // padding: $p-S 0;
         }
         @include mobile-L() {
-            padding: $padding-S 0;
+            // padding: $p-S 0;
         }
         @include mobile-XS() {
-            padding: $padding-XS 0;
+            // padding: $p-XS 0;
             // width: 85%;
         }
     }
-    h2 {
-        font-size: $font-size-h2;
-        color: $font-color-title-D;
+    h1 {
+        font-size: $size-h1;
+        color: $font-W;
         padding: 0;
         margin: 0;
         text-align: center;
-        margin-bottom: $margin-XS;
-        line-height: 48px;
+        line-height: 1.5;
+    }
+    h2 {
+        font-size: $size-h2;
+        color: $font-D;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: $m-S;
     }
     h3 {
-        font-size: $font-size-h3;
-        color: $font-color-title-D;
+        font-size: $size-h3;
+        color: $font-D;
         padding: 0;
         margin: 0;
         text-align: center;
-        // margin-bottom: $margin-S;
-        line-height: 45px;
+        line-height: 1.5;
+        margin: $m-XXS 0;
     }
     h4 {
-        font-size: $font-size-h4;
-        color: $font-color-title-D;
+        font-size: $size-h4;
+        color: $font-D;
         padding: 0;
         margin: 0;
         text-align: center;
-        margin-top: $margin-XS;
-        // margin-bottom: $margin-XS;
+        line-height: 1.5;
+        margin-bottom: $m-XXS;
     }
     h5 {
-        font-size: $font-size-h5;
-        color: $font-color-title-L;
+        font-size: $size-h5;
+        color: $font-W;
+        line-height: 1.5;
     }
     p {
-        font-size: $font-size-p;
-        color: $font-color-text;
+        font-size: $size-p;
+        color: $text;
         padding: 0;
         margin: 0;
         text-align: center;
-        line-height: 32px;
+        line-height: 1.5;
         font-weight: 500;
     }
     a {
@@ -97,10 +106,17 @@
     section {
         width: 100%;
     }
+    input{
+        //placeholder
+        &::placeholder,option {
+            color:$gray-60;
+            font-size: $size-h5;
+        }
+    }
 }
 
 @mixin btn() {
-    padding: 0 $padding-XS;
+    padding: $p-XXS $p-S;
     background-color: $dark-blue;
     border-radius: 10px;
     border: none;
@@ -111,7 +127,7 @@
     h3,
     h4,
     h5 {
-        color: $font-color-title-L;
+        color: $font-W;
     }
 }
 
@@ -140,8 +156,8 @@
             display: flex;
             align-items: center;
             h4 {
-                font-size: $font-size-h4;
-                color: $font-color-title-L;
+                font-size: $size-h4;
+                color: $font-W;
                 margin: 0;
                 padding: 0;
                 line-height: 80px;
@@ -154,13 +170,13 @@
         .navbar-R {
             width: 75%;
             height: 100%;
-            color: $font-color-title-L;
+            color: $font-W;
             display: flex;
             justify-content: flex-end;
             position: relative;
             h4 {
-                font-size: $font-size-h4;
-                color: $font-color-title-L;
+                font-size: $size-h4;
+                color: $font-W;
                 margin: 0;
                 padding: 0;
                 margin-right: 20px;
@@ -209,14 +225,14 @@
                 font-size: 30px;
                 line-height: 60px;
                 padding: 0 30px;
-                color: $font-color-title-L;
+                color: $font-W;
             }
             ul {
                 display: block;
                 width: 100vw;
                 height: 100vh;
                 background-color: rgba(0, 0, 0, 0.9);
-                font-size: $font-size-h4;
+                font-size: $size-h4;
                 line-height: 60px;
                 position: absolute;
                 top: 60px;
@@ -229,7 +245,7 @@
                 color: $light-sky;
             }
             a {
-                color: $font-color-title-L;
+                color: $font-W;
             }
             &:hover {
                 ul {
@@ -250,8 +266,8 @@
             display: flex;
             justify-content: center;
             h4 {
-                font-size: $font-size-h4;
-                color: $font-color-title-L;
+                font-size: $size-h4;
+                color: $font-W;
                 line-height: 60px;
                 margin: 0;
             }
@@ -261,21 +277,22 @@
 
 @mixin notice() {
     width: 100%;
-    padding: $padding-M;
+    padding: $p-L 0;
     background-color: $light-gray;
     border-radius: 20px;
     text-align: center;
 
     @include pad() {
-        padding: $padding-S;
+        padding: $p-S;
         h3 {
-            font-size: $font-size-h4;
+            font-size: $size-h4;
         }
     }
     @include mobile-XS() {
-        padding: $padding-S $padding-XS;
+        padding: $p-S $p-XS;
     }
     .btn {
+        margin-top: $m-S;
         @include btn();
     }
 }
@@ -283,37 +300,37 @@
 @mixin footer() {
     h4,
     p {
-        color: $font-color-title-L;
+        color: $font-W;
     }
     .ft-top {
         width: 100%;
         background-color: $dark-blue;
         display: flex;
         justify-content: center;
-        padding: $padding-S 40px;
+        padding: $p-M 40px;
         .text-gp {
             width: 100%;
             max-width: 1140px;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-around;
             @include mobile-L() {
                 flex-direction: column;
                 flex-wrap: wrap;
                 text-align: center;
                 width: 100%;
-                margin-bottom: $margin-S;
+                margin-bottom: $m-XS;
             }
 
             .text-box {
-                display: inline-block;
-                margin: 0 $margin-XS;
                 @include pad() {
                     margin: 0;
-                    margin-bottom: $margin-XS;
+                    margin-bottom: $m-XXS;
                 }
                 h4 {
                     text-align: left;
+                    margin-bottom: $m-XXS;
                     @include mobile-L() {
                         text-align: center;
                     }
@@ -331,7 +348,7 @@
         background-color: $light-sky;
         display: flex;
         justify-content: center;
-        padding: $padding-XXS 0;
+        padding: $p-XS 0;
         .copyright {
             width: 100%;
             max-width: 1140px;
@@ -353,10 +370,10 @@
     position: fixed;
     right: 40px;
     bottom: 30px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: $basic-blue;
     border-radius: 50%;
-    font-size: $font-size-h4;
-    color: $font-color-text;
+    font-size: $size-h4;
+    color: $font-W;
     line-height: 55px;
     text-align: center;
     @include web-S() {
@@ -377,8 +394,8 @@
         transform: translateX(-50%);
         h2,
         h4 {
-            color: $font-color-title-L;
-            margin-bottom: $margin-XS;
+            color: $font-W;
+            margin-bottom: $m-XXS;
         }
     }
     img {
@@ -395,13 +412,13 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: $margin-L;
+        align-items: center;
+        margin-bottom: $m-M;
         @include pad() {
             margin-bottom: unset;
         }
         .explain-img {
             width: 100%;
-            margin-bottom: $margin-M;
             img {
                 border-radius: 30px;
                 @include mobile-L() {
@@ -413,14 +430,14 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: $margin-M;
+            margin-bottom: $m-S;
             .mg-XS {
-                margin-bottom: $margin-XS;
+                margin-bottom: $m-XXS;
             }
         }
         .text-box {
             margin: 0;
-            margin-bottom: $margin-S;
+            margin-bottom: $m-XS;
             @include mobile-L() {
                 margin-bottom: unset;
             }
@@ -430,6 +447,7 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         @include pad() {
             flex-wrap: wrap;
             flex-direction: column-reverse;
@@ -440,15 +458,15 @@
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
+        align-items: center;
         @include pad() {
             flex-direction: column-reverse;
-            margin-bottom: $margin-S;
+            margin-bottom: $m-XS;
         }
     }
     .explain-img {
         width: 50%;
         margin: unset;
-        margin-bottom: $margin-M;
         @include pad() {
             width: 100%;
         }
@@ -457,13 +475,13 @@
         }
     }
     .text-box {
-        margin-top: $margin-M;
+        margin-top: $m-S;
         width: 40%;
         text-align: center;
         @include pad() {
             width: 100%;
             margin: auto;
-            margin-top: $margin-M;
+            margin-top: $m-S;
         }
         @include mobile-L() {
             margin-top: unset;
@@ -490,7 +508,7 @@
             }
         }
         .body {
-            padding: $padding-XXS * 2 0;
+            padding: $p-XXS * 2 0;
             p {
                 text-align: justify;
             }
@@ -499,15 +517,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: $margin-S;
+            margin-bottom: $m-XS;
             ul {
                 width: 50%;
                 text-align: left;
                 list-style: none;
                 padding: 0px;
                 margin: 0px;
-                font-size: $font-size-p;
-                line-height: $font-size-p * 2;
+                font-size: $size-p;
+                line-height: $size-p * 2;
                 color: $dark-blue;
                 @include mobile-XS() {
                     font-size: 14px;
@@ -515,7 +533,7 @@
                 }
                 i {
                     padding-right: 7px;
-                    margin-bottom: $margin-XS;
+                    margin-bottom: $m-XXS;
                     color: $dark-blue;
                     font-size: 14px;
                     @include mobile-L() {
@@ -536,6 +554,7 @@
     img {
         width: 100%;
         border-radius: 30px;
+
         @include mobile-L() {
             border-radius: 20px;
         }
@@ -552,24 +571,24 @@
         .Allicon {
             width: 25%;
             text-align: center;
-            padding: 0 $padding-XS;
-            margin-bottom: $margin-M;
+            padding: 0 $p-XS;
+            margin-bottom: $m-S;
 
             @include pad() {
                 width: 50%;
-                padding: 0 $padding-XXS;
+                padding: 0 $p-XXS;
             }
             @include mobile-L() {
                 width: 100%;
                 margin: auto;
-                margin-bottom: $margin-M;
+                margin-bottom: $m-S;
             }
             img {
-                width: 170px;
-                height: 170px;
+                width: 150px;
+                height: 150px;
                 object-fit: contain;
                 object-position: center;
-                margin: $margin-XS 0;
+                margin: $m-XXS 0;
             }
         }
     }
@@ -578,10 +597,10 @@
 @mixin link-gp() {
     display: flex;
     justify-content: space-between;
-    padding: $padding-S 0 0 0;
+    padding: $p-S 0 0 0;
     @include pad() {
         flex-wrap: wrap;
-        padding: $padding-XS 0 0 0;
+        padding: $p-XS 0 0 0;
     }
     .link {
         width: 49.5%;
@@ -592,7 +611,7 @@
         }
         h3 {
             text-align: center;
-            margin-top: $margin-XS;
+            margin-top: $m-XXS;
         }
         img {
             width: 100%;
@@ -601,7 +620,7 @@
 }
 
 @mixin table() {
-    margin-bottom: $margin-M;
+    margin-bottom: $m-S;
     width: 100%;
     text-align: center;
     border-collapse: separate;
@@ -612,23 +631,23 @@
 
     th {
         width: 30%;
-        font-size: $font-size-h5;
-        color: $font-color-title-D;
+        font-size: $size-h4;
+        color: $font-D;
         background-color: $table-blue;
-        padding: $padding-XXS;
+        padding: $p-XXS;
         font-weight: bold;
         @include pad() {
             width: 35%;
         }
         @include mobile-L() {
-            font-size: $font-size-p;
+            font-size: $size-p;
             padding: 5px;
         }
     }
     td {
-        padding: $padding-XXS 0;
-        font-size: $font-size-h5;
-        color: $font-color-text;
+        padding: $p-XXS 0;
+        font-size: $size-h5;
+        color: $text;
         display: flex;
         justify-content: center;
         @include pad() {
@@ -637,13 +656,13 @@
         @include mobile-L() {
             flex-wrap: wrap;
             flex-direction: column;
-            font-size: $font-size-p;
-            padding: $padding-XXS 0;
+            font-size: $size-p;
+            padding: $p-XXS 0;
         }
         .text-gp {
             width: 33.3%;
-            padding: $padding-S 0 $padding-XS 0;
-            margin: 0 $margin-XS;
+            padding: $p-S 0 $p-XS 0;
+            margin: 0 $m-XXS;
             @include web-S() {
                 margin: -10px;
             }
@@ -651,12 +670,12 @@
                 margin: -5px;
             }
             @include mobile-L() {
-                padding: $padding-XS 0 0 0;
+                padding: $p-XS 0 0 0;
                 width: unset;
             }
             img {
                 width: 200px;
-                margin-bottom: $margin-XS;
+                margin-bottom: $m-XXS;
                 @include web-S() {
                     width: 80%;
                 }
@@ -665,11 +684,11 @@
                 }
             }
             span {
-                font-size: $font-size-h5;
-                color: $font-color-title-D;
+                font-size: $size-h3;
+                color: $font-D;
                 font-weight: bold;
                 @include mobile-L() {
-                    font-size: $font-size-p;
+                    font-size: $size-p;
                 }
             }
         }
@@ -678,11 +697,11 @@
 
 @mixin form() {
     background-color: $table-blue;
-    padding: $padding-S 0;
-    margin-top: $margin-M;
+    padding: $p-L 0;
+    margin-top: $m-S;
     border-radius: 20px;
     @include pad() {
-        padding: $padding-S 0;
+        padding: $p-S 0;
     }
     @include mobile-L() {
         border-radius: unset;
@@ -696,24 +715,27 @@
             justify-content: center;
             flex-wrap: nowrap;
             flex-direction: row;
+            align-items: center;
             &:not(:last-child) {
-                margin-bottom: $margin-S;
+                margin-bottom: $m-S;
             }
             @include pad() {
-                padding: 0 $padding-S;
+                padding: 0 $p-S;
                 max-width: unset;
                 flex-direction: column;
             }
             @include mobile-L() {
-                padding: 0 $padding-XS;
+                padding: 0 $p-XS;
             }
             label {
                 width: 15%;
                 text-align: right;
-                margin-right: $margin-S;
+                margin: 0;
+                margin-right: $m-XS;
                 color: $dark-blue;
-                font-size: $font-size-h4;
+                font-size: $size-h4;
                 font-weight: bold;
+
                 @include pad() {
                     width: 100%;
                     text-align: left;
@@ -723,40 +745,44 @@
             select {
                 background-color: #fff;
                 width: 75%;
-                height: 40px;
+                height: 44px;
                 border-radius: 5px;
                 border: 1px solid $light-sky;
-                padding: 0 $padding-XXS;
-                color: $font-color-text;
-                font-size: $font-size-h5;
-                line-height: $font-size-h5;
+                padding: 0 $p-XXS;
+                color: $text;
+                font-size: $size-h5;
+                line-height: $size-h5;
                 @include pad() {
                     width: 100%;
                 }
                 &[type="submit"],
                 &[type="button"],
                 &[type="reset"] {
+                    height: 44px;
                     width: unset;
-                    height: 50px;
                     background-color: $dark-blue;
-                    color: $font-color-title-L;
-                    font-size: $font-size-h5;
-                    line-height: $font-size-h5;
+                    color: $font-W;
+                    font-size: $size-h5;
+                    line-height: 1.5;
                     border: none;
                     border-radius: 10px;
-                    padding: 0px 30px;
+                    padding: 0 $p-S;
                     text-decoration: none;
-                    margin-top: $margin-S;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                &:not(:last-child) {
+                    margin-right: $m-XS;
                 }
             }
             textarea {
                 width: 75%;
                 border-radius: 5px;
                 border: 1px solid $light-sky;
-                padding: 0 $padding-XXS;
-                color: $font-color-text;
-                font-size: $font-size-h5;
-                line-height: $font-size-h5;
+                padding: 0 $p-XXS;
+                color: $text;
+                font-size: $size-h5;
+                line-height: $size-h5;
                 @include pad() {
                     width: 100%;
                 }
@@ -772,7 +798,7 @@
 }
 
 @mixin collapse() {
-    padding: 0 $padding-M;
+    padding: 0 $p-M;
     @include pad() {
         padding: 0;
     }
@@ -780,22 +806,22 @@
         width: 100%;
         border-radius: 10px;
         cursor: pointer;
-        padding: $padding-XXS $padding-XS;
-        margin-bottom: $margin-XS;
+        padding: $p-XXS $p-XS;
+        margin-bottom: $m-XS;
         border: none;
         background-color: $table-blue;
         text-align: left;
         outline: none;
-        font-size: $font-size-h5;
-        color: $font-color-title-D;
+        font-size: $size-h5;
+        color: $font-D;
         font-weight: bold;
         @include mobile-XS() {
-            font-size: $font-size-h5;
+            font-size: $size-h5;
         }
     }
     .collapsible:after {
         content: "\002B";
-        color: $font-color-title-D;
+        color: $font-D;
         font-weight: bold;
         float: right;
         margin-left: 5px;
@@ -804,31 +830,32 @@
         content: "\2212";
     }
     .content {
-        padding: 0 $padding-XS;
-        margin-bottom: $margin-XS;
+        padding: 0 $p-XS;
+        margin-bottom: $m-XXS;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         @include mobile-XS() {
-            margin-bottom: $margin-XS;
+            margin-bottom: $m-XXS;
         }
         p {
             text-align: left;
-            font-size: $font-size-p;
-            color: $font-color-text;
-            line-height: $font-size-p * 2;
+            font-size: $size-p;
+            color: $text;
+            line-height: $size-p * 2;
+            margin-bottom: $m-XXS*2;
             @include mobile-XS() {
-                font-size: $font-size-p;
-                line-height: $font-size-p * 2;
+                font-size: $size-p;
+                line-height: $size-p * 2;
             }
         }
         ul,
         li {
             list-style: none;
-            font-size: $font-size-h5;
-            color: $font-color-text;
+            font-size: $size-h5;
+            color: $text;
             @include mobile-XS() {
-                font-size: $font-size-p;
+                font-size: $size-p;
             }
         }
     }

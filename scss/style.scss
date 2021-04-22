@@ -50,7 +50,7 @@ body {
             align-items: center;
             h2,
             h4 {
-                color: $font-color-title-L;
+                color: $font-W;
                 text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             }
             img {
@@ -77,14 +77,16 @@ body {
             .BN-text-gp {
                 position: absolute;
                 h2 {
+                    font-size: $size-h1;
+                    margin-bottom: 0;
                     @include mobile-XS() {
-                        font-size: $font-size-h3;
+                        font-size: $size-h3;
                     }
                 }
                 h4 {
                     @include mobile-XS() {
-                        font-size: $font-size-h5;
-                        padding: 0 $padding-XS;
+                        font-size: $size-h5;
+                        padding: 0 $p-XS;
                     }
                 }
             }
@@ -126,18 +128,18 @@ body {
                 justify-content: center;
                 flex-wrap: wrap;
                 text-align: center;
-                margin-bottom: $margin-M;
+                margin-bottom: $m-S;
                 @include pad() {
                     width: 50%;
-                    padding: 0 $padding-XXS;
+                    padding: 0 $p-XXS;
                 }
                 @include mobile-L() {
                     width: 100%;
                     margin: auto;
-                    margin-bottom: $margin-M;
+                    margin-bottom: $m-S;
                 }
                 img {
-                    margin: $margin-XS 0;
+                    margin: $m-XS 0;
                 }
             }
         }
@@ -155,6 +157,8 @@ body {
             width: 100%;
             display: flex;
             justify-content: space-around;
+            align-items: center;
+            margin-bottom: $m-2L;
             @include pad() {
                 flex-wrap: wrap;
                 flex-direction: column;
@@ -165,6 +169,8 @@ body {
             display: flex;
             justify-content: space-around;
             flex-direction: row-reverse;
+            align-items: center;
+            margin-bottom: $m-2L;
             @include pad() {
                 flex-direction: column;
             }
@@ -182,19 +188,19 @@ body {
         .text-box {
             width: 40%;
             text-align: center;
-            margin-bottom: $margin-XL;
+            // margin-bottom: $m-M;
             @include pad() {
                 width: 100%;
                 margin: auto;
-                margin-top: $margin-M;
-                margin-bottom: $margin-L;
+                margin-top: $m-S;
+                margin-bottom: $m-M;
             }
             @include mobile-L() {
-                margin-top: $margin-S;
-                margin-bottom: $margin-L;
+                margin-top: $m-XXS;
+                margin-bottom: $m-M;
             }
             .text-gp {
-                margin-bottom: $margin-S;
+                margin-bottom: $m-S;
                 p,
                 h4 {
                     text-align: left;
@@ -205,33 +211,30 @@ body {
             }
             .btn {
                 @include btn();
+                margin-top: $m-XS;
             }
             h3 {
                 text-align: left;
-                // margin-bottom: $margin-M;
-                @include pad() {
-                    // margin-bottom: 30px;
-                }
             }
         }
     }
     // 我們的客戶
     .content-client {
+        padding: $p-2L 0;
         img {
             width: 100%;
             object-fit: cover;
             object-position: center;
-            padding-bottom: $padding-M;
         }
     }
     // 好評推薦
     .content-recommend {
         background-color: $basic-blue;
         h3 {
-            color: $font-color-title-L;
+            color: $font-W;
         }
         .img-gp {
-            margin-top: $margin-S;
+            margin-top: $m-S;
             .talk-L {
                 float: left;
             }
@@ -241,7 +244,6 @@ body {
             img {
                 object-fit: cover;
                 object-position: center;
-                // margin: $margin-S 0;
                 @include pad() {
                     width: 100%;
                 }
@@ -252,9 +254,6 @@ body {
     .content-contactus {
         .notice {
             @include notice();
-            .btn{
-                margin-top: $margin-XS;
-            }
         }
     }
     // 頁尾
@@ -271,6 +270,9 @@ body {
     }
     .content-function {
         @include function();
+        h2 {
+            margin-bottom: 0;
+        }
     }
     // 流程圖
     .content-flow-HR {
@@ -285,12 +287,15 @@ body {
     // 所有功能
     .content-Allicon {
         @include Allicon();
+        h2{
+            margin-bottom: $m-S;
+        }
     }
     // 其他功能
     .content-other {
         h2 {
             @include pad() {
-                padding: 0 $padding-S;
+                padding: 0 $p-S;
                 line-height: 62px;
             }
         }
@@ -328,29 +333,23 @@ body {
     //聯絡我們icon
     .content-icon {
         .icon-gp {
-            padding: 0 0 $padding-S 0;
+            padding: 0 0 $p-S 0;
             display: flex;
             justify-content: space-between;
             text-align: center;
             flex-wrap: wrap;
             @include mobile-L() {
-                padding: $padding-XS 0 $padding-XS 0;
+                padding: $p-XS 0 $p-XS 0;
             }
             .icon {
                 width: 33.3%;
-                margin-bottom: $margin-M;
+                margin-bottom: $m-S;
                 @include mobile-L() {
                     width: 100%;
                 }
                 img {
                     height: 100px;
-                    margin-bottom: $margin-S;
-                    // @include pad() {
-                    //     height: 100px;
-                    // }
-                    // @include mobile-L() {
-                    //     height: 150px;
-                    // }
+                    margin-bottom: $m-XS;
                 }
             }
         }
