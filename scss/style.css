@@ -1267,6 +1267,10 @@ body .content-Allicon .Allicon-gp .Allicon img {
   margin: 4px 0;
 }
 
+body .content-Allicon .Allicon-gp .Allicon p {
+  text-align: center;
+}
+
 body .content-Allicon h2 {
   margin-bottom: 20px;
 }
