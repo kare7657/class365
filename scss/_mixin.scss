@@ -84,7 +84,7 @@
         color: $text;
         padding: 0;
         margin: 0;
-        text-align: center;
+        text-align: justify;
         line-height: 1.5;
         font-weight: 500;
     }
@@ -106,10 +106,11 @@
     section {
         width: 100%;
     }
-    input{
+    input {
         //placeholder
-        &::placeholder,option {
-            color:$gray-60;
+        &::placeholder,
+        option {
+            color: $gray-60;
             font-size: $size-h5;
         }
     }
@@ -124,10 +125,14 @@
         background-color: $hover;
         transition-duration: 0.5s;
     }
+    @include mobile-L() {
+        padding: $p-XXS $p-XS;
+    }
     h3,
     h4,
     h5 {
         color: $font-W;
+        margin-bottom: 0;
     }
 }
 
@@ -281,19 +286,26 @@
     background-color: $light-gray;
     border-radius: 20px;
     text-align: center;
-
+    @include web-S() {
+        width: 90%;
+        margin: auto;
+    }
     @include pad() {
+        width: 100%;
         padding: $p-S;
         h3 {
             font-size: $size-h4;
         }
     }
-    @include mobile-XS() {
-        padding: $p-S $p-XS;
+    @include mobile-L() {
+        padding: $p-M $p-XS;
     }
     .btn {
         margin-top: $m-S;
         @include btn();
+        @include mobile-L() {
+            margin-top: $m-XS;
+        }
     }
 }
 
@@ -843,7 +855,7 @@
             font-size: $size-p;
             color: $text;
             line-height: $size-p * 2;
-            margin-bottom: $m-XXS*2;
+            margin-bottom: $m-XXS * 2;
             @include mobile-XS() {
                 font-size: $size-p;
                 line-height: $size-p * 2;
