@@ -153,6 +153,9 @@
         height: 80px;
         display: flex;
         justify-content: space-between;
+        @include web-S {
+            width: 950px;
+        }
         @include pad() {
             display: none;
         }
@@ -221,6 +224,9 @@
             display: block;
             position: relative;
         }
+        @include mobile-L() {
+            height: 65px;
+        }
         .menu {
             position: absolute;
             top: 0;
@@ -229,11 +235,14 @@
             .fas.fa-bars {
                 font-size: 30px;
                 line-height: 60px;
-                padding: 0 30px;
+                padding: 0 25px;
                 color: $font-W;
+                @include mobile-L() {
+                    line-height: 65px;
+                }
             }
             ul {
-                display: block;
+                display: inline-block;
                 width: 100vw;
                 height: 100vh;
                 background-color: rgba(0, 0, 0, 0.9);
@@ -245,36 +254,62 @@
                 margin: 0;
                 padding: 40px 0;
                 text-align: center;
+                transition-duration: 0.7s;
+                @include mobile-L() {
+                    top: 65px;
+                }
+                .nav-item.dropdown {
+                    .dropdown-menu {
+                        background-color: $basic-blue;
+                        color: $font-W;
+                        text-align: center;
+                        .dropdown-item {
+                            padding: 15px 0;
+                        }
+                    }
+                    .nav-link.dropdown-toggle {
+                        padding: 5px 0;
+                    }
+                }
             }
             h4 {
                 color: $light-sky;
             }
             a {
                 color: $font-W;
+                font-size: $size-h5;
             }
-            &:hover {
-                ul {
-                    display: inline-block;
-                    color: $basic-blue;
-                    transition-duration: 0.7s;
-                    top: 60px;
-                    left: 0;
+            .active-ul {
+                display: inline-block;
+                color: $basic-blue;
+                transition-duration: 0.7s;
+                top: 60px;
+                left: 0;
+                @include mobile-L() {
+                    top: 65px;
                 }
+
                 li {
-                    &:hover {
-                        color: $basic-blue;
-                    }
+                    color: $basic-blue;
                 }
             }
         }
         .title {
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: 60px;
+            @include mobile-L() {
+                height: 65px;
+            }
             h4 {
                 font-size: $size-h4;
                 color: $font-W;
                 line-height: 60px;
                 margin: 0;
+            }
+            img {
+                height: 50px;
             }
         }
     }
@@ -320,6 +355,9 @@
         display: flex;
         justify-content: center;
         padding: $p-M 40px;
+        @include pad {
+            padding: $p-M;
+        }
         .text-gp {
             width: 100%;
             max-width: 1140px;
@@ -337,8 +375,12 @@
 
             .text-box {
                 @include pad() {
+                    width: 30%;
                     margin: 0;
                     margin-bottom: $m-XXS;
+                }
+                @include mobile-L() {
+                    width: 100%;
                 }
                 h4 {
                     text-align: left;
@@ -367,6 +409,7 @@
             p {
                 color: $dark-blue;
                 font-weight: bold;
+                text-align: center;
                 @include mobile-L() {
                     font-size: 14px;
                 }
@@ -602,7 +645,7 @@
                 object-position: center;
                 margin: $m-XXS 0;
             }
-            p{
+            p {
                 text-align: center;
             }
         }

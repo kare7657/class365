@@ -17,7 +17,6 @@
         <div class="pc">
             <div class="navbar-L">
                 <a href="index.html">
-                    <!-- <h4>Class 365</h4> -->
                     <img src="img/class365-logo_W.png" alt="logo" class="logo">
                 </a>
             </div>
@@ -52,23 +51,38 @@
         <div class="mobile">
             <div class="menu">
                 <div class="fas fa-bars">
-                    <ul>
-                        <li><a href="HR.html">人事模組</a></li>
-                        <li><a href="attendance.html">差勤模組</a></li>
-                        <li><a href="money.html">薪資模組</a></li>
-                        <li><a href="howmuch.html">收費方式</a></li>
-                        <li><a href="QA.html">常見問題</a></li>
-                        <li><a href="contactus.html">聯絡我們</a></li>
-                    </ul>
                 </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="HR.html">人事模組</a></li>
+                    <li><a href="attendance.html">差勤模組</a></li>
+                    <li><a href="money.html">薪資模組</a></li>
+                    <li><a href="howmuch.html">收費方式</a></li>
+                    <li><a href="QA.html">常見問題</a></li>
+                    <li><a href="contactus.html">聯絡我們</a></li>
+                </ul>
             </div>
             <div>
                 <a class="title" href="index.html">
-                    <h4>Class 365</h4>
+                    <img src="img/class365-logo_W.png" alt="logo" class="logo">
                 </a>
             </div>
         </div>
     </nav>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
 
 </body>
 
