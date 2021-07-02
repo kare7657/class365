@@ -68,7 +68,7 @@
   padding: 0;
   margin: 0;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.8;
   font-weight: 500;
 }
 
@@ -131,6 +131,10 @@ body {
   body {
     font-size: 0.875rem;
   }
+}
+
+body .icon p {
+  text-align: center;
 }
 
 body .navbar {
@@ -566,10 +570,14 @@ body .content-torment .icon-gp .icon img {
 }
 
 body .content-whats365 {
-  background-color: #eeefef;
+  background-color: rgba(125, 185, 222, 0.2);
   background-image: url(../img/cloud.png);
   background-position: left 100%;
   background-repeat: no-repeat;
+}
+
+body .content-whats365 p {
+  text-align: center;
 }
 
 body .content-module .explain-L {
@@ -762,7 +770,7 @@ body .content-recommend .img-gp img {
 body .content-contactus .notice {
   width: 100%;
   padding: 40px 0;
-  background-color: #eeefef;
+  background-color: rgba(125, 185, 222, 0.3);
   border-radius: 20px;
   text-align: center;
 }
@@ -912,7 +920,7 @@ body footer .ft-top .text-gp .text-box p {
 }
 
 body footer .ft-bot {
-  background-color: #a5dee4;
+  background-color: rgba(43, 95, 117, 0.95);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -928,8 +936,7 @@ body footer .ft-bot .copyright {
 }
 
 body footer .ft-bot .copyright p {
-  color: #2b5f75;
-  font-weight: bold;
+  color: white;
   text-align: center;
 }
 
@@ -1401,16 +1408,33 @@ body .content-other .link-gp .link img {
   width: 100%;
 }
 
-body .content-howmuch .bgB {
+body .content-howmuch .explain {
+  background-color: #fff;
+}
+
+body .content-howmuch .explain p {
+  text-align: center;
+}
+
+body .content-howmuch .notice {
+  color: #2b5f75;
+  font-weight: bold;
+}
+
+body .content-howmuch .bgA {
   background-color: #a5dee4;
 }
 
-body .content-howmuch .bgC {
+body .content-howmuch .bgB {
   background-color: #7db9de;
 }
 
+body .content-howmuch .bgC {
+  background-color: #a5dee4;
+}
+
 body .content-howmuch .bgD {
-  background-color: #33a6b8;
+  background-color: #7db9de;
 }
 
 body .content-howmuch table {

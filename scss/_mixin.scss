@@ -85,7 +85,7 @@
         padding: 0;
         margin: 0;
         text-align: justify;
-        line-height: 1.5;
+        line-height: 1.8;
         font-weight: 500;
     }
     a {
@@ -318,7 +318,7 @@
 @mixin notice() {
     width: 100%;
     padding: $p-L 0;
-    background-color: $light-gray;
+    background-color: rgba($color: $basic-blue, $alpha: 0.3);
     border-radius: 20px;
     text-align: center;
     @include web-S() {
@@ -351,7 +351,7 @@
     }
     .ft-top {
         width: 100%;
-        background-color: $dark-blue;
+        background-color: rgba($color: $dark-blue, $alpha: 1);
         display: flex;
         justify-content: center;
         padding: $p-M 40px;
@@ -399,7 +399,7 @@
         }
     }
     .ft-bot {
-        background-color: $light-sky;
+        background-color:  rgba($color: $dark-blue, $alpha: 0.95);
         display: flex;
         justify-content: center;
         padding: $p-XS 0;
@@ -407,8 +407,7 @@
             width: 100%;
             max-width: 1140px;
             p {
-                color: $dark-blue;
-                font-weight: bold;
+                color: $font-W;
                 text-align: center;
                 @include mobile-L() {
                     font-size: 14px;

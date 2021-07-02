@@ -15,6 +15,9 @@ body {
     @include mobile-L() {
         font-size: 0.875rem;
     }
+    .icon p {
+        text-align: center;
+    }
 
     // 導覽列
     .navbar {
@@ -153,10 +156,13 @@ body {
     }
     // 什麼是Class365
     .content-whats365 {
-        background-color: $light-gray;
+        background-color: rgba($color: $basic-blue, $alpha: 0.2);
         background-image: url(../img/cloud.png);
         background-position: left 100%;
         background-repeat: no-repeat;
+        p{
+            text-align: center;
+        }
     }
     // 模組介紹
     .content-module {
@@ -229,7 +235,7 @@ body {
     // 我們的客戶
     .content-client {
         padding: $p-2L 0;
-        @include mobile-L{
+        @include mobile-L {
             padding-top: 0;
         }
         img {
@@ -316,14 +322,27 @@ body {
     }
     //收費方式
     .content-howmuch {
-        .bgB {
+        .explain {
+            background-color: #fff;
+            p {
+                text-align: center;
+            }
+        }
+        .notice {
+            color: $dark-blue;
+            font-weight: bold;
+        }
+        .bgA {
             background-color: $light-sky;
         }
-        .bgC {
+        .bgB {
             background-color: $basic-blue;
         }
+        .bgC {
+            background-color: $light-sky;
+        }
         .bgD {
-            background-color: $blue-green;
+            background-color: $basic-blue;
         }
         table {
             @include table();
