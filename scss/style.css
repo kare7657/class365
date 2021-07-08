@@ -920,7 +920,7 @@ body footer .ft-top .text-gp .text-box p {
 }
 
 body footer .ft-bot {
-  background-color: rgba(43, 95, 117, 0.95);
+  background-color: #22566c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1446,6 +1446,14 @@ body .content-howmuch table {
   border-radius: 20px;
   border: solid 1px #7db9de;
   background-color: #fff;
+  table-layout: auto;
+  word-break: break-word;
+}
+
+body .content-howmuch table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .content-howmuch table th {

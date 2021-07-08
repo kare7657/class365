@@ -399,7 +399,7 @@
         }
     }
     .ft-bot {
-        background-color:  rgba($color: $dark-blue, $alpha: 0.95);
+        background-color: #22566c;
         display: flex;
         justify-content: center;
         padding: $p-XS 0;
@@ -685,6 +685,11 @@
     border-radius: 20px;
     border: solid 1px $basic-blue;
     background-color: #fff;
+    table-layout: auto;
+    word-break: break-word;
+    tr{
+        display: flex;
+    }
 
     th {
         width: 30%;
