@@ -678,80 +678,74 @@
 
 @mixin table() {
     margin-bottom: $m-S;
-    width: 100%;
     text-align: center;
     border-collapse: separate;
     border-spacing: 0;
-    border-radius: 20px;
+    border-radius: 20px !important;
     border: solid 1px $basic-blue;
     background-color: #fff;
-    table-layout: auto;
     word-break: break-word;
-    tr{
-        display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    thead{
+        width: 100%;
     }
-
-    th {
-        width: 30%;
-        font-size: $size-h4;
-        color: $font-D;
-        background-color: $table-blue;
-        padding: $p-XXS;
-        font-weight: bold;
-        @include pad() {
-            width: 35%;
-        }
-        @include mobile-L() {
-            font-size: $size-p;
-            padding: 5px;
-        }
+    tbody{
+        width: 100%;
     }
-    td {
-        padding: $p-XXS 0;
-        font-size: $size-h5;
-        color: $text;
+    tr {
         display: flex;
+        width: 100%;
         justify-content: center;
-        @include pad() {
+        align-items: stretch;
+        th {
+            width: 20%;
+            font-size: $size-h4;
+            color: $font-D;
+            padding: $p-XXS;
+            font-weight: bold;
+            background-color: $table-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include pad{
+                font-size: $size-h5;
+            }
+        }
+        td {
+            width: 25%;
+            padding: $m-XS 0;
+            font-size: $size-h5;
+            color: $text;
+            display: flex;
             flex-direction: row;
-        }
-        @include mobile-L() {
-            flex-wrap: wrap;
-            flex-direction: column;
-            font-size: $size-p;
-            padding: $p-XXS 0;
-        }
-        .text-gp {
-            width: 33.3%;
-            padding: $p-S 0 $p-XS 0;
-            margin: 0 $m-XXS;
-            @include web-S() {
-                margin: -10px;
-            }
-            @include pad() {
-                margin: -5px;
-            }
-            @include mobile-L() {
-                padding: $p-XS 0 0 0;
-                width: unset;
-            }
-            img {
-                width: 200px;
+            justify-content: space-around;
+
+            .text-gp {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
                 margin-bottom: $m-XXS;
-                @include web-S() {
-                    width: 80%;
+                img {
+                    width: 150px;
+                    margin-bottom: $m-XXS;
+                    @include pad {
+                        width: 80px;
+                    }
                 }
-                @include mobile-L() {
-                    width: 60%;
+                span {
+                    font-size: $size-h4;
+                    color: $font-D;
+                    font-weight: bold;
+                    @include pad{
+                        font-size: $size-p;
+                    }
                 }
             }
-            span {
-                font-size: $size-h3;
-                color: $font-D;
-                font-weight: bold;
-                @include mobile-L() {
-                    font-size: $size-p;
-                }
+            h4 {
+                margin: 0;
             }
         }
     }

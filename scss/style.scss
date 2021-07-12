@@ -160,7 +160,7 @@ body {
         background-image: url(../img/cloud.png);
         background-position: left 100%;
         background-repeat: no-repeat;
-        p{
+        p {
             text-align: center;
         }
     }
@@ -346,6 +346,43 @@ body {
         }
         table {
             @include table();
+            @include mobile-L {
+                display: none;
+            }
+        }
+        .table-mobile {
+            display: none;
+            width: 100%;
+            @include mobile-L {
+                display: flex;
+                flex-direction: column;
+                tr {
+                    justify-content: space-between;
+                    th {
+                        width: 40%;
+                    }
+                    td {
+                        width: 60%;
+                        justify-content: center;
+                        align-items: center;
+                        .text-gp {
+                            img {
+                                width: 100px;
+                            }
+                            span {
+                                font-size: $size-h5;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mobile-XS {
+                tr {
+                    th {
+                        font-size: $size-p;
+                    }
+                }
+            }
         }
     }
     //聯絡我們
