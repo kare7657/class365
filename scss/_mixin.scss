@@ -1,4 +1,14 @@
 // RWD
+@mixin web-XL {
+    @media (max-width: $web-XL) {
+        @content;
+    }
+}
+@mixin web-L {
+    @media (max-width: $web-L) {
+        @content;
+    }
+}
 @mixin web-S {
     @media (max-width: $web-S) {
         @content;
@@ -24,19 +34,17 @@
     font-family: "微軟正黑體";
     box-sizing: border-box !important;
     .container {
-        width: 1140px;
+        width: 100%;
+        max-width: 1440px ;
         margin: auto;
         padding: $p-2L 0;
-        @include pad() {
-            width: 80%;
-            // padding: $p-S 0;
+        text-align: center;
+        @include web-XL{
+            max-width: 1336px;
+            padding: $p-L $p-S;
         }
-        @include mobile-L() {
-            // padding: $p-S 0;
-        }
-        @include mobile-XS() {
-            // padding: $p-XS 0;
-            // width: 85%;
+        @include web-L{
+            max-width: unset;
         }
     }
     h1 {
@@ -447,7 +455,7 @@
         left: 50%;
         transform: translateX(-50%);
         h2,
-        h4 {
+        h3 {
             color: $font-W;
             margin-bottom: $m-XXS;
         }
@@ -502,6 +510,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        // margin-bottom: $m-S;
         @include pad() {
             flex-wrap: wrap;
             flex-direction: column-reverse;
@@ -513,6 +522,7 @@
         justify-content: space-around;
         flex-direction: row-reverse;
         align-items: center;
+        // margin-bottom: $m-S;
         @include pad() {
             flex-direction: column-reverse;
             margin-bottom: $m-XS;
@@ -531,7 +541,6 @@
     .text-box {
         margin-top: $m-S;
         width: 40%;
-        text-align: center;
         @include pad() {
             width: 100%;
             margin: auto;
@@ -542,9 +551,8 @@
         }
         .header {
             width: 100%;
-            h3,
-            h4 {
-                text-align: center;
+            h2 {
+                text-align: left;
             }
             h3 {
                 margin-bottom: 5px;
@@ -562,8 +570,9 @@
             }
         }
         .body {
-            padding: $p-XXS * 2 0;
+            padding-top: $p-XXS;
             p {
+                font-size: $size-h4;
                 text-align: justify;
             }
         }
@@ -606,9 +615,8 @@
 @mixin flow($bg-color) {
     background-color: $bg-color;
     img {
-        width: 100%;
+        width: 95%;
         border-radius: 30px;
-
         @include mobile-L() {
             border-radius: 20px;
         }
@@ -653,16 +661,17 @@
 
 @mixin link-gp() {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: $p-S 0 0 0;
     @include pad() {
         flex-wrap: wrap;
         padding: $p-XS 0 0 0;
     }
     .link {
-        width: 49.5%;
+        width: 48%;
         display: flex;
         flex-direction: column;
+        margin: 0 $m-XS;
         @include pad() {
             width: 100%;
         }
@@ -778,10 +787,12 @@
             @include pad() {
                 padding: 0 $p-S;
                 max-width: unset;
-                flex-direction: column;
+                flex-wrap: wrap;
             }
             @include mobile-L() {
                 padding: 0 $p-XS;
+                max-width: unset;
+                justify-content: space-between;
             }
             label {
                 width: 15%;
@@ -795,6 +806,11 @@
                 @include pad() {
                     width: 100%;
                     text-align: left;
+                }
+                @include mobile-L(){
+                    margin-right: 0;
+                    margin-bottom: $m-XXS;
+                    width: 100%;
                 }
             }
             input,
@@ -826,6 +842,9 @@
                     text-decoration: none;
                     font-weight: bold;
                     cursor: pointer;
+                    @include mobile-L(){
+                        width: 47%;
+                    }
                 }
                 &:not(:last-child) {
                     margin-right: $m-XS;

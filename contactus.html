@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
+    <title>聯絡我們</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
@@ -35,14 +35,6 @@
                         <input type="text" name="companyname" id="companyname" placeholder="例:力天資訊有限公司">
                     </div>
                     <div class="form-gp">
-                        <label for="companynumber">公司人數</label>
-                        <select name="companynumber" id="companynumber">
-                            <option value="20">20人(含↓)</option>
-                            <option value="30">30人(含↓)</option>
-                            <option value="50">50人(含↓)</option>
-                        </select>
-                    </div>
-                    <div class="form-gp">
                         <label for="name">姓名</label>
                         <input type="text" name="name" id="name" placeholder="例:李雲端">
                     </div>
@@ -65,15 +57,22 @@
                     </div>
                     <div class="form-gp">
                         <label for="content">內容描述</label>
-                        <textarea name="content" id="content" rows="4"></textarea>
+                        <textarea name="content" id="content" rows="5"></textarea>
                     </div>
                     <div class="form-gp">
-                        <label for="code">驗證碼</label>
-                        <input type="text" name="code" id="code">
+                        <!-- 圖片驗證碼 -->
+                        <div class="code-gp">
+                            <label for="code">驗證碼</label>
+                            <div class="text-gp">
+                                <input class="code" type="text" name="code" id="code">
+                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                <a href="#"><img class="reform" src="img/redo.svg" alt="重整"></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-gp">
                         <input type="submit" value="送出表單">
-                        <input type="reset" value="清除" class="button-outline">
+                        <input type="reset" value="清除">
                     </div>
                 </form>
             </div>

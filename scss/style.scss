@@ -252,18 +252,22 @@ body {
         }
         .img-gp {
             margin-top: $m-S;
-            .talk-L {
-                float: left;
-            }
-            .talk-R {
-                float: right;
-            }
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             img {
-                object-fit: cover;
+                object-fit: contain;
                 object-position: center;
                 @include pad() {
                     width: 100%;
                 }
+            }
+            .talk-L {
+                object-position: 0%;
+            }
+            .talk-R {
+                object-position: 100%;
             }
         }
     }
@@ -318,6 +322,9 @@ body {
         }
         .link-gp {
             @include link-gp();
+            h2{
+                margin-top: $m-XS;
+            }
         }
     }
     //收費方式
@@ -394,6 +401,69 @@ body {
             }
             .form {
                 @include form();
+            }
+            //圖片驗證碼
+            .code-gp {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: $m-XS;
+                @include pad {
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: start;
+                }
+                @include mobile-XS() {
+                    margin-bottom: $m-XS;
+                }
+                label {
+                    width: 15%;
+                    text-align: left;
+                    @include pad() {
+                        width: 100%;
+                    }
+                }
+                .text-gp {
+                    width: 75%;
+                    display: flex;
+                    align-items: center;
+                    @include mobile-L() {
+                        width: 100%;
+                    }
+                    .code {
+                        width: 35%;
+                        margin-right: 10px;
+                        margin-bottom: 0;
+                        @include pad {
+                            width: 60%;
+                        }
+                        @include mobile-L {
+                            width: 60%;
+                        }
+                        @include mobile-XS() {
+                            width: 50%;
+                            margin-right: 0;
+                        }
+                    }
+                    .RP {
+                        height: 100%;
+                        height: 27px;
+                        margin: 0;
+                        margin-right: 10px;
+                        @include mobile-L() {
+                            max-height: unset;
+                        }
+                        @include mobile-XS() {
+                            margin-left: $m-XS;
+                        }
+                    }
+                    .reform {
+                        height: 20px;
+                        width: 20px;
+                        margin: 0;
+                    }
+                }
             }
         }
     }
