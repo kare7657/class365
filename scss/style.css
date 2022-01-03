@@ -1448,20 +1448,181 @@ body .content-howmuch .notice {
   font-weight: bold;
 }
 
-body .content-howmuch .bgA {
-  background-color: #a5dee4;
-}
-
-body .content-howmuch .bgB {
+body .content-howmuch .plan {
   background-color: #7db9de;
 }
 
-body .content-howmuch .bgC {
-  background-color: #a5dee4;
+body .content-howmuch .plan .planbox {
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 32px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .content-howmuch .bgD {
-  background-color: #7db9de;
+body .content-howmuch .plan .planbox h3 {
+  text-align: left;
+  width: 100%;
+}
+
+body .content-howmuch .plan .planbox .text-gp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 0;
+}
+
+body .content-howmuch .plan .planbox .text-gp .plan-item {
+  margin: 0 48px;
+}
+
+@media (max-width: 1024px) {
+  body .content-howmuch .plan .planbox .text-gp .plan-item {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .plan-item {
+    margin: 0 4px;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .plan-item img {
+  width: 170px;
+}
+
+@media (max-width: 1024px) {
+  body .content-howmuch .plan .planbox .text-gp .plan-item img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .plan-item img {
+    margin: 0;
+    width: 80px;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .form-check {
+  margin-top: 4px;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .form-check {
+    margin-bottom: 20px;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .form-check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #777 !important;
+}
+
+body .content-howmuch .plan .planbox .text-gp .form-check label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+body .content-howmuch .plan .planbox .text-gp p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp p {
+    margin-right: 0;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .title {
+  font-size: 1.25rem;
+  color: #727171;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .title {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .num {
+  font-size: 1.875rem;
+  color: #7db9de;
+  margin: 0 4px;
+}
+
+body .content-howmuch .plan .planbox .text-gp .select-gp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  margin-right: 36px;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .select-gp {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .btn {
+  margin: 0 20px;
+  padding: 0;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .btn {
+    margin-top: 4px;
+    width: 100%;
+  }
+}
+
+body .content-howmuch .plan .planbox .text-gp .btn .download {
+  font-size: 1rem;
+  background-color: #2b5f75;
+  padding: 6px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+@media (max-width: 568px) {
+  body .content-howmuch .plan .planbox .text-gp .btn .download {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 8px 16px;
+  }
 }
 
 body .content-howmuch table {

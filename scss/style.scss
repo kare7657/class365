@@ -322,7 +322,7 @@ body {
         }
         .link-gp {
             @include link-gp();
-            h2{
+            h2 {
                 margin-top: $m-XS;
             }
         }
@@ -339,17 +339,133 @@ body {
             color: $dark-blue;
             font-weight: bold;
         }
-        .bgA {
-            background-color: $light-sky;
-        }
-        .bgB {
+        // .bgA {
+        //     background-color: $light-sky;
+        // }
+        // .bgB {
+        //     background-color: $basic-blue;
+        // }
+        // .bgC {
+        //     background-color: $light-sky;
+        // }
+        // .bgD {
+        //     background-color: $basic-blue;
+        // }
+        .plan {
             background-color: $basic-blue;
-        }
-        .bgC {
-            background-color: $light-sky;
-        }
-        .bgD {
-            background-color: $basic-blue;
+            .planbox {
+                background-color: white;
+                width: 100%;
+                border-radius: 20px;
+                padding: $p-M $p-L;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                h3 {
+                    text-align: left;
+                    width: 100%;
+                }
+                .text-gp {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: $p-S 0;
+                    .plan-item {
+                        margin: 0 $m-L;
+                        @include web-S {
+                            margin: 0 $m-S;
+                        }
+                        @include mobile-L {
+                            margin: 0 $m-XXS;
+                        }
+                        img {
+                            width: 170px;
+                            @include web-S {
+                                width: 150px;
+                            }
+                            @include mobile-L {
+                                margin: 0;
+                                width: 80px;
+                            }
+                        }
+                    }
+                    .form-check {
+                        margin-top: $m-XXS;
+                        @include mobile-L {
+                            margin-bottom: $m-S;
+                        }
+                        input[type="checkbox"] {
+                            width: 20px;
+                            height: 20px;
+                            border: solid 1px $gray-60 !important;
+                        }
+                        label {
+                            font-size: $size-h4;
+                            font-weight: bold;
+                            margin-left: $m-XS;
+                        }
+                    }
+                    p {
+                        font-size: $size-h4;
+                        font-weight: bold;
+                        margin-right: $m-S;
+                        @include mobile-L {
+                            margin-right: 0;
+                            margin-bottom: $m-XS;
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                    .title {
+                        font-size: $size-h4;
+                        color: $text;
+                        font-weight: bold;
+                        margin-right: $m-XS;
+                        @include mobile-L {
+                            width: 100%;
+                            margin-bottom: $m-XS;
+                            text-align: left;
+                        }
+                    }
+                    .num {
+                        font-size: $size-h2;
+                        color: $basic-blue;
+                        margin: 0 $m-XXS;
+                    }
+                    .select-gp {
+                        display: flex;
+                        align-items: center;
+                        vertical-align: middle;
+                        margin-right: $m-M;
+                        @include mobile-L {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: $m-XXS;
+                        }
+                    }
+                    .btn {
+                        margin: 0 $m-S;
+                        padding: 0;
+                        @include mobile-L {
+                            margin-top: $m-XXS;
+                            width: 100%;
+                        }
+                        .download {
+                            font-size: $size-p;
+                            background-color: $dark-blue;
+                            padding: 6px;
+                            color: #fff;
+                            border-radius: 6px;
+                            @include mobile-L {
+                                font-size: $size-h4;
+                                font-weight: bold;
+                                padding: 8px 16px;
+                            }
+                        }
+                    }
+                }
+            }
         }
         table {
             @include table();
