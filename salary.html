@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
     <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="scss/aos.css">
     <link rel="stylesheet" href="scss/style.css">
 </head>
 
@@ -28,7 +29,7 @@
         <div class="container">
             <div class="explain-R">
                 <div class="explain-img">
-                    <img src="img/salary-explain1.jpg" alt="">
+                    <img src="img/salary-explain1.jpg" alt="" data-aos="fade-left" data-aos-delay="100">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -41,7 +42,7 @@
             </div>
             <div class="explain-L">
                 <div class="explain-img">
-                    <img src="img/salary-explain2.jpg" alt="">
+                    <img src="img/salary-explain2.jpg" alt="" data-aos="fade-right" data-aos-delay="200">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -55,7 +56,7 @@
             </div>
             <div class="explain-R">
                 <div class="explain-img" style="margin-bottom: 0">
-                    <img src="img/salary-explain3.jpg" alt="">
+                    <img src="img/salary-explain3.jpg" alt="" data-aos="fade-left" data-aos-delay="300">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -69,7 +70,7 @@
             </div>
             <div class="explain-L">
                 <div class="explain-img">
-                    <img src="img/salary-explain4.jpg" alt="">
+                    <img src="img/salary-explain4.jpg" alt="" data-aos="fade-right" data-aos-delay="400">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -83,7 +84,7 @@
             </div>
             <div class="explain-R">
                 <div class="explain-img" style="margin-bottom: 0">
-                    <img src="img/salary-explain5.jpg" alt="">
+                    <img src="img/salary-explain5.jpg" alt="" data-aos="fade-left" data-aos-delay="500">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -97,7 +98,7 @@
             </div>
             <div class="explain-L">
                 <div class="explain-img">
-                    <img src="img/salary-explain6.jpg" alt="">
+                    <img src="img/salary-explain6.jpg" alt="" data-aos="fade-right" data-aos-delay="600">
                 </div>
                 <div class="text-box">
                     <div class="header">
@@ -173,7 +174,7 @@
         <div class="link-gp">
             <div class="link">
                 <a href="card-punch.html">
-                    <img src="img/link-hr.jpg" alt="">
+                    <img src="img/link-card-punch.jpg" alt="">
                     <h2>線上打卡</h2>
                 </a>
             </div>
@@ -210,6 +211,16 @@
      <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
      <script src="js/bootstrap.min.4.2.js"></script>
      <script src="js/popper.min.js"></script>
+     <script src="js/aos.js"></script>
+
+     <!-- aos -->
+     <script>
+         AOS.init({
+             duration: 900,
+             easing: 'ease-out-back',
+             once: true,
+         });
+     </script>
 
      <!-- Swiper JS -->
      <script src="js/swiper-bundle.min.js"></script>
