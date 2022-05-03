@@ -96,6 +96,11 @@
         line-height: 1.8;
         font-weight: 500;
     }
+    .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
     a {
         text-decoration: none !important;
         list-style: none !important;
@@ -364,7 +369,7 @@
         justify-content: center;
         padding: $p-M 40px;
         @include pad {
-            padding: $p-M;
+            padding: $p-S;
         }
         .text-gp {
             width: 100%;
@@ -376,32 +381,39 @@
             @include mobile-L() {
                 flex-direction: column;
                 flex-wrap: wrap;
-                text-align: center;
+                text-align: left;
                 width: 100%;
-                margin-bottom: $m-XS;
+                margin-bottom: 0;
             }
 
             .text-box {
                 @include pad() {
-                    width: 30%;
+                    width: 47%;
                     margin: 0;
                     margin-bottom: $m-XXS;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
                 }
                 @include mobile-L() {
                     width: 100%;
                 }
                 h4 {
-                    text-align: left;
                     margin-bottom: $m-XXS;
-                    @include mobile-L() {
-                        text-align: center;
-                    }
                 }
                 p {
                     text-align: left;
-                    @include mobile-L() {
-                        text-align: center;
-                    }
+                }
+                i{
+                    width: 15px;
+                    height: 15px;
+                    text-align: center;
+                    margin-right: $p-XXS;
+                }
+                a{
+                    color: white;
+                    line-height: 2;
+                    display: inline-block;
                 }
             }
         }

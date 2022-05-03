@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="scss/aos.css">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header"></header>
+    <!-- banner -->
+    <div class="top-BN">
+        <!-- <div class="BN-text-gp">
+            <h1>差勤模組</h1>
+            <h3>線上申請、審核、追蹤，即時掌握進度</h3>
+        </div>
+        <img src="img/BN-attendance.jpg" alt=""> -->
+    </div>
+    <section class="content-news container">
+        <!-- <div class="container"> -->
+            <div class="block">
+                <a href="">
+                    <img src="img/index-banner1.jpg" alt="">
+                    <P class="date">2022/04/08</p>
+                    <p class="ellipsis">標題標題標題標題標題標題標題標題標題標題標題標題</p>
+                </a>
+            </div>
+            <div class="block">
+                <a href="">
+                    <img src="img/index-banner1.jpg" alt="">
+                </a>
+            </div>
+            <div class="block">
+                <a href="">
+                    <img src="img/index-banner1.jpg" alt="">
+                </a>
+            </div>
+            <div class="block">
+                <a href="">
+                    <img src="img/index-banner1.jpg" alt="">
+                </a>
+            </div>
+            <div class="block">
+                <a href="">
+                    <img src="img/index-banner1.jpg" alt="">
+                </a>
+            </div>
+        <!-- </div> -->
+    </section>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <!-- aos -->
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-out-back',
+            once: true,
+        });
+    </script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

@@ -81,6 +81,12 @@
   font-weight: 500;
 }
 
+* .ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 * a {
   text-decoration: none !important;
   list-style: none !important;
@@ -873,7 +879,7 @@ body footer .ft-top {
 
 @media (max-width: 768px) {
   body footer .ft-top {
-    padding: 32px;
+    padding: 24px;
   }
 }
 
@@ -901,17 +907,20 @@ body footer .ft-top .text-gp {
             flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
   body footer .ft-top .text-gp .text-box {
-    width: 30%;
+    width: 47%;
     margin: 0;
     margin-bottom: 4px;
+  }
+  body footer .ft-top .text-gp .text-box:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -922,24 +931,24 @@ body footer .ft-top .text-gp {
 }
 
 body footer .ft-top .text-gp .text-box h4 {
-  text-align: left;
   margin-bottom: 4px;
-}
-
-@media (max-width: 568px) {
-  body footer .ft-top .text-gp .text-box h4 {
-    text-align: center;
-  }
 }
 
 body footer .ft-top .text-gp .text-box p {
   text-align: left;
 }
 
-@media (max-width: 568px) {
-  body footer .ft-top .text-gp .text-box p {
-    text-align: center;
-  }
+body footer .ft-top .text-gp .text-box i {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+body footer .ft-top .text-gp .text-box a {
+  color: white;
+  line-height: 2;
+  display: inline-block;
 }
 
 body footer .ft-bot {
@@ -1432,6 +1441,46 @@ body .content-other .link-gp .link img {
 }
 
 body .content-other .link-gp h2 {
+  margin-top: 12px;
+}
+
+body .content-news {
+  padding-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .content-news .block {
+  margin: 0 12px;
+  margin-bottom: 36px;
+  width: 23%;
+}
+
+body .content-news .block a {
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+
+body .content-news .block a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .content-news .block a .date {
+  color: #558d96;
   margin-top: 12px;
 }
 

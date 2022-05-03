@@ -327,6 +327,34 @@ body {
             }
         }
     }
+    // 最新消息
+    .content-news {
+        padding-top: 120px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        flex-wrap: wrap;
+        .block {
+            margin: 0 $m-XS;
+            margin-bottom: $m-M;
+            width: 23%;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 200px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .date{
+                    color: $blue-green;
+                    margin-top: $m-XS;
+                }
+
+            }
+        }
+    }
     //收費方式
     .content-howmuch {
         .explain {
