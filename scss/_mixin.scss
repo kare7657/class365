@@ -403,6 +403,9 @@
                 }
                 p {
                     text-align: left;
+                    @include mobile-L(){
+                        margin-bottom: $m-XS;
+                    }
                 }
                 i{
                     width: 15px;
@@ -414,6 +417,7 @@
                     color: white;
                     line-height: 2;
                     display: inline-block;
+
                 }
             }
         }

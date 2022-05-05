@@ -938,6 +938,12 @@ body footer .ft-top .text-gp .text-box p {
   text-align: left;
 }
 
+@media (max-width: 568px) {
+  body footer .ft-top .text-gp .text-box p {
+    margin-bottom: 12px;
+  }
+}
+
 body footer .ft-top .text-gp .text-box i {
   width: 15px;
   height: 15px;
