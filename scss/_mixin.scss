@@ -31,7 +31,7 @@
 }
 // 通用
 @mixin all() {
-    font-family: "微軟正黑體";
+    font-family: "微軟正黑體", sans-serif;
     box-sizing: border-box !important;
     .container {
         width: 100%;
