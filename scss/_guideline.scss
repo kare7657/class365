@@ -8,24 +8,28 @@ $mobile-S: 375px;
 $mobile-XS: 320px;
 
 //color
-$basic-blue: #7db9de;
-$light-sky: #a5dee4;
-$light-green: #c5de7d;
-$light-purple: #a5abe4;
-$blue-green: #558d96;
-$dark-blue: #2b5f75;
-$gray-60: #777;
-$gray-30: #ccc;
-$light-gray: #eeefef;
-$hover: black;
-$table-blue: #e5f1f9;
-$red: #c95555;
+// $basic-blue: #7db9de;
+// $light-sky: #a5dee4;
+// $light-green: #c5de7d;
+// $light-purple: #a5abe4;
+// $dark-blue: #2b5f75;
+// $gray-60: #777;
+// $gray-30: #ccc;
+// $table-blue: #e5f1f9;
+// $red: #c95555;
+
+$primary-table: #e5f1f9;
+$primary-tint: #a5dee4;
+$primary-default: #7db9de;
+$primary-dark: #2b5f75;
+$secondary: #c5de7d;
+$complementary: #a5abe4;
+$bk-20: #DCDDDD;
+$notice: #c95555;
 
 //font-color
 $font-D: #314965;
-$font-W: white;
 $text: #727171;
-$title-BK: #000;
 
 //font-size
 $size-h1: 2.5rem; //40px

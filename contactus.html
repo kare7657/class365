@@ -73,6 +73,7 @@
                     <div class="form-gp">
                         <input type="submit" value="送出表單">
                         <input type="reset" value="清除">
+                        <!-- <input type="button" value="modal test" data-toggle="modal" data-target="#modalChangPWD"> -->
                     </div>
                 </form>
             </div>
@@ -85,17 +86,67 @@
                 <div class="icon">
                     <img src="img/contactus-icon1.png" alt="客服信箱">
                     <h3>客服信箱</h3>
-                    <a href="mailto:service@richtop.com.tw"><p>service@richtop.com.tw</p></a>
+                    <a href="mailto:service@richtop.com.tw">
+                        <p>service@richtop.com.tw</p>
+                    </a>
                 </div>
                 <div class="icon">
                     <img src="img/contactus-icon2.png" alt="報價與合作">
                     <h3>報價與合作</h3>
-                    <a href="tel:+886-4-2323-9163"><p>04-2323 9163</p></a>
-
+                    <a href="tel:+886-4-2323-9163">
+                        <p>04-2323 9163</p>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- modal -->
+    <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
+        aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
+        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-gp">
+                            <label for="account">帳號<span class="notice">*</span></label>
+                            <input type="password" name="account" id="account" value="">
+                            <div class="text">
+                                <p class="notice">testtesttesttest</p>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="email">信箱<span class="notice">*</span></label>
+                            <input type="text" name="email" id="email" value="">
+                            <div class="text">
+                                <p class="notice">testtesttesttest</p>
+                            </div>
+                        </div>
+                        <div class="code-gp">
+                            <label for="code">驗證碼</label>
+                            <div class="text-gp">
+                                <input class="code" type="text" name="code" id="code">
+                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="go" id="go">確認更改</button>
+                        <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <!-- footer -->
     <footer id="footer"></footer>

@@ -44,7 +44,7 @@ html {
                 position: relative;
                 text-align: center;
                 font-size: 18px;
-                background: #fff;
+                background: white;
 
                 /* Center slide text vertically */
                 display: -webkit-box;
@@ -61,7 +61,7 @@ html {
                 align-items: center;
                 h2,
                 h4 {
-                    color: $font-W;
+                    color: white;
                     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
                 img {
@@ -157,7 +157,7 @@ html {
         }
         // 什麼是Class365
         .content-whats365 {
-            background-color: rgba($color: $basic-blue, $alpha: 0.2);
+            background-color: rgba($color: $primary-default, $alpha: 0.2);
             background-image: url(../img/cloud.png);
             background-position: left 100%;
             background-repeat: no-repeat;
@@ -247,9 +247,9 @@ html {
         }
         // 好評推薦
         .content-recommend {
-            background-color: $basic-blue;
+            background-color: $primary-default;
             h3 {
-                color: $font-W;
+                color: white;
             }
             .img-gp {
                 margin-top: $m-S;
@@ -298,13 +298,13 @@ html {
         }
         // 流程圖
         .content-flow-HR {
-            @include flow($light-sky);
+            @include flow($primary-tint);
         }
         .content-flow-attendance {
-            @include flow($light-green);
+            @include flow($secondary);
         }
         .content-flow-money {
-            @include flow($light-purple);
+            @include flow($complementary);
         }
         // 所有功能
         .content-Allicon {
@@ -349,7 +349,7 @@ html {
                         object-fit: cover;
                     }
                     .date {
-                        color: $blue-green;
+                        color: $primary-default;
                         margin-top: $m-XS;
                     }
                 }
@@ -358,29 +358,29 @@ html {
         //收費方式
         .content-howmuch {
             .explain {
-                background-color: #fff;
+                background-color: white;
                 p {
                     text-align: center;
                 }
             }
             .notice {
-                color: $dark-blue;
+                color: $primary-dark;
                 font-weight: bold;
             }
             // .bgA {
-            //     background-color: $light-sky;
+            //     background-color: $primary-tint;
             // }
             // .bgB {
-            //     background-color: $basic-blue;
+            //     background-color: $primary-default;
             // }
             // .bgC {
-            //     background-color: $light-sky;
+            //     background-color: $primary-tint;
             // }
             // .bgD {
-            //     background-color: $basic-blue;
+            //     background-color: $primary-default;
             // }
             .plan {
-                background-color: $basic-blue;
+                background-color: $primary-default;
                 .planbox {
                     background-color: white;
                     width: 100%;
@@ -426,7 +426,7 @@ html {
                             input[type="checkbox"] {
                                 width: 20px;
                                 height: 20px;
-                                border: solid 1px $gray-60 !important;
+                                border: solid 1px $text !important;
                             }
                             label {
                                 font-size: $size-h4;
@@ -458,7 +458,7 @@ html {
                         }
                         .num {
                             font-size: $size-h2;
-                            color: $basic-blue;
+                            color: $primary-default;
                             margin: 0 $m-XXS;
                         }
                         .select-gp {
@@ -480,11 +480,12 @@ html {
                                 width: 100%;
                             }
                             .download {
-                                font-size: $size-p;
-                                background-color: $dark-blue;
-                                padding: 6px;
-                                color: #fff;
+                                font-size: $size-h5;
+                                background-color: $primary-dark;
+                                padding: $p-XXS $p-XS;
+                                color: white;
                                 border-radius: 6px;
+                                font-weight: bold;
                                 @include mobile-L {
                                     font-size: $size-h4;
                                     font-weight: bold;
