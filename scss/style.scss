@@ -471,6 +471,9 @@ html {
                                 margin-right: 0;
                                 margin-bottom: $m-XXS;
                             }
+                            .form-control {
+                                padding-right: $m-S;
+                            }
                         }
                         .btn {
                             margin: 0 $m-S;
