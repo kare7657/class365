@@ -843,22 +843,25 @@ html body .content-whats365 {
 html body .content-whats365 p {
   text-align: center;
 }
-html body .content-module .explain-L {
+html body .content-module .container {
+  padding: 80px 0;
+}
+html body .content-module .container .explain-L {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-html body .content-module .explain-L:not(:last-child) {
+html body .content-module .container .explain-L:not(:last-child) {
   margin-bottom: 60px;
 }
 @media (max-width: 768px) {
-  html body .content-module .explain-L {
+  html body .content-module .container .explain-L {
     flex-wrap: wrap;
     flex-direction: column;
   }
 }
-html body .content-module .explain-R {
+html body .content-module .container .explain-R {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -867,28 +870,28 @@ html body .content-module .explain-R {
   margin-bottom: 60px;
 }
 @media (max-width: 768px) {
-  html body .content-module .explain-R {
+  html body .content-module .container .explain-R {
     flex-direction: column;
   }
 }
-html body .content-module .explain-img {
+html body .content-module .container .explain-img {
   width: 45%;
 }
 @media (max-width: 768px) {
-  html body .content-module .explain-img {
+  html body .content-module .container .explain-img {
     width: 80%;
     margin: auto;
   }
 }
-html body .content-module .explain-img img {
+html body .content-module .container .explain-img img {
   width: 100%;
 }
-html body .content-module .text-box {
+html body .content-module .container .text-box {
   width: 40%;
   text-align: center;
 }
 @media (max-width: 768px) {
-  html body .content-module .text-box {
+  html body .content-module .container .text-box {
     width: 100%;
     margin: auto;
     margin-top: 20px;
@@ -896,46 +899,46 @@ html body .content-module .text-box {
   }
 }
 @media (max-width: 568px) {
-  html body .content-module .text-box {
+  html body .content-module .container .text-box {
     margin-top: 4px;
     margin-bottom: 36px;
   }
 }
-html body .content-module .text-box .text-gp {
+html body .content-module .container .text-box .text-gp {
   margin-bottom: 20px;
 }
-html body .content-module .text-box .text-gp p,
-html body .content-module .text-box .text-gp h3 {
+html body .content-module .container .text-box .text-gp p,
+html body .content-module .container .text-box .text-gp h3 {
   text-align: left;
 }
 @media (max-width: 568px) {
-  html body .content-module .text-box .text-gp p,
-html body .content-module .text-box .text-gp h3 {
+  html body .content-module .container .text-box .text-gp p,
+html body .content-module .container .text-box .text-gp h3 {
     text-align: center;
   }
 }
-html body .content-module .text-box .btn {
+html body .content-module .container .text-box .btn {
   padding: 8px 24px;
   background-color: #2b5f75;
   border: none;
   margin-top: 12px;
 }
-html body .content-module .text-box .btn:hover {
+html body .content-module .container .text-box .btn:hover {
   background-color: black;
   transition-duration: 0.5s;
 }
 @media (max-width: 568px) {
-  html body .content-module .text-box .btn {
+  html body .content-module .container .text-box .btn {
     padding: 8px 16px;
   }
 }
-html body .content-module .text-box .btn h3,
-html body .content-module .text-box .btn h4,
-html body .content-module .text-box .btn h5 {
+html body .content-module .container .text-box .btn h3,
+html body .content-module .container .text-box .btn h4,
+html body .content-module .container .text-box .btn h5 {
   color: white;
   margin-bottom: 0;
 }
-html body .content-module .text-box h3 {
+html body .content-module .container .text-box h3 {
   text-align: left;
 }
 html body .content-client {
@@ -987,9 +990,8 @@ html body .content-recommend .img-gp .talk-R {
 }
 html body .content-contactus .notice {
   width: 100%;
-  padding: 40px 0;
+  padding: 64px 0;
   background-color: rgba(125, 185, 222, 0.3);
-  border-radius: 20px;
   text-align: center;
 }
 @media (max-width: 1024px) {
@@ -1368,37 +1370,22 @@ html body .content-flow-HR {
   background-color: #a5dee4;
 }
 html body .content-flow-HR img {
-  width: 95%;
-  border-radius: 30px;
-}
-@media (max-width: 568px) {
-  html body .content-flow-HR img {
-    border-radius: 20px;
-  }
+  width: 100%;
+  border-radius: 20px;
 }
 html body .content-flow-attendance {
   background-color: #c5de7d;
 }
 html body .content-flow-attendance img {
-  width: 95%;
-  border-radius: 30px;
-}
-@media (max-width: 568px) {
-  html body .content-flow-attendance img {
-    border-radius: 20px;
-  }
+  width: 100%;
+  border-radius: 20px;
 }
 html body .content-flow-money {
   background-color: #a5abe4;
 }
 html body .content-flow-money img {
-  width: 95%;
-  border-radius: 30px;
-}
-@media (max-width: 568px) {
-  html body .content-flow-money img {
-    border-radius: 20px;
-  }
+  width: 100%;
+  border-radius: 20px;
 }
 html body .content-Allicon .Allicon-gp {
   width: 100%;
@@ -1448,8 +1435,8 @@ html body .content-Allicon h2 {
 }
 html body .content-other .link-gp {
   display: flex;
-  justify-content: center;
-  padding: 24px 0 0 0;
+  justify-content: space-between;
+  padding: 40px 0;
 }
 @media (max-width: 768px) {
   html body .content-other .link-gp {
@@ -1461,7 +1448,6 @@ html body .content-other .link-gp .link {
   width: 48%;
   display: flex;
   flex-direction: column;
-  margin: 0 12px;
 }
 @media (max-width: 768px) {
   html body .content-other .link-gp .link {
@@ -1474,6 +1460,7 @@ html body .content-other .link-gp .link h3 {
 }
 html body .content-other .link-gp .link img {
   width: 100%;
+  border-radius: 20px;
 }
 html body .content-other .link-gp h2 {
   margin-top: 12px;
@@ -1518,7 +1505,7 @@ html body .content-howmuch .notice {
 html body .content-howmuch .plan {
   background-color: #7db9de;
 }
-html body .content-howmuch .plan .planbox {
+html body .content-howmuch .plan .container .planbox {
   background-color: white;
   width: 100%;
   border-radius: 20px;
@@ -1527,120 +1514,120 @@ html body .content-howmuch .plan .planbox {
   flex-wrap: wrap;
   justify-content: center;
 }
-html body .content-howmuch .plan .planbox h3 {
+html body .content-howmuch .plan .container .planbox h3 {
   text-align: left;
   width: 100%;
 }
-html body .content-howmuch .plan .planbox .text-gp {
+html body .content-howmuch .plan .container .planbox .text-gp {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
 }
-html body .content-howmuch .plan .planbox .text-gp .plan-item {
+html body .content-howmuch .plan .container .planbox .text-gp .plan-item {
   margin: 0 48px;
 }
 @media (max-width: 1024px) {
-  html body .content-howmuch .plan .planbox .text-gp .plan-item {
+  html body .content-howmuch .plan .container .planbox .text-gp .plan-item {
     margin: 0 20px;
   }
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .plan-item {
+  html body .content-howmuch .plan .container .planbox .text-gp .plan-item {
     margin: 0 4px;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .plan-item img {
+html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
   width: 170px;
 }
 @media (max-width: 1024px) {
-  html body .content-howmuch .plan .planbox .text-gp .plan-item img {
+  html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
     width: 150px;
   }
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .plan-item img {
+  html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
     margin: 0;
     width: 80px;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .form-check {
+html body .content-howmuch .plan .container .planbox .text-gp .form-check {
   margin-top: 4px;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .form-check {
+  html body .content-howmuch .plan .container .planbox .text-gp .form-check {
     margin-bottom: 20px;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .form-check input[type=checkbox] {
+html body .content-howmuch .plan .container .planbox .text-gp .form-check input[type=checkbox] {
   width: 20px;
   height: 20px;
   border: solid 1px #727171 !important;
 }
-html body .content-howmuch .plan .planbox .text-gp .form-check label {
+html body .content-howmuch .plan .container .planbox .text-gp .form-check label {
   font-size: 1.25rem;
   font-weight: bold;
   margin-left: 12px;
 }
-html body .content-howmuch .plan .planbox .text-gp p {
+html body .content-howmuch .plan .container .planbox .text-gp p {
   font-size: 1.25rem;
   font-weight: bold;
   margin-right: 20px;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp p {
+  html body .content-howmuch .plan .container .planbox .text-gp p {
     margin-right: 0;
     margin-bottom: 12px;
     width: 100%;
     text-align: left;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .title {
+html body .content-howmuch .plan .container .planbox .text-gp .title {
   font-size: 1.25rem;
   color: #727171;
   font-weight: bold;
   margin-right: 12px;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .title {
+  html body .content-howmuch .plan .container .planbox .text-gp .title {
     width: 100%;
     margin-bottom: 12px;
     text-align: left;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .num {
+html body .content-howmuch .plan .container .planbox .text-gp .num {
   font-size: 1.875rem;
   color: #7db9de;
   margin: 0 4px;
 }
-html body .content-howmuch .plan .planbox .text-gp .select-gp {
+html body .content-howmuch .plan .container .planbox .text-gp .select-gp {
   display: flex;
   align-items: center;
   vertical-align: middle;
   margin-right: 36px;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .select-gp {
+  html body .content-howmuch .plan .container .planbox .text-gp .select-gp {
     width: 100%;
     margin-right: 0;
     margin-bottom: 4px;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .select-gp .form-control {
+html body .content-howmuch .plan .container .planbox .text-gp .select-gp .form-control {
   padding-right: 20px;
 }
-html body .content-howmuch .plan .planbox .text-gp .btn {
+html body .content-howmuch .plan .container .planbox .text-gp .btn {
   margin: 0 20px;
   padding: 0;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .btn {
+  html body .content-howmuch .plan .container .planbox .text-gp .btn {
     margin-top: 4px;
     width: 100%;
   }
 }
-html body .content-howmuch .plan .planbox .text-gp .btn .download {
+html body .content-howmuch .plan .container .planbox .text-gp .btn .download {
   font-size: 1.125rem;
   background-color: #2b5f75;
   padding: 8px 16px;
@@ -1649,7 +1636,7 @@ html body .content-howmuch .plan .planbox .text-gp .btn .download {
   font-weight: bold;
 }
 @media (max-width: 568px) {
-  html body .content-howmuch .plan .planbox .text-gp .btn .download {
+  html body .content-howmuch .plan .container .planbox .text-gp .btn .download {
     font-size: 1.25rem;
     font-weight: bold;
     padding: 8px 16px;

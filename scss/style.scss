@@ -165,71 +165,74 @@ html {
                 text-align: center;
             }
         }
-        // 模組介紹
+        // 功能介紹
         .content-module {
-            .explain-L {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                &:not(:last-child) {
-                    margin-bottom: $m-2L;
-                }
-                @include pad() {
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                }
-            }
-            .explain-R {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-                flex-direction: row-reverse;
-                align-items: center;
-                margin-bottom: $m-2L;
-                @include pad() {
-                    flex-direction: column;
-                }
-            }
-            .explain-img {
-                width: 45%;
-                @include pad() {
-                    width: 80%;
-                    margin: auto;
-                }
-                img {
+            .container{
+                padding: $p-L*2 0;
+                .explain-L {
                     width: 100%;
-                }
-            }
-            .text-box {
-                width: 40%;
-                text-align: center;
-                @include pad() {
-                    width: 100%;
-                    margin: auto;
-                    margin-top: $m-S;
-                    margin-bottom: $m-M;
-                }
-                @include mobile-L() {
-                    margin-top: $m-XXS;
-                    margin-bottom: $m-M;
-                }
-                .text-gp {
-                    margin-bottom: $m-S;
-                    p,
-                    h3 {
-                        text-align: left;
-                        @include mobile-L() {
-                            text-align: center;
-                        }
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-bottom: $m-2L;
+                    }
+                    @include pad() {
+                        flex-wrap: wrap;
+                        flex-direction: column;
                     }
                 }
-                .btn {
-                    @include btn();
-                    margin-top: $m-XS;
+                .explain-R {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    margin-bottom: $m-2L;
+                    @include pad() {
+                        flex-direction: column;
+                    }
                 }
-                h3 {
-                    text-align: left;
+                .explain-img {
+                    width: 45%;
+                    @include pad() {
+                        width: 80%;
+                        margin: auto;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text-box {
+                    width: 40%;
+                    text-align: center;
+                    @include pad() {
+                        width: 100%;
+                        margin: auto;
+                        margin-top: $m-S;
+                        margin-bottom: $m-M;
+                    }
+                    @include mobile-L() {
+                        margin-top: $m-XXS;
+                        margin-bottom: $m-M;
+                    }
+                    .text-gp {
+                        margin-bottom: $m-S;
+                        p,
+                        h3 {
+                            text-align: left;
+                            @include mobile-L() {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .btn {
+                        @include btn();
+                        margin-top: $m-XS;
+                    }
+                    h3 {
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -367,21 +370,10 @@ html {
                 color: $primary-dark;
                 font-weight: bold;
             }
-            // .bgA {
-            //     background-color: $primary-tint;
-            // }
-            // .bgB {
-            //     background-color: $primary-default;
-            // }
-            // .bgC {
-            //     background-color: $primary-tint;
-            // }
-            // .bgD {
-            //     background-color: $primary-default;
-            // }
             .plan {
                 background-color: $primary-default;
-                .planbox {
+                .container{
+                    .planbox {
                     background-color: white;
                     width: 100%;
                     border-radius: 20px;
@@ -497,6 +489,7 @@ html {
                             }
                         }
                     }
+                }
                 }
             }
             table {
