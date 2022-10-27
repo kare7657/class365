@@ -157,7 +157,7 @@ html {
         }
         // 什麼是Class365
         .content-whats365 {
-            background-color: rgba($color: $primary-default, $alpha: 0.2);
+            background-color: $primary-table;
             background-image: url(../img/cloud.png);
             background-position: left 100%;
             background-repeat: no-repeat;
