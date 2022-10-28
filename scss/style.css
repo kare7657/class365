@@ -219,6 +219,14 @@
 * ::placeholder {
   color: #727171;
 }
+* ::-moz-selection {
+  background-color: #007BFF;
+  color: white;
+}
+* ::selection {
+  background-color: #007BFF;
+  color: white;
+}
 * select {
   -webkit-appearance: none; /* Safari & Chrome */
   -moz-appearance: none; /* FireFox */
@@ -560,14 +568,20 @@ html body .navbar .pc .navbar-R {
   justify-content: flex-end;
   position: relative;
 }
-html body .navbar .pc .navbar-R h4 {
+html body .navbar .pc .navbar-R a:not(.nav-list a) {
+  margin: 0 16px;
+}
+html body .navbar .pc .navbar-R a:not(.nav-list a):last-child {
+  margin-right: 0;
+}
+html body .navbar .pc .navbar-R .menu-title {
   font-size: 1.25rem;
   color: white;
   margin: 0;
   padding: 0;
-  margin-right: 20px;
   line-height: 80px;
   display: inline;
+  font-weight: bold;
 }
 html body .navbar .pc .navbar-R .nav-function {
   position: relative;
@@ -581,12 +595,12 @@ html body .navbar .pc .navbar-R .nav-list {
   text-align: center;
   position: absolute;
   top: 80px;
-  left: calc(50% - 90px);
+  left: calc(50% - 80px);
   width: 160px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #1c4b60;
 }
-html body .navbar .pc .navbar-R .nav-list h4 {
+html body .navbar .pc .navbar-R .nav-list .menu-title {
   margin: 0;
   padding: 0;
   line-height: 48px;
@@ -627,7 +641,7 @@ html body .navbar .mobile .menu ul {
   display: inline-block;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #1c4b60;
   font-size: 1.25rem;
   line-height: 60px;
   position: absolute;
@@ -676,25 +690,25 @@ html body .navbar .mobile .menu .active-ul {
 html body .navbar .mobile .menu .active-ul li {
   color: #7db9de;
 }
-html body .navbar .mobile .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
+@media (max-width: 768px) {
+  html body .navbar .mobile .title {
+    height: 60px;
+  }
 }
 @media (max-width: 568px) {
   html body .navbar .mobile .title {
     height: 65px;
   }
 }
-html body .navbar .mobile .title h4 {
-  font-size: 1.25rem;
-  color: white;
-  line-height: 60px;
-  margin: 0;
+html body .navbar .mobile .title h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  line-height: inherit;
 }
-html body .navbar .mobile .title img {
-  height: 50px;
+html body .navbar .mobile .title h1 img {
+  height: 45px;
 }
 html body .swiper-container {
   width: 100%;
@@ -727,7 +741,7 @@ html body .swiper-container .swiper-slide {
   align-items: center;
 }
 html body .swiper-container .swiper-slide h2,
-html body .swiper-container .swiper-slide h4 {
+html body .swiper-container .swiper-slide p {
   color: white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -769,8 +783,12 @@ html body .swiper-container .swiper-slide .BN-text-gp h2 {
     font-size: 1.5rem;
   }
 }
+html body .swiper-container .swiper-slide .BN-text-gp p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 @media (max-width: 320px) {
-  html body .swiper-container .swiper-slide .BN-text-gp h4 {
+  html body .swiper-container .swiper-slide .BN-text-gp p {
     font-size: 1.125rem;
     padding: 0 16px;
   }
@@ -994,12 +1012,6 @@ html body .content-contactus .notice {
   background-color: rgba(125, 185, 222, 0.3);
   text-align: center;
 }
-@media (max-width: 1024px) {
-  html body .content-contactus .notice {
-    width: 90%;
-    margin: auto;
-  }
-}
 @media (max-width: 768px) {
   html body .content-contactus .notice {
     width: 100%;
@@ -1111,7 +1123,7 @@ html body footer .ft-top .text-gp .text-box a {
   display: inline-block;
 }
 html body footer .ft-bot {
-  background-color: #22566c;
+  background-color: #1c4b60;
   display: flex;
   justify-content: center;
   padding: 16px 0;
@@ -1170,10 +1182,12 @@ html body .top-BN .BN-text-gp .title {
   line-height: 1.5;
   font-weight: bold;
 }
-html body .top-BN .BN-text-gp h2,
-html body .top-BN .BN-text-gp h3 {
+html body .top-BN .BN-text-gp p {
   color: white;
   margin-bottom: 4px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 html body .top-BN img {
   width: 100%;
@@ -1998,6 +2012,10 @@ html body .content-icon .icon-gp .icon {
 html body .content-icon .icon-gp .icon img {
   height: 100px;
   margin-bottom: 12px;
+}
+html body .content-icon .icon-gp .icon .title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 html body .content-QA .collapse-gp {
   padding: 0 32px;

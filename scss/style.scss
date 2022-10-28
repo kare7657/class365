@@ -60,7 +60,7 @@ html {
                 -webkit-align-items: center;
                 align-items: center;
                 h2,
-                h4 {
+                p {
                     color: white;
                     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
@@ -94,7 +94,9 @@ html {
                             font-size: $size-h3;
                         }
                     }
-                    h4 {
+                    p {
+                        font-size: $size-h4;
+                        font-weight: bold;
                         @include mobile-XS() {
                             font-size: $size-h5;
                             padding: 0 $p-XS;
@@ -167,8 +169,8 @@ html {
         }
         // 功能介紹
         .content-module {
-            .container{
-                padding: $p-L*2 0;
+            .container {
+                padding: $p-L * 2 0;
                 .explain-L {
                     width: 100%;
                     display: flex;
@@ -372,124 +374,124 @@ html {
             }
             .plan {
                 background-color: $primary-default;
-                .container{
+                .container {
                     .planbox {
-                    background-color: white;
-                    width: 100%;
-                    border-radius: 20px;
-                    padding: $p-M $p-L;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    h3 {
-                        text-align: left;
+                        background-color: white;
                         width: 100%;
-                    }
-                    .text-gp {
+                        border-radius: 20px;
+                        padding: $p-M $p-L;
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: $p-S 0;
-                        .plan-item {
-                            margin: 0 $m-L;
-                            @include web-S {
-                                margin: 0 $m-S;
-                            }
-                            @include mobile-L {
-                                margin: 0 $m-XXS;
-                            }
-                            img {
-                                width: 170px;
-                                @include web-S {
-                                    width: 150px;
-                                }
-                                @include mobile-L {
-                                    margin: 0;
-                                    width: 80px;
-                                }
-                            }
+                        justify-content: center;
+                        h3 {
+                            text-align: left;
+                            width: 100%;
                         }
-                        .form-check {
-                            margin-top: $m-XXS;
-                            @include mobile-L {
-                                margin-bottom: $m-S;
-                            }
-                            input[type="checkbox"] {
-                                width: 20px;
-                                height: 20px;
-                                border: solid 1px $text !important;
-                            }
-                            label {
-                                font-size: $size-h4;
-                                font-weight: bold;
-                                margin-left: $m-XS;
-                            }
-                        }
-                        p {
-                            font-size: $size-h4;
-                            font-weight: bold;
-                            margin-right: $m-S;
-                            @include mobile-L {
-                                margin-right: 0;
-                                margin-bottom: $m-XS;
-                                width: 100%;
-                                text-align: left;
-                            }
-                        }
-                        .title {
-                            font-size: $size-h4;
-                            color: $text;
-                            font-weight: bold;
-                            margin-right: $m-XS;
-                            @include mobile-L {
-                                width: 100%;
-                                margin-bottom: $m-XS;
-                                text-align: left;
-                            }
-                        }
-                        .num {
-                            font-size: $size-h2;
-                            color: $primary-default;
-                            margin: 0 $m-XXS;
-                        }
-                        .select-gp {
+                        .text-gp {
                             display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
                             align-items: center;
-                            vertical-align: middle;
-                            margin-right: $m-M;
-                            @include mobile-L {
-                                width: 100%;
-                                margin-right: 0;
-                                margin-bottom: $m-XXS;
-                            }
-                            .form-control {
-                                padding-right: $m-S;
-                            }
-                        }
-                        .btn {
-                            margin: 0 $m-S;
-                            padding: 0;
-                            @include mobile-L {
-                                margin-top: $m-XXS;
-                                width: 100%;
-                            }
-                            .download {
-                                font-size: $size-h5;
-                                background-color: $primary-dark;
-                                padding: $p-XXS $p-XS;
-                                color: white;
-                                border-radius: 6px;
-                                font-weight: bold;
+                            padding: $p-S 0;
+                            .plan-item {
+                                margin: 0 $m-L;
+                                @include web-S {
+                                    margin: 0 $m-S;
+                                }
                                 @include mobile-L {
+                                    margin: 0 $m-XXS;
+                                }
+                                img {
+                                    width: 170px;
+                                    @include web-S {
+                                        width: 150px;
+                                    }
+                                    @include mobile-L {
+                                        margin: 0;
+                                        width: 80px;
+                                    }
+                                }
+                            }
+                            .form-check {
+                                margin-top: $m-XXS;
+                                @include mobile-L {
+                                    margin-bottom: $m-S;
+                                }
+                                input[type="checkbox"] {
+                                    width: 20px;
+                                    height: 20px;
+                                    border: solid 1px $text !important;
+                                }
+                                label {
                                     font-size: $size-h4;
                                     font-weight: bold;
-                                    padding: 8px 16px;
+                                    margin-left: $m-XS;
+                                }
+                            }
+                            p {
+                                font-size: $size-h4;
+                                font-weight: bold;
+                                margin-right: $m-S;
+                                @include mobile-L {
+                                    margin-right: 0;
+                                    margin-bottom: $m-XS;
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                            .title {
+                                font-size: $size-h4;
+                                color: $text;
+                                font-weight: bold;
+                                margin-right: $m-XS;
+                                @include mobile-L {
+                                    width: 100%;
+                                    margin-bottom: $m-XS;
+                                    text-align: left;
+                                }
+                            }
+                            .num {
+                                font-size: $size-h2;
+                                color: $primary-default;
+                                margin: 0 $m-XXS;
+                            }
+                            .select-gp {
+                                display: flex;
+                                align-items: center;
+                                vertical-align: middle;
+                                margin-right: $m-M;
+                                @include mobile-L {
+                                    width: 100%;
+                                    margin-right: 0;
+                                    margin-bottom: $m-XXS;
+                                }
+                                .form-control {
+                                    padding-right: $m-S;
+                                }
+                            }
+                            .btn {
+                                margin: 0 $m-S;
+                                padding: 0;
+                                @include mobile-L {
+                                    margin-top: $m-XXS;
+                                    width: 100%;
+                                }
+                                .download {
+                                    font-size: $size-h5;
+                                    background-color: $primary-dark;
+                                    padding: $p-XXS $p-XS;
+                                    color: white;
+                                    border-radius: 6px;
+                                    font-weight: bold;
+                                    @include mobile-L {
+                                        font-size: $size-h4;
+                                        font-weight: bold;
+                                        padding: 8px 16px;
+                                    }
                                 }
                             }
                         }
                     }
-                }
                 }
             }
             table {
@@ -628,6 +630,10 @@ html {
                     img {
                         height: 100px;
                         margin-bottom: $m-XS;
+                    }
+                    .title{
+                        font-size: $size-h3;
+                        font-weight: bold;
                     }
                 }
             }
