@@ -45,6 +45,7 @@
         }
         @include web-L {
             max-width: unset;
+            padding: $p-M $p-S;
         }
     }
     h1 {
@@ -238,8 +239,8 @@
     ::placeholder {
         color: $text;
     }
-    ::selection{
-        background-color: #007BFF;
+    ::selection {
+        background-color: #007bff;
         color: white;
     }
     select {
@@ -834,7 +835,7 @@
             line-height: 1.5;
             font-weight: bold;
         }
-        p{
+        p {
             color: white;
             margin-bottom: $m-XXS;
             font-size: $size-h3;
@@ -861,6 +862,9 @@
         @include pad() {
             margin-bottom: unset;
         }
+        @include mobile-L() {
+            margin-bottom: $m-S;
+        }
         .explain-img {
             width: 100%;
             img {
@@ -883,7 +887,7 @@
             margin: 0;
             margin-bottom: $m-XS;
             @include mobile-L() {
-                margin-bottom: unset;
+                margin-bottom: $m-S;
             }
         }
     }
@@ -897,6 +901,9 @@
             flex-wrap: wrap;
             flex-direction: column-reverse;
         }
+        @include mobile-L() {
+            margin-bottom: $m-S;
+        }
     }
     .explain-R {
         width: 100%;
@@ -908,6 +915,9 @@
         @include pad() {
             flex-direction: column-reverse;
             margin-bottom: $m-XS;
+        }
+        @include mobile-L() {
+            margin-bottom: $m-S;
         }
     }
     .explain-img {
@@ -1061,6 +1071,9 @@
         img {
             width: 100%;
             border-radius: 20px;
+            @include mobile-L() {
+                width: 80%;
+            }
         }
     }
 }
@@ -1251,7 +1264,6 @@
 }
 
 @mixin collapse() {
-    padding: 0 $p-M;
     @include pad() {
         padding: 0;
     }
@@ -1309,6 +1321,48 @@
             color: $text;
             @include mobile-XS() {
                 font-size: $size-p;
+            }
+        }
+    }
+}
+
+@mixin breadcrumb {
+    .breadcrumb {
+        background-color: white;
+        margin-bottom: $m-S;
+        @include mobile-L() {
+            padding: 0;
+        }
+        .container {
+            padding: 0;
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                text-align: left;
+                a {
+                    color: $text;
+                    &:hover .fas,
+                    &:hover p {
+                        color: $primary-default;
+                    }
+                }
+                li {
+                    font-size: $size-p;
+                    color: $text;
+                    line-height: $size-p;
+                    display: inline;
+                    list-style: none;
+                    margin-right: 5px;
+                }
+                .fas {
+                    font-size: $size-p;
+                    line-height: $size-p;
+                    color: $text;
+                }
+                span {
+                    color: black;
+                }
             }
         }
     }

@@ -19,6 +19,8 @@ html {
         .icon p {
             text-align: center;
         }
+        // 組件
+        @include breadcrumb;
 
         // 導覽列
         .navbar {
@@ -305,6 +307,9 @@ html {
         }
         .content-function {
             @include function();
+            .container {
+                padding-bottom: 0;
+            }
             h2 {
                 margin-bottom: 0;
             }
@@ -401,6 +406,9 @@ html {
                             justify-content: space-between;
                             align-items: center;
                             padding: $p-S 0;
+                            @include mobile-L{
+                                padding-bottom: 0;
+                            }
                             .plan-item {
                                 margin: 0 $m-L;
                                 @include web-S {
@@ -416,7 +424,7 @@ html {
                                     }
                                     @include mobile-L {
                                         margin: 0;
-                                        width: 80px;
+                                        width: 100px;
                                     }
                                 }
                             }
@@ -437,6 +445,9 @@ html {
                                     font-weight: bold;
                                     margin-left: $m-XS;
                                     text-align: left;
+                                    @include mobile-L{
+                                        margin-left: 0;
+                                    }
                                 }
                             }
                             p {

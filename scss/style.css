@@ -19,6 +19,7 @@
 @media (max-width: 1366px) {
   * .container {
     max-width: unset;
+    padding: 32px 24px;
   }
 }
 * h1 {
@@ -220,11 +221,11 @@
   color: #727171;
 }
 * ::-moz-selection {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
 }
 * ::selection {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
 }
 * select {
@@ -511,6 +512,46 @@ html body {
 }
 html body .icon p {
   text-align: center;
+}
+html body .breadcrumb {
+  background-color: white;
+  margin-bottom: 20px;
+}
+@media (max-width: 568px) {
+  html body .breadcrumb {
+    padding: 0;
+  }
+}
+html body .breadcrumb .container {
+  padding: 0;
+}
+html body .breadcrumb .container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+html body .breadcrumb .container ul a {
+  color: #727171;
+}
+html body .breadcrumb .container ul a:hover .fas, html body .breadcrumb .container ul a:hover p {
+  color: #7db9de;
+}
+html body .breadcrumb .container ul li {
+  font-size: 1rem;
+  color: #727171;
+  line-height: 1rem;
+  display: inline;
+  list-style: none;
+  margin-right: 5px;
+}
+html body .breadcrumb .container ul .fas {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #727171;
+}
+html body .breadcrumb .container ul span {
+  color: black;
 }
 html body .navbar {
   width: 100%;
@@ -1218,6 +1259,11 @@ html body .content-function .explain-M {
     margin-bottom: unset;
   }
 }
+@media (max-width: 568px) {
+  html body .content-function .explain-M {
+    margin-bottom: 20px;
+  }
+}
 html body .content-function .explain-M .explain-img {
   width: 100%;
 }
@@ -1244,7 +1290,7 @@ html body .content-function .explain-M .text-box {
 }
 @media (max-width: 568px) {
   html body .content-function .explain-M .text-box {
-    margin-bottom: unset;
+    margin-bottom: 20px;
   }
 }
 html body .content-function .explain-L {
@@ -1259,6 +1305,11 @@ html body .content-function .explain-L {
     flex-direction: column-reverse;
   }
 }
+@media (max-width: 568px) {
+  html body .content-function .explain-L {
+    margin-bottom: 20px;
+  }
+}
 html body .content-function .explain-R {
   width: 100%;
   display: flex;
@@ -1270,6 +1321,11 @@ html body .content-function .explain-R {
   html body .content-function .explain-R {
     flex-direction: column-reverse;
     margin-bottom: 12px;
+  }
+}
+@media (max-width: 568px) {
+  html body .content-function .explain-R {
+    margin-bottom: 20px;
   }
 }
 html body .content-function .explain-img {
@@ -1386,6 +1442,9 @@ html body .content-function .text-box .btn h5 {
   color: white;
   margin-bottom: 0;
 }
+html body .content-function .container {
+  padding-bottom: 0;
+}
 html body .content-function h2 {
   margin-bottom: 0;
 }
@@ -1485,6 +1544,11 @@ html body .content-other .link-gp .link img {
   width: 100%;
   border-radius: 20px;
 }
+@media (max-width: 568px) {
+  html body .content-other .link-gp .link img {
+    width: 80%;
+  }
+}
 html body .content-other .link-gp h2 {
   margin-top: 12px;
 }
@@ -1548,6 +1612,11 @@ html body .content-howmuch .plan .container .planbox .text-gp {
   align-items: center;
   padding: 24px 0;
 }
+@media (max-width: 568px) {
+  html body .content-howmuch .plan .container .planbox .text-gp {
+    padding-bottom: 0;
+  }
+}
 html body .content-howmuch .plan .container .planbox .text-gp .plan-item {
   margin: 0 48px;
 }
@@ -1572,7 +1641,7 @@ html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
 @media (max-width: 568px) {
   html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
     margin: 0;
-    width: 80px;
+    width: 100px;
   }
 }
 html body .content-howmuch .plan .container .planbox .text-gp .form-check {
@@ -1595,6 +1664,11 @@ html body .content-howmuch .plan .container .planbox .text-gp .form-check label 
   font-weight: bold;
   margin-left: 12px;
   text-align: left;
+}
+@media (max-width: 568px) {
+  html body .content-howmuch .plan .container .planbox .text-gp .form-check label {
+    margin-left: 0;
+  }
 }
 html body .content-howmuch .plan .container .planbox .text-gp p {
   font-size: 1.25rem;
@@ -2028,9 +2102,6 @@ html body .content-icon .icon-gp .icon img {
 html body .content-icon .icon-gp .icon .title {
   font-size: 1.5rem;
   font-weight: bold;
-}
-html body .content-QA .collapse-gp {
-  padding: 0 32px;
 }
 @media (max-width: 768px) {
   html body .content-QA .collapse-gp {
