@@ -7,9 +7,12 @@
     <title>Class 365 雲端差勤系統 | 薪資系統</title>
     <meta name="description" property="og:description"
         content="每年匯入人事行政局的國定假日、勞健保級距，隨政府新法規更新。批次設定員工薪資、加扣款、獎金管理，支援一鍵結轉、產出薪資條，且提供印領清冊、扣繳憑單、薪資轉存清冊等多種報表">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+     <!-- Font Awesome Icons -->
+     <script src="fontawesome-free-6.1.1-web/js/fontawesome-kit.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <!-- Bootstrap 5.1 -->
+    <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <!-- AOS -->
     <link rel="stylesheet" type="text/css" href="scss/aos.css">
     <link rel="stylesheet" href="scss/style.css">
 </head>
@@ -156,29 +159,27 @@
     <footer id="footer"></footer>
 
     <!-- jquery -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.4.2.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <!-- Bootstrap 5.1 -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <noscript>此網頁需要支援 JavaScript 才能正確運行，請先至你的瀏覽器設定中開啟 JavaScript</noscript>
-
-    <!-- aos -->
-    <script>
-        AOS.init({
-            duration: 900,
-            easing: 'ease-out-back',
-            once: true,
-        });
-    </script>
 
     <!-- 引入html header&footer -->
     <script>
         $(function () {
             $("#header").load('header.html');
             $("#footer").load("footer.html");
+        });
+    </script>
+
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-out-back',
+            once: true,
         });
     </script>
 

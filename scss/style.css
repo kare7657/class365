@@ -1576,7 +1576,8 @@ html body .content-howmuch .plan .container .planbox .text-gp .plan-item img {
   }
 }
 html body .content-howmuch .plan .container .planbox .text-gp .form-check {
-  margin-top: 4px;
+  margin-top: 12px;
+  display: flex;
 }
 @media (max-width: 568px) {
   html body .content-howmuch .plan .container .planbox .text-gp .form-check {
@@ -1586,12 +1587,14 @@ html body .content-howmuch .plan .container .planbox .text-gp .form-check {
 html body .content-howmuch .plan .container .planbox .text-gp .form-check input[type=checkbox] {
   width: 20px;
   height: 20px;
+  border-radius: 4px !important;
   border: solid 1px #727171 !important;
 }
 html body .content-howmuch .plan .container .planbox .text-gp .form-check label {
   font-size: 1.25rem;
   font-weight: bold;
   margin-left: 12px;
+  text-align: left;
 }
 html body .content-howmuch .plan .container .planbox .text-gp p {
   font-size: 1.25rem;

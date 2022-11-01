@@ -421,19 +421,22 @@ html {
                                 }
                             }
                             .form-check {
-                                margin-top: $m-XXS;
+                                margin-top: $m-XS;
+                                display: flex;
                                 @include mobile-L {
                                     margin-bottom: $m-S;
                                 }
                                 input[type="checkbox"] {
                                     width: 20px;
                                     height: 20px;
+                                    border-radius: 4px !important;
                                     border: solid 1px $text !important;
                                 }
                                 label {
                                     font-size: $size-h4;
                                     font-weight: bold;
                                     margin-left: $m-XS;
+                                    text-align: left;
                                 }
                             }
                             p {
