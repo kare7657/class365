@@ -153,6 +153,8 @@ html {
                     }
                     img {
                         margin: $m-XS 0;
+                        width: 200px;
+                        height: 200px;
                     }
                 }
             }
@@ -171,6 +173,9 @@ html {
         .content-module {
             .container {
                 padding: $p-L * 2 0;
+                @include mobile-L {
+                    padding: $p-L 0;
+                }
                 .explain-L {
                     width: 100%;
                     display: flex;
@@ -203,29 +208,32 @@ html {
                     }
                     img {
                         width: 100%;
+                        height: 100%;
                     }
                 }
                 .text-box {
                     width: 40%;
                     text-align: center;
                     @include pad() {
-                        width: 100%;
+                        width: 80%;
                         margin: auto;
                         margin-top: $m-S;
                         margin-bottom: $m-M;
                     }
                     @include mobile-L() {
-                        margin-top: $m-XXS;
-                        margin-bottom: $m-M;
+                        margin-top: $m-XS;
+                        margin-bottom: $m-S;
+                    }
+                    h2 {
+                        @include mobile-L {
+                            margin-bottom: $m-M;
+                        }
                     }
                     .text-gp {
                         margin-bottom: $m-S;
                         p,
                         h3 {
                             text-align: left;
-                            @include mobile-L() {
-                                text-align: center;
-                            }
                         }
                     }
                     .btn {
@@ -631,7 +639,7 @@ html {
                         height: 100px;
                         margin-bottom: $m-XS;
                     }
-                    .title{
+                    .title {
                         font-size: $size-h3;
                         font-weight: bold;
                     }
