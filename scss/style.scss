@@ -10,9 +10,10 @@ html {
     body {
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 0 !important;
         overflow-x: hidden;
         font-size: 1rem;
+        background-color: white !important;
         @include mobile-L() {
             font-size: 0.875rem;
         }
@@ -21,11 +22,15 @@ html {
         }
         // 組件
         @include breadcrumb;
+        @include navbar();
+        @include footer();
+        @include fastlink();
+        @include back-top();
+        @include top-BN();
+        @include Allicon();
+        @include collapse;
+        @include form();
 
-        // 導覽列
-        .navbar {
-            @include navbar();
-        }
         // Banner
         .swiper-container {
             width: 100%;
@@ -287,24 +292,6 @@ html {
                 }
             }
         }
-        // 聯絡我們
-        .content-contactus {
-            .notice {
-                @include notice();
-            }
-        }
-        // 頁尾
-        footer {
-            @include footer();
-        }
-        .back-top {
-            @include back-top();
-        }
-
-        // 人事模組
-        .top-BN {
-            @include top-BN();
-        }
         .content-function {
             @include function();
             .container {
@@ -326,7 +313,6 @@ html {
         }
         // 所有功能
         .content-Allicon {
-            @include Allicon();
             h2 {
                 margin-bottom: $m-S;
             }
@@ -393,6 +379,7 @@ html {
                         width: 100%;
                         border-radius: 20px;
                         padding: $p-M $p-L;
+                        margin-bottom: $m-S;
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
@@ -406,7 +393,7 @@ html {
                             justify-content: space-between;
                             align-items: center;
                             padding: $p-S 0;
-                            @include mobile-L{
+                            @include mobile-L {
                                 padding-bottom: 0;
                             }
                             .plan-item {
@@ -445,7 +432,7 @@ html {
                                     font-weight: bold;
                                     margin-left: $m-XS;
                                     text-align: left;
-                                    @include mobile-L{
+                                    @include mobile-L {
                                         margin-left: 0;
                                     }
                                 }
@@ -516,46 +503,6 @@ html {
                     }
                 }
             }
-            table {
-                @include table();
-                @include mobile-L {
-                    display: none;
-                }
-            }
-            .table-mobile {
-                display: none;
-                width: 100%;
-                @include mobile-L {
-                    display: flex;
-                    flex-direction: column;
-                    tr {
-                        justify-content: space-between;
-                        th {
-                            width: 40%;
-                        }
-                        td {
-                            width: 60%;
-                            justify-content: center;
-                            align-items: center;
-                            .text-gp {
-                                img {
-                                    width: 100px;
-                                }
-                                span {
-                                    font-size: $size-h5;
-                                }
-                            }
-                        }
-                    }
-                }
-                @include mobile-XS {
-                    tr {
-                        th {
-                            font-size: $size-p;
-                        }
-                    }
-                }
-            }
         }
         //聯絡我們
         .content-form {
@@ -563,9 +510,6 @@ html {
                 @include mobile-L() {
                     width: 100%;
                     margin: unset;
-                }
-                .form {
-                    @include form();
                 }
                 //圖片驗證碼
                 .code-gp {
@@ -584,7 +528,6 @@ html {
                     }
                     label {
                         width: 15%;
-                        text-align: left;
                         @include pad() {
                             width: 100%;
                         }
@@ -658,12 +601,6 @@ html {
                         font-weight: bold;
                     }
                 }
-            }
-        }
-        //常見問題
-        .content-QA {
-            .collapse-gp {
-                @include collapse;
             }
         }
     }
