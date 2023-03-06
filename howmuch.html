@@ -8,9 +8,15 @@
     <title>Class 365 雲端差勤系統 | 收費方式</title>
     <meta name="description" property="og:description"
         content="系統採月租方式，公司無須負擔硬體費用，享有專人維護主機、資安檢測及病毒掃瞄等服務。提供線上費用試算，依據選擇的功能、使用帳號人數計算金額">
-    <!-- Font Awesome Icons -->
-    <script src="fontawesome-free-6.1.1-web/js/fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <!-- Google tag (gtag.js)-class365_356362700 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVBY48MYL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NVBY48MYL4');
+    </script>
     <!-- Bootstrap 5.1 -->
     <link rel="stylesheet" href="scss/bootstrap.min.css">
     <link rel="stylesheet" href="scss/style.css">
@@ -36,8 +42,8 @@
                 <div class="breadcrumb">
                     <div class="container">
                         <ul>
-                            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                            <li>></li>
+                            <li><a href=" /"><i class="fas fa-home"></i></a></li>
+                            <li>&gt;</li>
                             <li><span>收費方式</span></li>
                         </ul>
                     </div>
@@ -52,53 +58,103 @@
             <div class="container">
                 <h2>方案介紹</h2>
                 <div class="planbox">
-                    <h3>選擇功能</h3>
-                    <div class="text-gp">
-                        <div class="plan-item">
-                            <img src="img/card-punch@2x.png" alt="線上打卡">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="cardpunch">
-                                <label class="form-check-label" for="cardpunch">
-                                    線上打卡
-                                </label>
-                            </div>
-                        </div>
-                        <div class="plan-item">
-                            <img src="img/attendance@2x.png" alt="差勤系統">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="attendance">
-                                <label class="form-check-label" for="attendance">
-                                    差勤系統
-                                </label>
-                            </div>
-                        </div>
-                        <div class="plan-item">
-                            <img src="img/salary@2x.png" alt="薪資系統">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="salary">
-                                <label class="form-check-label" for="salary">
-                                    薪資系統
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-gp">
-                        <div class="title">使用帳號人數</div>
-                        <div class="select-gp">
-                            <!-- <label for="exampleFormControlSelect1">Example select</label> -->
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>10人</option>
-                                <option>20人</option>
-                                <option>30人</option>
-                                <option>40人</option>
-                                <option>50人</option>
-                            </select>
-                        </div>
-                        <p>每月(含稅) <span class="num">3,000</span> 元</p>
-                        <div class="btn">
-                            <a href="" class="download" title="[下載]估價單">下載估價單</a>
-                        </div>
-                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">方案A</th>
+                            </tr>
+                            <tr class="function-icon">
+                                <th colspan="2">
+                                    <img src="img/mobile/card-punch-568.png" alt="線上打卡示意圖">
+                                    <p>打卡</p>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20人</td>
+                                <td>800 元</td>
+                            </tr>
+                            <tr>
+                                <td>30人</td>
+                                <td>1200 元</td>
+                            </tr>
+                            <tr>
+                                <td>40人</td>
+                                <td>1600 元</td>
+                            </tr>
+                            <tr>
+                                <td>50人</td>
+                                <td>2000 元</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">方案B</th>
+                            </tr>
+                            <tr class="function-icon">
+                                <th colspan="2">
+                                    <img src="img/card-punch-attendance.png" alt="差勤系統+線上打卡示意圖">
+                                    <p>差勤+打卡</p>
+                                </th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20人</td>
+                                <td>1600 元</td>
+                            </tr>
+                            <tr>
+                                <td>30人</td>
+                                <td>2400 元</td>
+                            </tr>
+                            <tr>
+                                <td>40人</td>
+                                <td>3200 元</td>
+                            </tr>
+                            <tr>
+                                <td>50人</td>
+                                <td>4000 元</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">方案C</th>
+                            </tr>
+                            <tr class="function-icon">
+                                <th colspan="2" scope="col" id="function3">
+                                    <img src="img/card-punch-attendance-salary.png" alt="差勤系統+線上打卡+薪資系統示意圖">
+                                    <p>差勤+打卡+薪資</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20人</td>
+                                <td>2400 元</td>
+                            </tr>
+                            <tr>
+                                <td>30人</td>
+                                <td>3600 元</td>
+                            </tr>
+                            <tr>
+                                <td>40人</td>
+                                <td>4800 元</td>
+                            </tr>
+                            <tr>
+                                <td>50人</td>
+                                <td>6000 元</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="unit"><i class="fa-solid fa-circle-exclamation"></i>表格金額以台幣計價</p>
                 </div>
 
             </div>
@@ -120,7 +176,7 @@
     <footer id="footer"></footer>
 
     <!-- jquery -->
-    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Bootstrap 5.1 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 

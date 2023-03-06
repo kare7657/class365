@@ -30,6 +30,7 @@ html {
         @include Allicon();
         @include collapse;
         @include form();
+        @include table();
 
         // Banner
         .swiper-container {
@@ -71,7 +72,8 @@ html {
                     color: white;
                     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
-                img {
+                img,
+                picture {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -155,7 +157,6 @@ html {
                     }
                     @include mobile-L() {
                         width: 100%;
-                        margin: auto;
                         margin-bottom: $m-S;
                     }
                     img {
@@ -216,6 +217,7 @@ html {
                     img {
                         width: 100%;
                         height: 100%;
+                        max-width: 600px;
                     }
                 }
                 .text-box {
@@ -334,27 +336,31 @@ html {
         }
         // 最新消息
         .content-news {
-            padding-top: 120px;
             display: flex;
             flex-direction: row;
             justify-content: start;
             flex-wrap: wrap;
-            .block {
-                margin: 0 $m-XS;
-                margin-bottom: $m-M;
-                width: 23%;
-                a {
-                    display: inline-block;
-                    width: 100%;
-                    height: 200px;
-                    img {
+            .container{
+                padding: $p-L $p-S;
+                display: flex;
+                flex-wrap: wrap;
+                .block {
+                    margin: 0 $m-XS;
+                    margin-bottom: $m-M;
+                    width: 23%;
+                    a {
+                        display: inline-block;
                         width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                    .date {
-                        color: $primary-default;
-                        margin-top: $m-XS;
+                        height: 200px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .date {
+                            color: $primary-default;
+                            margin-top: $m-XS;
+                        }
                     }
                 }
             }
@@ -374,15 +380,23 @@ html {
             .plan {
                 background-color: $primary-default;
                 .container {
+                    @include web-XL {
+                        padding: $p-L $p-2L;
+                    }
+                    @include web-S {
+                        padding: $p-M $p-L;
+                    }
+                    @include pad {
+                        padding: $p-M;
+                    }
                     .planbox {
-                        background-color: white;
                         width: 100%;
                         border-radius: 20px;
-                        padding: $p-M $p-L;
                         margin-bottom: $m-S;
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: center;
+                        justify-content: space-between;
+
                         h3 {
                             text-align: left;
                             width: 100%;
@@ -498,6 +512,91 @@ html {
                                         padding: 8px 16px;
                                     }
                                 }
+                            }
+                        }
+                        table {
+                            width: 30%;
+                            @include mobile-L {
+                                width: 100%;
+                                &:not(:last-of-type) {
+                                    margin-bottom: $m-M;
+                                }
+                            }
+                            thead {
+                                background-color: white;
+                                tr:nth-child(1) {
+                                    // background-color: rgba($color: $primary-table, $alpha: 1);
+                                    font-size: $size-h4;
+                                    th {
+                                        border-radius: 16px 16px 0 0;
+                                        border: none;
+                                        outline: 1px solid $primary-tint;
+                                    }
+                                }
+                                .function-icon th {
+                                    padding: $p-M;
+                                }
+                                tr:not(:first-of-type) {
+                                    border-right: 1px solid $primary-tint;
+                                    border-left: 1px solid $primary-tint;
+                                }
+                                img {
+                                    width: 170px;
+                                    height: 170px;
+                                    margin: 0;
+                                    @include pad {
+                                        width: 130px;
+                                        height: 130px;
+                                    }
+                                    @include mobile-L {
+                                        width: 150px;
+                                        height: 150px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr:nth-last-of-type(1) td {
+                                    border-radius: 0 0 0 16px;
+                                    border-top: 1px solid $primary-tint;
+                                    &:nth-child(2) {
+                                        border-radius: 0 0 16px 0;
+                                    }
+                                }
+                                tr:not(:nth-last-of-type(1)) {
+                                    border-top: 1px solid $primary-tint;
+                                    background-color: white;
+                                }
+                                td:nth-child(odd) {
+                                    border-right: 1px solid $primary-tint;
+                                }
+                                tr:last-child td {
+                                    background-color: white;
+                                }
+                                tr:nth-child(odd) td {
+                                    background-color: rgba($color: $primary-table, $alpha: 0.6);
+                                }
+                            }
+                            p {
+                                text-align: center;
+                                font-weight: bold;
+                                margin-top: $m-XS;
+                                font-size: $size-h5;
+                                color: black;
+                                line-height: 1;
+                            }
+                        }
+                        .unit {
+                            width: 100%;
+                            text-align: right;
+                            color: $font-D;
+                            font-weight: bold;
+                            @include mobile-L {
+                                text-align: center;
+                            }
+                            i {
+                                color: $font-D;
+                                margin-right: $p-XXS;
+                                margin-top: $p-S;
                             }
                         }
                     }

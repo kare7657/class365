@@ -8,9 +8,15 @@
     <title>Class 365 雲端差勤系統 | 打造團隊高效的每一天</title>
     <meta name="description" property="og:description"
         content="提供多種功能，協助企業端管理組織結構、優化流程效率。線上打卡：多元打卡提供資料匯出。差勤系統：整合出缺勤紀錄，掌握排班表。薪資系統：批次設定薪資，輕鬆匯出薪資條">
-    <!-- Font Awesome Icons -->
-    <script src="fontawesome-free-6.1.1-web/js/fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <!-- Google tag (gtag.js)-class365_356362700 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVBY48MYL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NVBY48MYL4');
+    </script>
     <!-- Bootstrap 5.1 -->
     <link rel="stylesheet" href="scss/bootstrap.min.css">
     <!-- swiper -->
@@ -30,21 +36,33 @@
                     <h2>Class 365</h2>
                     <p>打造團隊高效的每一天</p>
                 </div>
-                <img class="BN1" src="img/Class365-BN-index_card-punch.jpg" alt="class365品牌banner">
+                <picture class="BN1">
+                    <source media="(max-width:768px)" srcset="img/Class365-BN-index_card-punch.webp">
+                    <source media="(max-width:568px)" srcset="img/mobile/Class365-BN-index_card-punch-768.jpg">
+                    <img src="img/Class365-BN-index_card-punch.jpg" alt="class365品牌banner">
+                </picture>
             </div>
             <div class="swiper-slide">
                 <div class="BN-text-gp" id="BN-title2">
                     <h2>豐富的差勤報表</h2>
                     <p>輕鬆查詢，一鍵匯出檔案</p>
                 </div>
-                <img class="BN2" src="img/Class365-BN-index_attendance.jpg" alt="差勤系統banner">
+                <picture class="BN2">
+                    <source media="(max-width:768px)" srcset="img/Class365-BN-index_attendance.webp">
+                    <source media="(max-width:568px)" srcset="img/mobile/Class365-BN-index_attendance-768.jpg">
+                    <img src="img/Class365-BN-index_attendance.jpg" alt="差勤系統banner">
+                </picture>
             </div>
             <div class="swiper-slide">
                 <div class="BN-text-gp" id="BN-title3">
                     <h2>線上申請表單</h2>
                     <p>流程透明化，一次掌握審核進度</p>
                 </div>
-                <img class="BN3" src="img/Class365-BN-index_eform.jpg" alt="線上表單banner">
+                <picture class="BN3">
+                    <source media="(max-width:768px)" srcset="img/Class365-BN-index_eform.webp">
+                    <source media="(max-width:568px)" srcset="img/mobile/Class365-BN-index_eform-768.jpg">
+                    <img src="img/Class365-BN-index_eform.jpg" alt="線上表單banner">
+                </picture>
             </div>
         </div>
         <!-- Add Arrows -->
@@ -100,7 +118,11 @@
         <div class="container">
             <div class="explain-L">
                 <div class="explain-img">
-                    <img src="img/card-punch@2x.png" alt="線上打卡示意圖">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="img/card-punch@2x.webp">
+                        <source media="(max-width:568px)" srcset="img/mobile/card-punch-568.png">
+                        <img src="img/card-punch@2x.png" alt="線上打卡示意圖">
+                    </picture>
                 </div>
                 <div class="text-box">
                     <h2>線上打卡</h2>
@@ -126,7 +148,11 @@
             </div>
             <div class="explain-R">
                 <div class="explain-img">
-                    <img src="img/attendance@2x.png" alt="線上打卡示意圖">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="img/attendance@2x.webp">
+                        <source media="(max-width:568px)" srcset="img/mobile/attendance-568.png">
+                        <img src="img/attendance@2x.png" alt="差勤系統示意圖">
+                    </picture>
                 </div>
                 <div class="text-box">
                     <h2>差勤系統</h2>
@@ -154,7 +180,11 @@
             </div>
             <div class="explain-L">
                 <div class="explain-img">
-                    <img src="img/salary@2x.png" alt="薪資系統示意圖">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="img/salary@2x.webp">
+                        <source media="(max-width:568px)" srcset="img/mobile/salary-568.png">
+                        <img src="img/salary@2x.png" alt="薪資系統示意圖">
+                    </picture>
                 </div>
                 <div class="text-box">
                     <h2>薪資系統</h2>
@@ -197,7 +227,7 @@
     <link rel="import" href="footer.html" id="cHeader">
 
     <!-- jquery -->
-    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Bootstrap 5.1 -->
     <script src="js/bootstrap.bundle.min.js"></script>
 

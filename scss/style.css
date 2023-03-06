@@ -102,10 +102,6 @@
   color: #727171;
   font-size: 1.125rem;
 }
-* input:-ms-input-placeholder {
-  color: #727171;
-  font-size: 1.125rem;
-}
 * input::placeholder,
 * input option {
   color: #727171;
@@ -212,9 +208,6 @@
   background-color: rgba(25, 118, 210, 0.1);
 }
 * ::-moz-placeholder {
-  color: #727171;
-}
-* :-ms-input-placeholder {
   color: #727171;
 }
 * ::placeholder {
@@ -378,7 +371,7 @@
 }
 @media (max-width: 568px) {
   * .modal-template .modal-dialog .modal-content .modal-body .form-gp input,
-* .modal-template .modal-dialog .modal-content .modal-body .form-gp select {
+  * .modal-template .modal-dialog .modal-content .modal-body .form-gp select {
     width: 100%;
   }
 }
@@ -751,6 +744,7 @@ html body .navbar .mobile .menu .active-ul li {
   }
 }
 html body .navbar .mobile .title h1 {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -758,7 +752,10 @@ html body .navbar .mobile .title h1 {
   line-height: inherit;
 }
 html body .navbar .mobile .title h1 img {
+  width: 100%;
   height: 45px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 html body .footer h4,
 html body .footer p {
@@ -816,7 +813,7 @@ html body .footer .ft-top .text-gp .text-box p {
 }
 @media (max-width: 568px) {
   html body .footer .ft-top .text-gp .text-box p {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 }
 html body .footer .ft-top .text-gp .text-box i {
@@ -866,7 +863,7 @@ html body .fastlink {
 }
 @media (max-width: 568px) {
   html body .fastlink {
-    padding: 32px 16px;
+    padding: 40px 24px;
   }
 }
 html body .fastlink .btn {
@@ -1055,7 +1052,7 @@ html body .collapse-gp .content li {
 }
 @media (max-width: 320px) {
   html body .collapse-gp .content ul,
-html body .collapse-gp .content li {
+  html body .collapse-gp .content li {
     font-size: 1rem;
   }
 }
@@ -1137,7 +1134,7 @@ html body form .form-gp select {
 }
 @media (max-width: 768px) {
   html body form .form-gp input,
-html body form .form-gp select {
+  html body form .form-gp select {
     width: 100%;
   }
 }
@@ -1159,9 +1156,9 @@ html body form .form-gp select[type=reset] {
 }
 @media (max-width: 568px) {
   html body form .form-gp input[type=submit], html body form .form-gp input[type=button], html body form .form-gp input[type=reset],
-html body form .form-gp select[type=submit],
-html body form .form-gp select[type=button],
-html body form .form-gp select[type=reset] {
+  html body form .form-gp select[type=submit],
+  html body form .form-gp select[type=button],
+  html body form .form-gp select[type=reset] {
     width: 47%;
   }
 }
@@ -1189,6 +1186,66 @@ html body form .form-gp option:focus,
 html body form .form-gp textarea:focus {
   outline: 1px solid #7db9de;
 }
+html body table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+}
+html body table th,
+html body table td {
+  padding: 8px 8px;
+  text-align: center;
+}
+html body table tr:nth-child(even):not(:last-child) {
+  background-color: white;
+}
+html body table tr:nth-child(odd) {
+  background-color: #e5f1f9;
+}
+html body table tr th {
+  text-align: center;
+  width: 30%;
+}
+html body table tr th:nth-child(1) {
+  width: 10%;
+}
+@media (max-width: 768px) {
+  html body table tr th {
+    width: 29%;
+  }
+  html body table tr th:nth-child(1) {
+    width: 13%;
+  }
+}
+@media (max-width: 568px) {
+  html body table tr th:nth-child(1) {
+    width: 25%;
+  }
+}
+html body table tr td {
+  color: #727171;
+}
+@media (max-width: 568px) {
+  html body table tr td {
+    flex-wrap: wrap;
+  }
+}
+html body table tr .btn {
+  margin: 0 4px;
+}
+@media (max-width: 768px) {
+  html body table tr .btn {
+    margin: 4px 12px;
+  }
+}
+@media (max-width: 568px) {
+  html body table tr .btn {
+    margin: 12px 12px 12px 0 !important;
+  }
+}
+html body table tr .btn-primary {
+  background-color: #7db9de;
+}
 html body .swiper-container {
   width: 100%;
   height: 100vh;
@@ -1205,7 +1262,7 @@ html body .swiper-container {
 }
 @media (max-width: 568px) {
   html body .swiper-container .swiper-button-next,
-html body .swiper-container .swiper-button-prev {
+  html body .swiper-container .swiper-button-prev {
     display: none;
   }
 }
@@ -1224,7 +1281,8 @@ html body .swiper-container .swiper-slide p {
   color: white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-html body .swiper-container .swiper-slide img {
+html body .swiper-container .swiper-slide img,
+html body .swiper-container .swiper-slide picture {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1324,7 +1382,6 @@ html body .content-torment .icon-gp .icon {
 @media (max-width: 568px) {
   html body .content-torment .icon-gp .icon {
     width: 100%;
-    margin: auto;
     margin-bottom: 20px;
   }
 }
@@ -1390,6 +1447,7 @@ html body .content-module .container .explain-img {
 html body .content-module .container .explain-img img {
   width: 100%;
   height: 100%;
+  max-width: 600px;
 }
 html body .content-module .container .text-box {
   width: 40%;
@@ -1762,29 +1820,33 @@ html body .content-other .link-gp h2 {
   margin-top: 12px;
 }
 html body .content-news {
-  padding-top: 120px;
   display: flex;
   flex-direction: row;
   justify-content: start;
   flex-wrap: wrap;
 }
-html body .content-news .block {
+html body .content-news .container {
+  padding: 40px 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .content-news .container .block {
   margin: 0 12px;
   margin-bottom: 36px;
   width: 23%;
 }
-html body .content-news .block a {
+html body .content-news .container .block a {
   display: inline-block;
   width: 100%;
   height: 200px;
 }
-html body .content-news .block a img {
+html body .content-news .container .block a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-html body .content-news .block a .date {
+html body .content-news .container .block a .date {
   color: #7db9de;
   margin-top: 12px;
 }
@@ -1801,15 +1863,28 @@ html body .content-howmuch .notice {
 html body .content-howmuch .plan {
   background-color: #7db9de;
 }
+@media (max-width: 1550px) {
+  html body .content-howmuch .plan .container {
+    padding: 40px 64px;
+  }
+}
+@media (max-width: 1024px) {
+  html body .content-howmuch .plan .container {
+    padding: 32px 40px;
+  }
+}
+@media (max-width: 768px) {
+  html body .content-howmuch .plan .container {
+    padding: 32px;
+  }
+}
 html body .content-howmuch .plan .container .planbox {
-  background-color: white;
   width: 100%;
   border-radius: 20px;
-  padding: 32px 40px;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 html body .content-howmuch .plan .container .planbox h3 {
   text-align: left;
@@ -1951,6 +2026,96 @@ html body .content-howmuch .plan .container .planbox .text-gp .btn .download {
     font-weight: bold;
     padding: 8px 16px;
   }
+}
+html body .content-howmuch .plan .container .planbox table {
+  width: 30%;
+}
+@media (max-width: 568px) {
+  html body .content-howmuch .plan .container .planbox table {
+    width: 100%;
+  }
+  html body .content-howmuch .plan .container .planbox table:not(:last-of-type) {
+    margin-bottom: 36px;
+  }
+}
+html body .content-howmuch .plan .container .planbox table thead {
+  background-color: white;
+}
+html body .content-howmuch .plan .container .planbox table thead tr:nth-child(1) {
+  font-size: 1.25rem;
+}
+html body .content-howmuch .plan .container .planbox table thead tr:nth-child(1) th {
+  border-radius: 16px 16px 0 0;
+  border: none;
+  outline: 1px solid #a5dee4;
+}
+html body .content-howmuch .plan .container .planbox table thead .function-icon th {
+  padding: 32px;
+}
+html body .content-howmuch .plan .container .planbox table thead tr:not(:first-of-type) {
+  border-right: 1px solid #a5dee4;
+  border-left: 1px solid #a5dee4;
+}
+html body .content-howmuch .plan .container .planbox table thead img {
+  width: 170px;
+  height: 170px;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  html body .content-howmuch .plan .container .planbox table thead img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 568px) {
+  html body .content-howmuch .plan .container .planbox table thead img {
+    width: 150px;
+    height: 150px;
+  }
+}
+html body .content-howmuch .plan .container .planbox table tbody tr:nth-last-of-type(1) td {
+  border-radius: 0 0 0 16px;
+  border-top: 1px solid #a5dee4;
+}
+html body .content-howmuch .plan .container .planbox table tbody tr:nth-last-of-type(1) td:nth-child(2) {
+  border-radius: 0 0 16px 0;
+}
+html body .content-howmuch .plan .container .planbox table tbody tr:not(:nth-last-of-type(1)) {
+  border-top: 1px solid #a5dee4;
+  background-color: white;
+}
+html body .content-howmuch .plan .container .planbox table tbody td:nth-child(odd) {
+  border-right: 1px solid #a5dee4;
+}
+html body .content-howmuch .plan .container .planbox table tbody tr:last-child td {
+  background-color: white;
+}
+html body .content-howmuch .plan .container .planbox table tbody tr:nth-child(odd) td {
+  background-color: rgba(229, 241, 249, 0.6);
+}
+html body .content-howmuch .plan .container .planbox table p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 1.125rem;
+  color: black;
+  line-height: 1;
+}
+html body .content-howmuch .plan .container .planbox .unit {
+  width: 100%;
+  text-align: right;
+  color: #314965;
+  font-weight: bold;
+}
+@media (max-width: 568px) {
+  html body .content-howmuch .plan .container .planbox .unit {
+    text-align: center;
+  }
+}
+html body .content-howmuch .plan .container .planbox .unit i {
+  color: #314965;
+  margin-right: 8px;
+  margin-top: 24px;
 }
 @media (max-width: 568px) {
   html body .content-form .container {
