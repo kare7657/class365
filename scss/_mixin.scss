@@ -307,7 +307,7 @@
         &:hover {
             background-color: $primary-default;
             color: white;
-            transition-duration: 0.5s;
+            transition: 0.5s;
         }
         &[disabled] {
             background-color: $primary-tint;
@@ -491,7 +491,7 @@
     border: none;
     &:hover {
         background-color: black;
-        transition-duration: 0.5s;
+        transition: 0.5s;
     }
     @include mobile-L() {
         padding: $p-XXS $p-XS;
@@ -579,7 +579,7 @@
                     &:hover {
                         .nav-list {
                             display: block;
-                            transition-duration: 0.5s;
+                            transition: 0.5s;
                         }
                     }
                 }
@@ -639,7 +639,7 @@
                     margin: 0;
                     padding: 40px 0;
                     text-align: center;
-                    transition-duration: 0.7s;
+                    transition: 0.7s;
                     @include mobile-L() {
                         top: 65px;
                     }
@@ -667,7 +667,7 @@
                 .active-ul {
                     display: inline-block;
                     color: $primary-default;
-                    transition-duration: 0.7s;
+                    transition: 0.7s;
                     top: 60px;
                     left: 0;
                     @include mobile-L() {
@@ -732,22 +732,24 @@
 
 @mixin footer() {
     .footer {
+        background-color: $primary-dark;
         h4,
         p {
             color: white;
         }
         .ft-top {
             width: 100%;
-            background-color: $primary-dark;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             padding: $p-M 40px;
+            margin: auto;
+            max-width: 1140px;
             @include pad {
                 padding: $p-S;
             }
             .text-gp {
                 width: 100%;
-                max-width: 1140px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -759,12 +761,14 @@
                     width: 100%;
                     margin-bottom: 0;
                 }
-
                 .text-box {
                     @include pad() {
-                        width: 47%;
+                        width: 45%;
                         margin: 0;
                         margin-bottom: $m-XXS;
+                        &:first-child {
+                            margin-right: $m-XS;
+                        }
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -791,6 +795,27 @@
                         color: white;
                         line-height: 2;
                         display: inline-block;
+                    }
+                }
+                .social-gp {
+                    @include pad() {
+                        width: 8%;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        margin-top: $m-XS;
+                    }
+                    a {
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        i {
+                            font-size: 1.7rem;
+                            margin-right: $p-XXS;
+                            @include mobile-L() {
+                                font-size: 2.5rem;
+                            }
+                        }
                     }
                 }
             }
@@ -1028,42 +1053,6 @@
     img {
         width: 100%;
         border-radius: 20px;
-    }
-}
-
-@mixin Allicon() {
-    .Allicon-gp {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .Allicon {
-            width: 25%;
-            text-align: center;
-            padding: 0 $p-XS;
-            margin-bottom: $m-S;
-
-            @include pad() {
-                width: 50%;
-                padding: 0 $p-XXS;
-            }
-            @include mobile-L() {
-                width: 100%;
-                margin: auto;
-                margin-bottom: $m-S;
-            }
-            img {
-                width: 150px;
-                height: 150px;
-                object-fit: contain;
-                object-position: center;
-                margin: $m-XXS 0;
-            }
-            p {
-                text-align: center;
-            }
-        }
     }
 }
 
