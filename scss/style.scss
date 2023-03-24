@@ -162,7 +162,7 @@ html {
                         margin: $m-XS 0;
                         width: 200px;
                         height: 200px;
-                        @include mobile-L{
+                        @include mobile-L {
                             width: 150px;
                             height: 150px;
                         }
@@ -337,7 +337,7 @@ html {
             flex-direction: row;
             justify-content: start;
             flex-wrap: wrap;
-            .container{
+            .container {
                 padding: $p-L $p-S;
                 display: flex;
                 flex-wrap: wrap;
@@ -578,6 +578,43 @@ html {
                         font-size: $size-h3;
                         font-weight: bold;
                     }
+                }
+            }
+        }
+        // 聯絡我們-成功
+        .content-form-success {
+            padding-top: 80px;
+            @include pad() {
+                padding-top: 60px;
+            }
+            .container {
+                padding: $p-M;
+                height: calc(100vh - 269px);
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                @include pad() {
+                    height: calc(100vh - 249px);
+                }
+                @include mobile-L() {
+                    padding: $p-S;
+                    height: 60vh;
+                }
+                h2{
+                    margin-bottom: $m-XXS;
+                }
+                p {
+                    text-align: center;
+                }
+                img {
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: $m-S;
+                }
+                .btn {
+                    margin: $m-S 0;
                 }
             }
         }

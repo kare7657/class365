@@ -162,7 +162,7 @@
   cursor: pointer;
 }
 * input:not(.custom-control-input)[type=button]:hover {
-  background-color: #7db9de;
+  background-color: #2b5f75;
 }
 * input:not(.custom-control-input)[type=file] {
   border: none;
@@ -2087,4 +2087,46 @@ html body .content-icon .icon-gp .icon img {
 html body .content-icon .icon-gp .icon .title {
   font-size: 1.5rem;
   font-weight: bold;
+}
+html body .content-form-success {
+  padding-top: 80px;
+}
+@media (max-width: 768px) {
+  html body .content-form-success {
+    padding-top: 60px;
+  }
+}
+html body .content-form-success .container {
+  padding: 32px;
+  height: calc(100vh - 269px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  html body .content-form-success .container {
+    height: calc(100vh - 249px);
+  }
+}
+@media (max-width: 568px) {
+  html body .content-form-success .container {
+    padding: 24px;
+    height: 60vh;
+  }
+}
+html body .content-form-success .container h2 {
+  margin-bottom: 4px;
+}
+html body .content-form-success .container p {
+  text-align: center;
+}
+html body .content-form-success .container img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+html body .content-form-success .container .btn {
+  margin: 20px 0;
 }/*# sourceMappingURL=style.css.map */
