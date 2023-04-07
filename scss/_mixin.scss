@@ -511,7 +511,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 1000;
         background-color: $primary-dark;
         display: flex;
         justify-content: center;
@@ -744,7 +744,7 @@
             justify-content: center;
             padding: $p-M 40px;
             margin: auto;
-            max-width: 1140px;
+            max-width: 1110px;
             @include pad {
                 padding: $p-S;
             }
@@ -753,7 +753,7 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: space-between;
                 @include mobile-L() {
                     flex-direction: column;
                     flex-wrap: wrap;
