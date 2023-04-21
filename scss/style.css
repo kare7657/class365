@@ -745,7 +745,7 @@ html body .navbar .mobile .menu .active-ul li {
   }
 }
 html body .navbar .mobile .title h1 {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
