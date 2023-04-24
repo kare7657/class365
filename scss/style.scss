@@ -6,7 +6,8 @@
 }
 html {
     scroll-behavior: smooth;
-
+    width: 100vw;
+    overflow-x: hidden;
     body {
         width: 100%;
         margin: 0;
@@ -51,6 +52,9 @@ html {
         }
         .loader-inner {
             margin: 30px;
+        }
+        .d-none {
+            display: none;
         }
 
         // Banner
@@ -205,7 +209,7 @@ html {
         // 功能介紹
         .content-module {
             .container {
-                padding: $p-L * 2 0;
+                padding: $p-2L 0;
                 @include mobile-L {
                     padding: $p-L 0;
                 }
@@ -217,7 +221,10 @@ html {
                     &:not(:last-child) {
                         margin-bottom: $m-2L;
                     }
-                    @include pad() {
+                    @include pad {
+                        padding: 0 $p-L;
+                    }
+                    @include mobile-L() {
                         flex-wrap: wrap;
                         flex-direction: column;
                     }
@@ -229,15 +236,21 @@ html {
                     flex-direction: row-reverse;
                     align-items: center;
                     margin-bottom: $m-2L;
-                    @include pad() {
+                    @include pad {
+                        padding: 0 $p-L;
+                    }
+                    @include mobile-L() {
                         flex-direction: column;
                     }
                 }
                 .explain-img {
                     width: 45%;
                     @include pad() {
-                        width: 80%;
+                        width: 45%;
                         margin: auto;
+                    }
+                    @include mobile-L {
+                        width: 100%;
                     }
                     img {
                         width: 100%;
@@ -249,14 +262,17 @@ html {
                     width: 40%;
                     text-align: center;
                     @include pad() {
-                        width: 80%;
+                        width: 55%;
                         margin: auto;
                         margin-top: $m-S;
                         margin-bottom: $m-M;
+                        padding: 0 $p-S;
                     }
                     @include mobile-L() {
+                        width: 100%;
                         margin-top: $m-XS;
                         margin-bottom: $m-S;
+                        padding: 0;
                     }
                     h2 {
                         @include mobile-L {
@@ -280,45 +296,7 @@ html {
                 }
             }
         }
-        // 我們的客戶
-        .content-client {
-            padding: $p-2L 0;
-            @include mobile-L {
-                padding-top: 0;
-            }
-            img {
-                width: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-        // 好評推薦
-        .content-recommend {
-            background-color: $primary-default;
-            h3 {
-                color: white;
-            }
-            .img-gp {
-                margin-top: $m-S;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                img {
-                    object-fit: contain;
-                    object-position: center;
-                    @include pad() {
-                        width: 100%;
-                    }
-                }
-                .talk-L {
-                    object-position: 0%;
-                }
-                .talk-R {
-                    object-position: 100%;
-                }
-            }
-        }
+        // 功能介紹
         .content-function {
             @include function();
             .container {
@@ -329,9 +307,6 @@ html {
             }
         }
         // 流程圖
-        .content-flow-HR {
-            @include flow($primary-tint);
-        }
         .content-flow-attendance {
             @include flow($secondary);
         }
@@ -340,7 +315,12 @@ html {
         }
         // 其他功能
         .content-other {
+            padding: $p-2L 0;
+            @include mobile-L {
+                padding: $p-M 0;
+            }
             h2 {
+                margin-bottom: $m-M;
                 @include pad() {
                     padding: 0 $p-S;
                     line-height: 62px;
@@ -498,6 +478,9 @@ html {
                                 color: $font-D;
                                 margin-right: $p-XXS;
                                 margin-top: $p-S;
+                            }
+                            a {
+                                color: #0d6efd;
                             }
                         }
                     }

@@ -58,13 +58,13 @@
     <!-- Loaders 網頁讀取-->
     <link rel="stylesheet" href="scss/loaders.css">
     <!-- Bootstrap 5.1 -->
-    <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="scss/bootstrap.min.css"> -->
     <link rel="stylesheet" href="scss/style.css">
 </head>
 
 <body>
     <!-- Loaders -->
-    <div class="loader"> <!-- class 加 d-none 可隱藏 -->
+    <div class="loader d-none"> <!-- class 加 d-none 可隱藏 -->
         <div class="loader-inner line-spin-fade-loader">
         </div>
     </div>
@@ -166,60 +166,13 @@
         </div>
     </section>
 
-    <!-- modal -->
-    <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
-        aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
-        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-gp">
-                            <label for="account">帳號<span class="notice">*</span></label>
-                            <input type="password" name="account" id="account" value="">
-                            <div class="text">
-                                <p class="notice">testtesttesttest</p>
-                            </div>
-                        </div>
-                        <div class="form-gp">
-                            <label for="email">信箱<span class="notice">*</span></label>
-                            <input type="text" name="email" id="memail" value="">
-                            <div class="text">
-                                <p class="notice">testtesttesttest</p>
-                            </div>
-                        </div>
-                        <div class="code-gp">
-                            <label for="code">驗證碼</label>
-                            <div class="text-gp">
-                                <input class="code" type="text" name="code" id="mcode">
-                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
-                                <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="go" id="go">確認更改</button>
-                        <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
-
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
     <!-- footer -->
     <footer id="footer"></footer>
 
     <!-- jquery -->
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap 5.1 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
     <!-- Loaders 網頁讀取-->
     <script src="js/loaders.css.js"></script>
 
