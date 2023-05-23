@@ -335,30 +335,43 @@ html {
         }
         // 最新消息
         .content-news {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: start;
+            // flex-wrap: wrap;
+            padding-top: 80px;
             .container {
                 padding: $p-L $p-S;
                 display: flex;
                 flex-wrap: wrap;
-                .block {
-                    margin: 0 $m-XS;
-                    margin-bottom: $m-M;
-                    width: 23%;
-                    a {
-                        display: inline-block;
-                        width: 100%;
-                        height: 200px;
-                        img {
+                .breadcrumb {
+                    .container {
+                        padding: 0;
+                    }
+                }
+                .block-gp {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin-top: $m-S;
+                    .block {
+                        // margin: 0 $m-XS;
+                        margin-bottom: $m-M;
+                        width: 24%;
+                        a {
+                            display: inline-block;
                             width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                        .date {
-                            color: $primary-default;
-                            margin-top: $m-XS;
+                            height: 200px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            .date {
+                                color: $primary-default;
+                                margin-top: $m-XS;
+                            }
                         }
                     }
                 }
@@ -559,33 +572,33 @@ html {
             }
         }
         //聯絡我們icon
-        .content-icon {
-            .icon-gp {
-                padding: 0 0 $p-S 0;
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                flex-wrap: wrap;
-                @include mobile-L() {
-                    padding: $p-XS 0 $p-XS 0;
-                }
-                .icon {
-                    width: 50%;
-                    margin-bottom: $m-S;
-                    @include mobile-L() {
-                        width: 100%;
-                    }
-                    img {
-                        height: 100px;
-                        margin-bottom: $m-XS;
-                    }
-                    .title {
-                        font-size: $size-h3;
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
+        // .content-icon {
+        //     .icon-gp {
+        //         padding: 0 0 $p-S 0;
+        //         display: flex;
+        //         justify-content: space-between;
+        //         text-align: center;
+        //         flex-wrap: wrap;
+        //         @include mobile-L() {
+        //             padding: $p-XS 0 $p-XS 0;
+        //         }
+        //         .icon {
+        //             width: 50%;
+        //             margin-bottom: $m-S;
+        //             @include mobile-L() {
+        //                 width: 100%;
+        //             }
+        //             img {
+        //                 height: 100px;
+        //                 margin-bottom: $m-XS;
+        //             }
+        //             .title {
+        //                 font-size: $size-h3;
+        //                 font-weight: bold;
+        //             }
+        //         }
+        //     }
+        // }
         // 聯絡我們-成功
         .content-form-success {
             padding-top: 80px;
