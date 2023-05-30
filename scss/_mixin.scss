@@ -9,6 +9,11 @@
         @content;
     }
 }
+@mixin web-M {
+    @media (max-width: $web-M) {
+        @content;
+    }
+}
 @mixin web-S {
     @media (max-width: $web-S) {
         @content;
@@ -44,8 +49,15 @@
             padding: $p-L $p-S;
         }
         @include web-L {
-            max-width: unset;
+            max-width: 1280px;
             padding: $p-M $p-S;
+        }
+        @include web-M {
+            max-width: 1140px;
+            padding: $p-M;
+        }
+        @include web-S {
+            max-width: unset;
         }
     }
     h1 {
@@ -104,6 +116,12 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+    .multiline-ellipsis {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
     a {
         text-decoration: none !important;
@@ -253,17 +271,20 @@
         width: 100%;
         height: 40px;
         border-radius: 5px;
-        border: solid 1px $complementary;
+        border: solid 1px $primary-default;
         background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
         background-position: 97% center;
         background-color: white;
         color: $text;
         padding: 0 $p-XXS;
+        font-size: $size-p;
         &::-ms-expand {
             display: none;
         }
         option {
             color: $text;
+            padding: $p-XS;
+            margin-bottom: 12px;
         }
     }
     textarea {
@@ -322,6 +343,74 @@
             margin-right: $m-XS;
         }
     }
+    //頁碼
+    .pagination {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: $p-M;
+        white-space: nowrap;
+        @include mobile-L() {
+            justify-content: center;
+            text-align: left;
+            white-space: initial;
+            margin-top: $p-XXS;
+        }
+        @include mobile-XS {
+            margin-top: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0 !important;
+            @include mobile-L {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li {
+                display: inline;
+                text-decoration: none;
+                padding: 0;
+                @include mobile-L {
+                    margin: $p-XXS;
+                    margin-bottom: $p-XS;
+                }
+                @include mobile-XS() {
+                    margin-bottom: $p-XXS;
+                }
+                a {
+                    display: inline;
+                    padding: $m-XXS $m-XS;
+                    border: solid 1px rgba($color: $primary-tint, $alpha: 1);
+                    margin: -2px;
+                    font-size: $size-p;
+                    line-height: 2;
+                    color: $primary-default;
+                    @include mobile-L() {
+                        padding: $p-XXS $p-XS;
+                        font-size: $size-h5;
+                    }
+                    @include mobile-XS() {
+                        padding: $m-XXS $m-XS;
+                    }
+                    &:hover {
+                        background-color: rgba($color: $primary-default, $alpha: 0.1);
+                    }
+                }
+                .active {
+                    background-color: $primary-default;
+                    color: white;
+                    border: solid 1px $primary-default;
+                    &:hover {
+                        background-color: $primary-default;
+                    }
+                }
+                .fas {
+                    font-size: $size-p;
+                    color: $primary-default;
+                }
+            }
+        }
+    }
 }
 
 @mixin btn() {
@@ -363,7 +452,7 @@
             display: flex;
             justify-content: space-between;
             @include web-S {
-                padding: 0 $p-S;
+                padding: 0 $p-M;
             }
             @include pad() {
                 display: none;
@@ -610,8 +699,8 @@
             padding-bottom: $p-XS;
             margin: auto;
             max-width: 1140px;
-            @include web-S{
-                padding: $p-S;
+            @include web-S {
+                padding: $p-S $p-M;
             }
             .text-gp {
                 width: 100%;
@@ -632,13 +721,13 @@
                 }
                 .text-box {
                     @include pad() {
-                        width: 45%;
                         margin: 0;
                         margin-bottom: $m-XXS;
                         &:first-child {
-                            margin-right: $m-XS;
+                            width: 45%;
                         }
                         &:last-child {
+                            width: 45%;
                             margin-bottom: 0;
                         }
                     }
@@ -661,6 +750,7 @@
                         color: white;
                         line-height: 2;
                         display: inline-block;
+                        // margin-right: $p-XXS;
                     }
                 }
                 .social-gp {
@@ -756,6 +846,26 @@
             height: 400px;
             object-fit: cover;
             object-position: center center;
+        }
+        .NOBN-text-gp {
+            padding-top: 120px;
+            @include pad {
+                padding-top: 100px;
+            }
+            .title {
+                font-size: $size-h1;
+                color: $font-D;
+                text-align: center;
+                line-height: 1.5;
+                font-weight: bold;
+            }
+            p {
+                color: $font-D;
+                margin-bottom: $m-XXS;
+                font-size: $size-h3;
+                text-align: center;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -1149,7 +1259,7 @@
             padding: 0;
         }
         .container {
-            padding: 0;
+            padding: 0 !important;
             ul {
                 padding: 0;
                 margin: 0;
@@ -1234,6 +1344,50 @@
             }
             .btn-primary {
                 background-color: $primary-default;
+            }
+        }
+    }
+}
+@mixin searchbar() {
+    .searchbar {
+        display: flex;
+        @include mobile-L() {
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        select {
+            min-width: 150px;
+            width: initial;
+            margin-right: $m-S;
+            @include mobile-L {
+                width: 100%;
+                margin-bottom: $m-S;
+            }
+        }
+        input[type="search"] {
+            width: 150px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: solid 1px $primary-default;
+            background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+            @include mobile-L() {
+                width: 100%;
+                padding: 5px 8px;
+            }
+            &:focus {
+                width: 180px;
+                transition: 0.5s;
+                @include mobile-L() {
+                    width: 100%;
+                }
+            }
+        }
+        button {
+            margin-left: $m-S;
+            @include mobile-L() {
+                width: 100%;
+                margin-top: $m-XS;
             }
         }
     }

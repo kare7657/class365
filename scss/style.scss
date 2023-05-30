@@ -31,6 +31,7 @@ html {
         @include collapse;
         @include form();
         @include table();
+        @include searchbar();
 
         /* Loaders */
         .loader {
@@ -333,17 +334,15 @@ html {
                 }
             }
         }
-        // 最新消息
-        .content-news {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: start;
-            // flex-wrap: wrap;
-            padding-top: 80px;
+        // 文章專欄
+        .content-article {
             .container {
                 padding: $p-L $p-S;
                 display: flex;
                 flex-wrap: wrap;
+                h2 {
+                    width: 100%;
+                }
                 .breadcrumb {
                     .container {
                         padding: 0;
@@ -354,23 +353,143 @@ html {
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
-                    margin-top: $m-S;
+                    margin-top: $m-M;
                     .block {
-                        // margin: 0 $m-XS;
-                        margin-bottom: $m-M;
+                        margin-bottom: $m-S;
                         width: 24%;
-                        a {
-                            display: inline-block;
+                        border: solid 1px $bk-20;
+                        border-radius: 12px;
+                        @include mobile-L {
                             width: 100%;
-                            height: 200px;
+                            margin-bottom: $p-S;
+                        }
+                        &:hover {
+                            box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
+                            transition: 0.3s;
+                            transform: translate(0px, -3px);
+                        }
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+
                             img {
                                 width: 100%;
                                 height: 100%;
+                                aspect-ratio: 16 / 9;
                                 object-fit: cover;
+                                border-radius: 12px 12px 0 0;
                             }
-                            .date {
-                                color: $primary-default;
-                                margin-top: $m-XS;
+                            .content {
+                                padding: $p-S;
+                                background-color: white;
+                                border-radius: 0 0 12px 12px;
+                                @include web-S {
+                                    padding: $m-S;
+                                }
+                                .date {
+                                    color: $primary-default;
+                                    font-weight: bold;
+                                    width: 100%;
+                                    text-align: left;
+                                    display: block;
+                                }
+                                .title {
+                                    font-size: $size-h4;
+                                    color: $font-D;
+                                    line-height: 1.5;
+                                    font-weight: bold;
+                                    margin: $p-XS 0;
+                                    @include web-S {
+                                        margin: $m-XS 0;
+                                    }
+                                    @include mobile-L {
+                                        margin: $p-XS 0;
+                                    }
+                                }
+                                p {
+                                    line-height: 1.5;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 文章內容
+        .content-article-content {
+            padding-top: 80px;
+            @include mobile-L{
+                padding-top: 60px;
+            }
+            .container {
+                padding: $p-L $p-S;
+                display: flex;
+                flex-wrap: wrap;
+                h2 {
+                    width: 100%;
+                }
+                .breadcrumb {
+                    .container {
+                        padding: 0;
+                    }
+                }
+                .content-header {
+                    max-width: 800px;
+                    width: 100%;
+                    margin: auto;
+                    margin-top: $m-XS;
+                    margin-bottom: $m-M;
+                    img {
+                        width: 100%;
+                        aspect-ratio: 16 / 9;
+                        border-radius: 12px;
+                    }
+                    .text-gp {
+                        width: 100%;
+                        margin-bottom: $m-M;
+                        text-align: left;
+                        h2 {
+                            text-align: left;
+                            width: 100%;
+                            margin-bottom: $p-XXS;
+                        }
+                        i {
+                            margin-right: $p-XXS;
+                            color: #cccccc;
+                        }
+                        span {
+                            margin-right: $p-XS;
+                            color: $text;
+                        }
+                        a {
+                            color: $primary-default;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .content-body {
+                    margin: auto;
+                    max-width: 800px;
+                    .text-gp {
+                        margin-bottom: $m-M;
+                        img {
+                            width: 100%;
+                            aspect-ratio: 16 / 9;
+                            border-radius: 12px;
+                            margin: $p-XS 0;
+                        }
+                        h3 {
+                            width: 100%;
+                            text-align: left;
+                        }
+                        ul{
+                            padding: 0;
+                            list-style-position: inside;
+                            li{
+                                width: 100%;
+                                text-align: left;
                             }
                         }
                     }

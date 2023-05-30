@@ -16,10 +16,21 @@
     padding: 40px 24px;
   }
 }
-@media (max-width: 1367px) {
+@media (max-width: 1366px) {
+  * .container {
+    max-width: 1280px;
+    padding: 32px 24px;
+  }
+}
+@media (max-width: 1280px) {
+  * .container {
+    max-width: 1140px;
+    padding: 32px;
+  }
+}
+@media (max-width: 1024px) {
   * .container {
     max-width: unset;
-    padding: 32px 24px;
   }
 }
 * h1 {
@@ -78,6 +89,12 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+* .multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 * a {
   text-decoration: none !important;
@@ -226,18 +243,21 @@
   width: 100%;
   height: 40px;
   border-radius: 5px;
-  border: solid 1px #a5abe4;
+  border: solid 1px #7db9de;
   background: url("../img/chevron-down-solid.svg") no-repeat scroll transparent;
   background-position: 97% center;
   background-color: white;
   color: #727171;
   padding: 0 8px;
+  font-size: 1rem;
 }
 * select::-ms-expand {
   display: none;
 }
 * select option {
   color: #727171;
+  padding: 16px;
+  margin-bottom: 12px;
 }
 * textarea {
   width: 100%;
@@ -294,6 +314,87 @@
 * .button-outline .fas {
   margin-right: 12px;
 }
+* .pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  white-space: nowrap;
+}
+@media (max-width: 568px) {
+  * .pagination {
+    justify-content: center;
+    text-align: left;
+    white-space: initial;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 320px) {
+  * .pagination {
+    margin-top: 0;
+  }
+}
+* .pagination ul {
+  margin: 0;
+  padding: 0 !important;
+}
+@media (max-width: 568px) {
+  * .pagination ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+* .pagination ul li {
+  display: inline;
+  text-decoration: none;
+  padding: 0;
+}
+@media (max-width: 568px) {
+  * .pagination ul li {
+    margin: 8px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 320px) {
+  * .pagination ul li {
+    margin-bottom: 8px;
+  }
+}
+* .pagination ul li a {
+  display: inline;
+  padding: 4px 12px;
+  border: solid 1px #a5dee4;
+  margin: -2px;
+  font-size: 1rem;
+  line-height: 2;
+  color: #7db9de;
+}
+@media (max-width: 568px) {
+  * .pagination ul li a {
+    padding: 8px 16px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 320px) {
+  * .pagination ul li a {
+    padding: 4px 12px;
+  }
+}
+* .pagination ul li a:hover {
+  background-color: rgba(125, 185, 222, 0.1);
+}
+* .pagination ul li .active {
+  background-color: #7db9de;
+  color: white;
+  border: solid 1px #7db9de;
+}
+* .pagination ul li .active:hover {
+  background-color: #7db9de;
+}
+* .pagination ul li .fas {
+  font-size: 1rem;
+  color: #7db9de;
+}
 
 html {
   scroll-behavior: smooth;
@@ -328,7 +429,7 @@ html body .breadcrumb {
   }
 }
 html body .breadcrumb .container {
-  padding: 0;
+  padding: 0 !important;
 }
 html body .breadcrumb .container ul {
   padding: 0;
@@ -383,7 +484,7 @@ html body .navbar .pc {
 }
 @media (max-width: 1024px) {
   html body .navbar .pc {
-    padding: 0 24px;
+    padding: 0 32px;
   }
 }
 @media (max-width: 768px) {
@@ -599,7 +700,7 @@ html body .footer .ft-top {
 }
 @media (max-width: 1024px) {
   html body .footer .ft-top {
-    padding: 24px;
+    padding: 24px 32px;
   }
 }
 html body .footer .ft-top .text-gp {
@@ -624,14 +725,14 @@ html body .footer .ft-top .text-gp h5 {
 }
 @media (max-width: 768px) {
   html body .footer .ft-top .text-gp .text-box {
-    width: 45%;
     margin: 0;
     margin-bottom: 4px;
   }
   html body .footer .ft-top .text-gp .text-box:first-child {
-    margin-right: 12px;
+    width: 45%;
   }
   html body .footer .ft-top .text-gp .text-box:last-child {
+    width: 45%;
     margin-bottom: 0;
   }
 }
@@ -819,6 +920,28 @@ html body .top-BN img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+html body .top-BN .NOBN-text-gp {
+  padding-top: 120px;
+}
+@media (max-width: 768px) {
+  html body .top-BN .NOBN-text-gp {
+    padding-top: 100px;
+  }
+}
+html body .top-BN .NOBN-text-gp .title {
+  font-size: 2.5rem;
+  color: #314965;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+}
+html body .top-BN .NOBN-text-gp p {
+  color: #314965;
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   html body .collapse-gp {
@@ -1085,6 +1208,58 @@ html body table tr .btn {
 }
 html body table tr .btn-primary {
   background-color: #7db9de;
+}
+html body .searchbar {
+  display: flex;
+}
+@media (max-width: 568px) {
+  html body .searchbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+html body .searchbar select {
+  min-width: 150px;
+  width: initial;
+  margin-right: 20px;
+}
+@media (max-width: 568px) {
+  html body .searchbar select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+html body .searchbar input[type=search] {
+  width: 150px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: solid 1px #7db9de;
+  background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+}
+@media (max-width: 568px) {
+  html body .searchbar input[type=search] {
+    width: 100%;
+    padding: 5px 8px;
+  }
+}
+html body .searchbar input[type=search]:focus {
+  width: 180px;
+  transition: 0.5s;
+}
+@media (max-width: 568px) {
+  html body .searchbar input[type=search]:focus {
+    width: 100%;
+  }
+}
+html body .searchbar button {
+  margin-left: 20px;
+}
+@media (max-width: 568px) {
+  html body .searchbar button {
+    width: 100%;
+    margin-top: 12px;
+  }
 }
 html body .loader {
   width: 100%;
@@ -1668,42 +1843,169 @@ html body .content-other .link-gp .link img {
 html body .content-other .link-gp h2 {
   margin-top: 12px;
 }
-html body .content-news {
-  padding-top: 80px;
-}
-html body .content-news .container {
+html body .content-article .container {
   padding: 40px 24px;
   display: flex;
   flex-wrap: wrap;
 }
-html body .content-news .container .breadcrumb .container {
+html body .content-article .container h2 {
+  width: 100%;
+}
+html body .content-article .container .breadcrumb .container {
   padding: 0;
 }
-html body .content-news .container .block-gp {
+html body .content-article .container .block-gp {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 36px;
 }
-html body .content-news .container .block-gp .block {
-  margin-bottom: 36px;
+html body .content-article .container .block-gp .block {
+  margin-bottom: 20px;
   width: 24%;
+  border: solid 1px #DCDDDD;
+  border-radius: 12px;
 }
-html body .content-news .container .block-gp .block a {
-  display: inline-block;
+@media (max-width: 568px) {
+  html body .content-article .container .block-gp .block {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+html body .content-article .container .block-gp .block:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  transform: translate(0px, -3px);
+}
+html body .content-article .container .block-gp .block a {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 200px;
 }
-html body .content-news .container .block-gp .block a img {
+html body .content-article .container .block-gp .block a img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
-html body .content-news .container .block-gp .block a .date {
+html body .content-article .container .block-gp .block a .content {
+  padding: 24px;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+}
+@media (max-width: 1024px) {
+  html body .content-article .container .block-gp .block a .content {
+    padding: 20px;
+  }
+}
+html body .content-article .container .block-gp .block a .content .date {
   color: #7db9de;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  display: block;
+}
+html body .content-article .container .block-gp .block a .content .title {
+  font-size: 1.25rem;
+  color: #314965;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 16px 0;
+}
+@media (max-width: 1024px) {
+  html body .content-article .container .block-gp .block a .content .title {
+    margin: 12px 0;
+  }
+}
+@media (max-width: 568px) {
+  html body .content-article .container .block-gp .block a .content .title {
+    margin: 16px 0;
+  }
+}
+html body .content-article .container .block-gp .block a .content p {
+  line-height: 1.5;
+  margin: 0;
+}
+html body .content-article-content {
+  padding-top: 80px;
+}
+@media (max-width: 568px) {
+  html body .content-article-content {
+    padding-top: 60px;
+  }
+}
+html body .content-article-content .container {
+  padding: 40px 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .content-article-content .container h2 {
+  width: 100%;
+}
+html body .content-article-content .container .breadcrumb .container {
+  padding: 0;
+}
+html body .content-article-content .container .content-header {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
   margin-top: 12px;
+  margin-bottom: 36px;
+}
+html body .content-article-content .container .content-header img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+}
+html body .content-article-content .container .content-header .text-gp {
+  width: 100%;
+  margin-bottom: 36px;
+  text-align: left;
+}
+html body .content-article-content .container .content-header .text-gp h2 {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 8px;
+}
+html body .content-article-content .container .content-header .text-gp i {
+  margin-right: 8px;
+  color: #cccccc;
+}
+html body .content-article-content .container .content-header .text-gp span {
+  margin-right: 16px;
+  color: #727171;
+}
+html body .content-article-content .container .content-header .text-gp a {
+  color: #7db9de;
+  font-weight: bold;
+}
+html body .content-article-content .container .content-body {
+  margin: auto;
+  max-width: 800px;
+}
+html body .content-article-content .container .content-body .text-gp {
+  margin-bottom: 36px;
+}
+html body .content-article-content .container .content-body .text-gp img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+html body .content-article-content .container .content-body .text-gp h3 {
+  width: 100%;
+  text-align: left;
+}
+html body .content-article-content .container .content-body .text-gp ul {
+  padding: 0;
+  list-style-position: inside;
+}
+html body .content-article-content .container .content-body .text-gp ul li {
+  width: 100%;
+  text-align: left;
 }
 html body .content-howmuch .explain {
   background-color: white;
