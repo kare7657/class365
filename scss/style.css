@@ -2000,12 +2000,34 @@ html body .content-article-content .container .content-body .text-gp h3 {
   text-align: left;
 }
 html body .content-article-content .container .content-body .text-gp ul {
-  padding: 0;
-  list-style-position: inside;
+  padding-left: 24px;
+  list-style-position: outside;
 }
 html body .content-article-content .container .content-body .text-gp ul li {
   width: 100%;
   text-align: left;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #727171;
+  padding-left: 8px;
+}
+html body .content-article-content .container .content-body .text-gp ul.number {
+  list-style: decimal;
+  padding-left: 24px;
+  list-style-position: outside;
+}
+html body .content-article-content .container .content-body .text-gp ul.number li {
+  padding-left: 8px;
+}
+html body .content-article-content .container .content-body .text-gp .quote {
+  border-left: solid 4px #727171;
+  padding-left: 16px;
+  margin-left: 8px;
+  margin-top: 16px;
+}
+html body .content-article-content .container .content-body .text-gp .quote p {
+  font-size: 1.25rem;
+  color: #727171;
 }
 html body .content-howmuch .explain {
   background-color: white;

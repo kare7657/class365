@@ -420,7 +420,7 @@ html {
         // 文章內容
         .content-article-content {
             padding-top: 80px;
-            @include mobile-L{
+            @include mobile-L {
                 padding-top: 60px;
             }
             .container {
@@ -484,12 +484,34 @@ html {
                             width: 100%;
                             text-align: left;
                         }
-                        ul{
-                            padding: 0;
-                            list-style-position: inside;
-                            li{
+                        ul {
+                            padding-left: 24px;
+                            list-style-position: outside;
+                            li {
                                 width: 100%;
                                 text-align: left;
+                                font-size: $size-p;
+                                line-height: 1.75;
+                                color: $text;
+                                padding-left: 8px;                    }
+
+                            &.number {
+                                list-style: decimal;
+                                padding-left: 24px;
+                                list-style-position: outside;
+                                li{
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                        .quote {
+                            border-left: solid 4px $text;
+                            padding-left: $p-XS;
+                            margin-left: $p-XXS;
+                            margin-top: $p-XS;
+                            p {
+                                font-size: $size-h4;
+                                color: $text;
                             }
                         }
                     }
