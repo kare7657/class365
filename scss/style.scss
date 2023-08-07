@@ -387,6 +387,11 @@ html {
                                 @include web-S {
                                     padding: $m-S;
                                 }
+                                i {
+                                    font-size: $size-p;
+                                    margin-right: 2px;
+                                    color: $yellow;
+                                }
                                 .date {
                                     color: $primary-default;
                                     font-weight: bold;
@@ -493,13 +498,14 @@ html {
                                 font-size: $size-p;
                                 line-height: 1.75;
                                 color: $text;
-                                padding-left: 8px;                    }
+                                padding-left: 8px;
+                            }
 
                             &.number {
                                 list-style: decimal;
                                 padding-left: 24px;
                                 list-style-position: outside;
-                                li{
+                                li {
                                     padding-left: 8px;
                                 }
                             }

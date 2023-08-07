@@ -1901,6 +1901,11 @@ html body .content-article .container .block-gp .block a .content {
     padding: 20px;
   }
 }
+html body .content-article .container .block-gp .block a .content i {
+  font-size: 1rem;
+  margin-right: 2px;
+  color: #FFC107;
+}
 html body .content-article .container .block-gp .block a .content .date {
   color: #7db9de;
   font-weight: bold;
