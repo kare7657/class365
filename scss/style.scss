@@ -57,7 +57,45 @@ html {
         .d-none {
             display: none;
         }
+        // 一般
+        .content-normal {
+            ul:not(.nav, .breadcrumb) {
+                text-align: left;
+                padding: 0;
+                margin-top: 0;
+                li:not(.nav-item) {
+                    line-height: 2;
+                    color: $text;
+                    list-style: decimal;
+                    list-style-position: inside;
+                }
+                &.dot {
+                    li {
+                        list-style: disc;
+                        text-indent: 16px;
+                        list-style-position: inside;
+                    }
+                }
+            }
+            a {
+                color: $primary-link;
+                font-weight: bold;
+            }
 
+            h6 {
+                margin-bottom: $p-XXS;
+            }
+            h4 {
+                margin-bottom: $p-XXS;
+            }
+            h3,
+            h4,
+            h5 {
+                text-align: left;
+                margin-top: $m-S;
+                margin-bottom: $m-XXS;
+            }
+        }
         // Banner
         .swiper-container {
             width: 100%;

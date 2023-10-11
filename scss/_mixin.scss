@@ -716,8 +716,31 @@
                     width: 100%;
                     margin-bottom: 0;
                 }
-                h5 {
+                // h5 {
+                //     width: 100%;
+                // }
+                .link-gp {
                     width: 100%;
+                    margin-bottom: $m-XS;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    .title {
+                        margin: 0;
+                        margin-right: $m-S;
+                        font-size: $size-h4;
+                        color: white;
+                        font-weight: bold;
+                    }
+                    a {
+                        color: $primary-tint;
+                        font-size: $size-caption;
+                        border: solid 1px $primary-tint;
+                        border-radius: 4px;
+                        padding: $m-XXS $p-XXS;
+                        font-weight: bold;
+                        // text-decoration: underline !important;
+                    }
                 }
                 .text-box {
                     @include pad() {
@@ -853,7 +876,7 @@
                 padding-top: 100px;
             }
             .title {
-                font-size: $size-h1;
+                font-size: $size-h2;
                 color: $font-D;
                 text-align: center;
                 line-height: 1.5;
@@ -1174,6 +1197,39 @@
             option:focus,
             textarea:focus {
                 outline: 1px solid $primary-default;
+            }
+            // .code-gp{
+            //     margin-bottom: 0 !important;
+            // }
+        }
+        .choice {
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: $p-XS;
+                @include mobile-L() {
+                    width: 100%;
+                    &:not(:nth-last-child(1)) {
+                        margin-bottom: $p-XS;
+                    }
+                }
+                label{
+                    width: 100%;
+                    font-size: $size-h5;
+                }
+                input{
+                    width: 25px;
+                    height: 25px;
+                    margin: 0;
+                    margin-right: $p-XXS;
+                    vertical-align: middle;
+                }
+                a {
+                    color: $primary-link;
+                    font-size: $size-h5;
+                    margin-left: $m-XXS;
+                }
             }
         }
     }

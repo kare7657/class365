@@ -134,7 +134,7 @@
   width: 100%;
   height: 40px;
   border-radius: 6px !important;
-  border: solid 1px #DCDDDD;
+  border: solid 1px #dcdddd;
   background-color: white;
   color: #727171;
   padding: 0 8px;
@@ -184,11 +184,11 @@
   padding: 8px 0;
 }
 * input:not(.custom-control-input)[disabled] {
-  background-color: #DCDDDD;
+  background-color: #dcdddd;
   cursor: not-allowed;
 }
 * input:not(.custom-control-input)[disabled]:hover {
-  background-color: #DCDDDD;
+  background-color: #dcdddd;
 }
 * input:not(.custom-control-input)[type=checkbox], * input:not(.custom-control-input)[type=radio] {
   width: 20px;
@@ -720,8 +720,27 @@ html body .footer .ft-top .text-gp {
     margin-bottom: 0;
   }
 }
-html body .footer .ft-top .text-gp h5 {
+html body .footer .ft-top .text-gp .link-gp {
   width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+html body .footer .ft-top .text-gp .link-gp .title {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+}
+html body .footer .ft-top .text-gp .link-gp a {
+  color: #a5dee4;
+  font-size: 0.875rem;
+  border: solid 1px #a5dee4;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   html body .footer .ft-top .text-gp .text-box {
@@ -930,7 +949,7 @@ html body .top-BN .NOBN-text-gp {
   }
 }
 html body .top-BN .NOBN-text-gp .title {
-  font-size: 2.5rem;
+  font-size: 1.875rem;
   color: #314965;
   text-align: center;
   line-height: 1.5;
@@ -1149,6 +1168,36 @@ html body form .form-gp option:focus,
 html body form .form-gp textarea:focus {
   outline: 1px solid #7db9de;
 }
+html body form .choice .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+@media (max-width: 568px) {
+  html body form .choice .item {
+    width: 100%;
+  }
+  html body form .choice .item:not(:nth-last-child(1)) {
+    margin-bottom: 16px;
+  }
+}
+html body form .choice .item label {
+  width: 100%;
+  font-size: 1.125rem;
+}
+html body form .choice .item input {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+html body form .choice .item a {
+  color: #009bcc;
+  font-size: 1.125rem;
+  margin-left: 4px;
+}
 html body table {
   border-collapse: collapse;
   width: 100%;
@@ -1283,6 +1332,39 @@ html body .loader-inner {
 }
 html body .d-none {
   display: none;
+}
+html body .content-normal ul:not(.nav, .breadcrumb) {
+  text-align: left;
+  padding: 0;
+  margin-top: 0;
+}
+html body .content-normal ul:not(.nav, .breadcrumb) li:not(.nav-item) {
+  line-height: 2;
+  color: #727171;
+  list-style: decimal;
+  list-style-position: inside;
+}
+html body .content-normal ul:not(.nav, .breadcrumb).dot li {
+  list-style: disc;
+  text-indent: 16px;
+  list-style-position: inside;
+}
+html body .content-normal a {
+  color: #009bcc;
+  font-weight: bold;
+}
+html body .content-normal h6 {
+  margin-bottom: 8px;
+}
+html body .content-normal h4 {
+  margin-bottom: 8px;
+}
+html body .content-normal h3,
+html body .content-normal h4,
+html body .content-normal h5 {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 html body .swiper-container {
   width: 100%;
@@ -1865,7 +1947,7 @@ html body .content-article .container .block-gp .block {
   margin-right: 12px;
   margin-bottom: 20px;
   width: 24%;
-  border: solid 1px #DCDDDD;
+  border: solid 1px #dcdddd;
   border-radius: 12px;
 }
 @media (max-width: 568px) {
@@ -1909,7 +1991,7 @@ html body .content-article .container .block-gp .block a .content {
 html body .content-article .container .block-gp .block a .content i {
   font-size: 1rem;
   margin-right: 2px;
-  color: #FFC107;
+  color: #ffc107;
 }
 html body .content-article .container .block-gp .block a .content .date {
   color: #7db9de;
@@ -1999,7 +2081,7 @@ html body .content-article-content .container .content-header .text-gp span {
   color: #727171;
 }
 html body .content-article-content .container .content-header .text-gp a {
-  color: #009BCC;
+  color: #009bcc;
   font-weight: bold;
 }
 html body .content-article-content .container .content-body {
@@ -2012,7 +2094,7 @@ html body .content-article-content .container .content-body .text-gp {
   text-align: left;
 }
 html body .content-article-content .container .content-body .text-gp a {
-  color: #009BCC;
+  color: #009bcc;
   font-weight: bold;
 }
 html body .content-article-content .container .content-body .text-gp img {
